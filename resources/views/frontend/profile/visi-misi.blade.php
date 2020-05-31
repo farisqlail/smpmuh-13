@@ -9,24 +9,23 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
+   <!-- Favicons -->
+   <link href="{{ asset('assets/img/logo.png')}}" rel="icon">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+   <!-- Google Fonts -->
+   <link
+     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+     rel="stylesheet">
+ 
+   <!-- Vendor CSS Files -->
+   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+   <link href="{{ asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+   <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+   <link href="{{ asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+   <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+   <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -52,30 +51,30 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <a href="index.html"><img src="./assets/img/logo-navbar.png" class="img-fluid mt-1 ml-3" alt=""></a>
+        <a href="{{ url('/') }}"><img src="{{ asset('./assets/img/logo-navbar.png')}}" class="img-fluid mt-1 ml-3" alt=""></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="drop-down"><a href="">Profile</a>
             <ul>
-                <li><a href="sejarah.html">Sejarah</a></li>
-                <li><a href="visi-misi.html">Visi Misi</a></li>
-                <li><a href="akreditasi.html">Akreditasi Sekolah</a></li>
-                <li><a href="beasiswa.html">Beasiswa</a></li>
-                <li><a href="staf.html">Stuf dan Guru</a></li>
-                <li><a href="mars.html">Mars Muhammadiyah</a></li>
-            </ul>
-          </li>
-          <li><a href="ekstrakulikuler.html">Ekstrakulikuler</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="berita.html">Berita</a></li>
-          <li class="drop-down"><a href="">Pendaftaran</a>
-            <ul>
-                <li><a href="ppdb.html">Info Pendaftaran</a></li>
-                <li><a href="ppdb.html">Daftar Online</a></li>
-            </ul>
-          </li>
+              <li><a href="{{ url('/tentang') }}">Tentang Sekolah</a></li>
+              <li><a href="{{ url('/visi') }}">Visi Misi</a></li>
+              <li><a href="{{ url('/akreditasi') }}">Akreditasi Sekolah</a></li>
+              <li><a href="{{ url('/beasiswa') }}">Beasiswa</a></li>
+              <li><a href="{{ url('/staf') }}">Stuf dan Guru</a></li>
+              <li><a href="{{ url('/mars') }}">Mars Muhammadiyah</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ url('/ekstra')}}">Ekstrakulikuler</a></li>
+        <li><a href="{{ url('/galeri') }}">Galeri</a></li>
+        <li><a href="{{ url('/berita') }}">Berita</a></li>
+        <li class="drop-down"><a href="">Pendaftaran</a>
+          <ul>
+            <li><a href="ppdb.html">Info Pendaftaran</a></li>
+            <li><a href="ppdb.html">Daftar Online</a></li>
+          </ul>
+        </li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -175,11 +174,10 @@
 
     <div class="footer-top">
 
-
       <div class="container">
         <div class="row">
           <div class="col-sm-4" align="left">
-            <img src="./assets/img/logo-2.png" class="img-fluid" alt="">
+            <img src="{{ asset('./assets/img/logo-2.png')}}" class="img-fluid" alt="">
             <p>Hallo, Selamat Datang di SMP Muhammadiyah 
               13 Surabaya. Sekolah islam memadukan nilai-nilai 
               tauhid ke seluruh kurikulum dan aktivitasnya </p>
@@ -195,20 +193,19 @@
             <h5>Menu</h5><br><br>
               <div class="row">
                 <div class="col">
-                  <a href="">Profil</a><br>
-                  <a href="">Tentang Kami</a><br>
-                  <a href="">Visi Misi</a><br>
-                  <a href="">Akreditasi</a><br>
-                  <a href="">Beasiswa</a><br>
-                  <a href="">Staff dan Guru</a><br>
-                  <a href="">Mars Muhammadiyah</a><br>
+                  <a href="{{ url('/tentang') }}">Tentang Kami</a><br>
+                  <a href="{{ url('/visi') }}">Visi Misi</a><br>
+                  <a href="{{ url('/akreditasi') }}">Akreditasi</a><br>
+                  <a href="{{ url('/beasiswa') }}">Beasiswa</a><br>
+                  <a href="{{ url('/staf') }}">Staff dan Guru</a><br>
+                  <a href="{{ url('/mars') }}">Mars Muhammadiyah</a><br>
             
                 </div>
                 <div class="col">
-                  <a href="">Ekstrakulikuler</a><br><br>
-                  <a href="">Galeri</a><br><br>
-                  <a href="">Berita</a><br><br>
-                  <a href="">Pendaftaran</a><br><br>
+                  <a href="{{ url('/ekstra') }}">Ekstrakulikuler</a><br><br>
+                  <a href="{{ url('/galeri') }}">Galeri</a><br><br>
+                  <a href="{{ url('/berita') }}">Berita</a><br><br>
+                  <a href="{{ url('/') }}">Pendaftaran</a><br><br>
                 </div>
               </div>
           </div>
@@ -229,17 +226,17 @@
   <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ asset('assets/vendor/jquery-sticky/jquery.sticky.js')}}"></script>
+  <script src="{{ asset('assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
 
   <script>
     var sp = document.querySelector('.search-open');
@@ -260,7 +257,7 @@
   </script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
 
 </body>
 

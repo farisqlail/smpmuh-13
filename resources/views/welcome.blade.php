@@ -51,23 +51,23 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <a href="index.html"><img src="{{ asset('./assets/img/logo-navbar.png')}}" class="img-fluid mt-1 ml-3" alt=""></a>
+      <a href="{{ url('/') }}"><img src="{{ asset('./assets/img/logo-navbar.png')}}" class="img-fluid mt-1 ml-3" alt=""></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="drop-down"><a href="">Profile</a>
             <ul>
-              <li><a href="tentang.html">Tentang Sekolah</a></li>
-                <li><a href="visi-misi.html">Visi Misi</a></li>
-                <li><a href="akreditasi.html">Akreditasi Sekolah</a></li>
-                <li><a href="beasiswa.html">Beasiswa</a></li>
-                <li><a href="staf.html">Stuf dan Guru</a></li>
-                <li><a href="mars.html">Mars Muhammadiyah</a></li>
+                <li><a href="{{ url('/tentang') }}">Tentang Sekolah</a></li>
+                <li><a href="{{ url('/visi') }}">Visi Misi</a></li>
+                <li><a href="{{ url('/akreditasi') }}">Akreditasi Sekolah</a></li>
+                <li><a href="{{ url('/beasiswa') }}">Beasiswa</a></li>
+                <li><a href="{{ url('/staf') }}">Stuf dan Guru</a></li>
+                <li><a href="{{ url('/mars') }}">Mars Muhammadiyah</a></li>
             </ul>
           </li>
-          <li><a href="ekstrakulikuler.html">Ekstrakulikuler</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="{{ url('/ekstra')}}">Ekstrakulikuler</a></li>
+          <li><a href="{{ url('/galeri') }}">Galeri</a></li>
           <li><a href="{{ url('/berita') }}">Berita</a></li>
           <li class="drop-down"><a href="">Pendaftaran</a>
             <ul>
@@ -253,20 +253,19 @@
             <h5>Menu</h5><br><br>
               <div class="row">
                 <div class="col">
-                  <a href="">Profil</a><br>
-                  <a href="">Tentang Kami</a><br>
-                  <a href="">Visi Misi</a><br>
-                  <a href="">Akreditasi</a><br>
-                  <a href="">Beasiswa</a><br>
-                  <a href="">Staff dan Guru</a><br>
-                  <a href="">Mars Muhammadiyah</a><br>
+                  <a href="{{ url('/tentang') }}">Tentang Kami</a><br>
+                  <a href="{{ url('/visi') }}">Visi Misi</a><br>
+                  <a href="{{ url('/akreditasi') }}">Akreditasi</a><br>
+                  <a href="{{ url('/beasiswa') }}">Beasiswa</a><br>
+                  <a href="{{ url('/staf') }}">Staff dan Guru</a><br>
+                  <a href="{{ url('/mars') }}">Mars Muhammadiyah</a><br>
             
                 </div>
                 <div class="col">
-                  <a href="">Ekstrakulikuler</a><br><br>
-                  <a href="">Galeri</a><br><br>
-                  <a href="">Berita</a><br><br>
-                  <a href="">Pendaftaran</a><br><br>
+                  <a href="{{ url('/ekstra') }}">Ekstrakulikuler</a><br><br>
+                  <a href="{{ url('/galeri') }}">Galeri</a><br><br>
+                  <a href="{{ url('/berita') }}">Berita</a><br><br>
+                  <a href="{{ url('/') }}">Pendaftaran</a><br><br>
                 </div>
               </div>
           </div>
