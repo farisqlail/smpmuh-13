@@ -571,6 +571,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  text-align: center;
 }
 
 #hero-1 h2 {
@@ -598,9 +599,20 @@ nav {
   color: #2d3436;
 }
 
+#hero-1 img {
+  width: 300px;
+  margin-top: 40px;
+}
+
 @media (min-width: 1024px) {
   #hero-1 {
     background-attachment: fixed;
+  }
+  #hero-1 h1{
+    text-align: left;
+  }
+  #hero-1 img{
+    margin-top: -20px;
   }
 }
 

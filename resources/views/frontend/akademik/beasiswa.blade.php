@@ -84,9 +84,16 @@
 
   <section id="hero-1">
     <div class="hero1-container" data-aos="fade-up">
-        <div class="container align-self-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
             <h1>Beasiswa SPEMGALAS</h1>
           </div>
+          <div class="col-lg-6" align="center">
+            <img src="{{ asset('assets/img/bea-img.png') }}" class="img-fluid" width="250px" alt="">
+          </div>
+        </div>
+      </div>
     </div>
     
     
