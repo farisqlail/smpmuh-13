@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\Berita;
 
 class BeritaController extends Controller
 {
@@ -25,7 +27,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.berita.create');
     }
 
     /**
@@ -36,7 +38,16 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Alert::success('Success', 'Berhasil Terupload');
+
+        Berita::create([
+            'judul' => request('judul'),
+            'slug' => str_slug(request('judul')),
+            'image' => request('image')->store('beritas'),
+            'deskripsi' => request('deskripsi')
+        ]);
+
+        return redirect()->route('admin.berita.index');
     }
 
     /**
@@ -45,9 +56,11 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Berita $berita)
     {
-        //
+        $beritas = Berita::all();
+
+        return view('admin.berita.index', compact('beritas'));
     }
 
     /**
@@ -58,7 +71,9 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $beritas = Berita::find($id);
+
+        return view('admin.berita.index', compact('beritas'));
     }
 
     /**
@@ -68,9 +83,22 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Berita $berita)
     {
-        //
+        if($berita->image){
+            \Storage::delete($berita->image);
+        }
+
+        Alert::success('Success', 'Berhasil Terupdate');
+
+        $berita->update([
+            'judul' => request('judul'),
+            'slug' => str_slug(request('judul')),
+            'image' => request('image')->store('beritas'),
+            'deskripsi' => request('deskripsi')
+        ]);
+
+        return redirect()->route('admin.berita.index');
     }
 
     /**
@@ -81,6 +109,8 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $berita->delete();
+
+        \Storage::delete($berita->image);
     }
 }

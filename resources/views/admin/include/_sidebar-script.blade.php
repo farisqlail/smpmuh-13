@@ -30,49 +30,39 @@
             </a>
             <div id="berita" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">List Artikel</a>
-                <a class="collapse-item" href="login.html">Tambah Artikel</a>
-                <hr>
-                <a class="collapse-item" href="login.html">Manange Artikel</a>
+                <a class="collapse-item" href="{{ url('/berita-admin') }}">List Berita</a>
+              <a class="collapse-item" href="{{ route('admin.berita-admin.create') }}">Tambah Berita</a>
               </div>
             </div>
           </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-book-open"></i>
-            <span>Akreditasi</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-book-open"></i>
-            <span>Staf</span></a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-              <i class="fas fa-fw fa-book-open"></i>
-              <span>Beasiswa</span></a>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#akademik" aria-expanded="true" aria-controls="collapsePages">
+              <i class="fas fa-fw fa-poll"></i>
+              <span>Akademik</span>
+            </a>
+            <div id="akademik" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Akreditasi</a>
+                <a class="collapse-item" href="login.html">Beasiswa</a>
+                <a class="collapse-item" href="login.html">Ekstrakulikuler</a>
+              </div>
+            </div>
           </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-              <i class="fas fa-fw fa-book-open"></i>
-              <span>Ekstra</span></a>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#profile" aria-expanded="true" aria-controls="collapsePages">
+              <i class="fas fa-fw fa-poll"></i>
+              <span>Profile</span>
+            </a>
+            <div id="profile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Staff</a>
+                <a class="collapse-item" href="login.html">Galeri</a>
+                <a class="collapse-item" href="login.html">Visi Misi</a>
+              </div>
+            </div>
           </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-book-open"></i>
-            <span>Galeri</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-book-open"></i>
-            <span>Visi Misi</span></a>
-        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="tables.html">

@@ -125,7 +125,7 @@
                     </div>
                     <div>
                         <div class="uk-card-body">
-                            <a href="show-berita.html"><h3 class="uk-card-title">PPDB SMP AL HIKMAH 2020-2021</h3></a>
+                            <a href="{{url('/show-berita')}}"><h3 class="uk-card-title">PPDB SMP AL HIKMAH 2020-2021</h3></a>
                             <p>Informasi Penerimaan Peserta Didik Baru SMP 
                               Muhammadiyah 13 Surabaya 2020-2021</p>
 

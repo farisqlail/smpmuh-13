@@ -15,6 +15,7 @@
 
             // Berita
             Route::get('/berita', 'BeritaController@index')->name('berita');
+            Route::get('/show-berita', 'BeritaController@show')->name('show-berita');
 
             // Akademik
             Route::get('/ekstra', 'EkstraController@index')->name('ekstra');
