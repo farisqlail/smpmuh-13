@@ -81,6 +81,7 @@
   </div> --}}
 
   @include('admin.include._footer-script')
+  @yield('script')
 </body>
 
 </html>

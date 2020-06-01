@@ -33,30 +33,20 @@
               </tr>
             </tfoot>
             <tbody>
+              @foreach ($berita as $brt)      
               <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
+                <td>{{ $brt->judul }}</td>
+                <td>{{ str_limit($brt->deskripsi, 50) }}</td>
+                <td align="center"><img src="{{ asset('storage/'.$brt->image) }}"  width="128px" alt=""></td>
+                <td>
+                  <a href="{{ route('admin.berita.edit', $brt) }}" class="btn btn-primary">Edit</a>
+
+                  <a href="{{ route('admin.berita.delete', $brt->id) }}" class="btn btn-danger">Delete</a>
+
+                </td>
               </tr>
-              <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-              </tr>
-              <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-              </tr>
-              <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-              </tr>
+            @endforeach
+
             </tbody>
           </table>
         </div>

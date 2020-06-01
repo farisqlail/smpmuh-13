@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Berita;
@@ -17,7 +18,9 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        return view('admin.berita.index');
+        $berita = Berita::paginate(10);
+
+        return view('admin.berita.index', compact('berita'));
     }
 
     /**
@@ -47,7 +50,7 @@ class BeritaController extends Controller
             'deskripsi' => request('deskripsi')
         ]);
 
-        return redirect()->route('admin.berita.index');
+        return redirect()->route('admin.berita-admin.index');
     }
 
     /**
@@ -58,9 +61,9 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        $beritas = Berita::all();
+        $berita = Berita::all();
 
-        return view('admin.berita.index', compact('beritas'));
+        return view('admin.berita.index', ['berita' => $berita]);
     }
 
     /**
@@ -69,11 +72,9 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Berita $berita)
     {
-        $beritas = Berita::find($id);
-
-        return view('admin.berita.index', compact('beritas'));
+        return view('admin.berita.edit', compact('berita'));
     }
 
     /**
@@ -91,6 +92,7 @@ class BeritaController extends Controller
 
         Alert::success('Success', 'Berhasil Terupdate');
 
+        // dd($berita);
         $berita->update([
             'judul' => request('judul'),
             'slug' => str_slug(request('judul')),
@@ -98,7 +100,7 @@ class BeritaController extends Controller
             'deskripsi' => request('deskripsi')
         ]);
 
-        return redirect()->route('admin.berita.index');
+        return redirect()->route('admin.berita-admin.index');
     }
 
     /**
@@ -107,10 +109,14 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Berita $berita)
     {
-        $berita->delete();
+        // dd($berita);
 
+        $berita->delete();
+        Alert::success('Success', 'Berhasul Dihapus');
         \Storage::delete($berita->image);
+
+        return redirect()->route('admin.berita-admin.index');
     }
 }
