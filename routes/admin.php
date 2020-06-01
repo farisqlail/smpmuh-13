@@ -11,6 +11,10 @@
         ], function () {
             Route::get('/admin', 'AdminController@index')->name('admin');
 
+            Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+                \UniSharp\LaravelFilemanager\Lfm::routes();
+            });
+            
             // Berita
             // Route::get('/berita-admin', 'BeritaController@index')->name('berita-admin');
             Route::get('/berita-admin/{berita}/delete', 'BeritaController@destroy')->name('berita.delete');

@@ -36,7 +36,7 @@
               @foreach ($berita as $brt)      
               <tr>
                 <td>{{ $brt->judul }}</td>
-                <td>{{ str_limit($brt->deskripsi, 50) }}</td>
+                <td>{!! str_limit($brt->deskripsi, 50) !!}</td>
                 <td align="center"><img src="{{ asset('storage/'.$brt->image) }}"  width="128px" alt=""></td>
                 <td>
                   <a href="{{ route('admin.berita.edit', $brt) }}" class="btn btn-primary">Edit</a>
