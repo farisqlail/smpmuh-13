@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Galeri;
 
 class GaleriController extends Controller
 {
@@ -17,7 +18,9 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        return view('admin.galeri.index');
+        $galeri = Galeri::all();
+
+        return view('admin.galeri.index', compact('galeri'));
     }
 
     /**
