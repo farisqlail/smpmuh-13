@@ -37,29 +37,14 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#akademik" aria-expanded="true" aria-controls="collapsePages">
-              <i class="fas fa-fw fa-poll"></i>
-              <span>Akademik</span>
-            </a>
-            <div id="akademik" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Akreditasi</a>
-                <a class="collapse-item" href="login.html">Beasiswa</a>
-                <a class="collapse-item" href="login.html">Ekstrakulikuler</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#profile" aria-expanded="true" aria-controls="collapsePages">
               <i class="fas fa-fw fa-poll"></i>
               <span>Profile</span>
             </a>
             <div id="profile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Staff</a>
-                <a class="collapse-item" href="login.html">Galeri</a>
-                <a class="collapse-item" href="login.html">Visi Misi</a>
+                <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Galeri</a>
               </div>
             </div>
           </li>

@@ -21,5 +21,12 @@
             Route::get('/berita-admin/{berita}/edit', 'BeritaController@edit')->name('berita.edit');
             Route::patch('/berita-admin/{berita}', 'BeritaController@update')->name('berita.update');
             Route::resource('/berita-admin', 'BeritaController');
+
+            Route::resource('/galeri-admin', 'GaleriController');
+
+            Route::get('/staff-admin/{staff}/edit', 'StaffController@edit')->name('staff.edit');
+            Route::patch('/staff-admin/{staff}', 'StaffController@update')->name('staff.update');
+            Route::get('/staff-admin/{staff}/delete', 'StaffController@destroy')->name('staff.delete');
+            Route::resource('/staff-admin', 'StaffController');
         });
     });

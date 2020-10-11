@@ -27,7 +27,7 @@
             <tfoot>
               <tr>
                 <th>Judul</th>
-                <th>Deskripsi</th>
+                {{-- <th>Deskripsi</th> --}}
                 <th>Created at</th>
                 <th>Actions</th>
               </tr>
@@ -36,9 +36,15 @@
               @foreach ($berita as $brt)      
               <tr>
                 <td>{{ $brt->judul }}</td>
-                <td>{!! str_limit($brt->deskripsi, 50) !!}</td>
-                <td align="center"><img src="{{ asset('storage/'.$brt->image) }}"  width="128px" alt=""></td>
                 <td>
+                  @php
+                    echo $brt->deskripsi;
+                  @endphp
+                </td>
+                <td>{{ $brt->created_at }}</td>
+                <td>
+                  <a href="{{ route('admin.berita.edit', $brt) }}" class="btn btn-success">Show</a>
+
                   <a href="{{ route('admin.berita.edit', $brt) }}" class="btn btn-primary">Edit</a>
 
                   <a href="{{ route('admin.berita.delete', $brt->id) }}" class="btn btn-danger">Delete</a>

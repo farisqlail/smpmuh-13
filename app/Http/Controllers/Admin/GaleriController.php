@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
-class AkreditasiController extends Controller
+class GaleriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +17,7 @@ class AkreditasiController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.galeri.index');
     }
 
     /**
