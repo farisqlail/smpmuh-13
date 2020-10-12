@@ -18,7 +18,7 @@
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Artikel</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">400 Artikel</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $beritaCount }} Artikel</div>
               </div>
               <div class="col-auto">
                 <i class="fas fa-newspaper fa-2x text-gray-300"></i>
@@ -35,7 +35,7 @@
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Staf</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">215 Users</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $staffCount }} Staff</div>
               </div>
               <div class="col-auto">
                 <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -51,28 +51,11 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Foto</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">50 Videos</div>
+                <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Galeri</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $galeriCount }} Foto</div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-user fa-2x text-gray-300"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-dark shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Berita Terbaru</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                <i class="fas fa-images fa-2x text-gray-300"></i>
               </div>
             </div>
           </div>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use App\Berita;
+use App\Staff;
+use App\Galeri;
 
 class AdminController extends Controller
 {
@@ -15,7 +18,16 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $berita = Berita::all();
+        $beritaCount = $berita->count();
+
+        $staff = Staff::all();
+        $staffCount = $staff->count();
+
+        $galeri = Galeri::all();
+        $galeriCount = $galeri->count();
+
+        return view('admin.dashboard', compact('beritaCount', 'staffCount', 'galeriCount'));
     }
 
     /**
