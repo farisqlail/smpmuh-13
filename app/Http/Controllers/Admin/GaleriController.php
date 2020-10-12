@@ -30,7 +30,7 @@ class GaleriController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.galeri.create');
     }
 
     /**
@@ -41,7 +41,14 @@ class GaleriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Alert::success('Success', 'Berhasil Terupload');
+
+        Galeri::create([
+            'name' => request('name'),
+            'image' => request('image')->store('galeri')
+        ]);
+
+        return redirect()->route('admin.galeri-admin.index');
     }
 
     /**
@@ -61,9 +68,20 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Galeri $galeri)
     {
-        //
+        if($galeri->image){
+            \Storage::delete($galeri->image);
+        }
+
+        Alert::success('Success', 'Berhasil Terupdate');
+
+        $galeri->update([
+            'name' => request('name'),
+            'image' => request('image')->store('galeri')
+        ]);
+
+        return redirect()->route('admin.galeri-admin.index');
     }
 
     /**
@@ -84,8 +102,12 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Galeri $galeri)
     {
-        //
+        $galeri->delete();
+        Alert::success('Success', 'Berhasil Dihapus');
+        \Storage::delete($galeri->image);
+
+        return redirect()->route('admin.galeri-admin.index');
     }
 }

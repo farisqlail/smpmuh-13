@@ -22,6 +22,9 @@
             Route::patch('/berita-admin/{berita}', 'BeritaController@update')->name('berita.update');
             Route::resource('/berita-admin', 'BeritaController');
 
+            Route::get('/galeri-admin/{galeri}/delete', 'GaleriController@destroy')->name('galeri.delete');
+            Route::get('/galeri-admin/{galeri}/edit', 'GaleriController@edit')->name('galeri.edit');
+            Route::patch('/galeri-admin/{galeri}', 'GaleriController@update')->name('galeri.update');
             Route::resource('/galeri-admin', 'GaleriController');
 
             Route::get('/staff-admin/{staff}/edit', 'StaffController@edit')->name('staff.edit');
