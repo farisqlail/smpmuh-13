@@ -40,7 +40,7 @@
                              <img src="{{ asset('storage/'.$glr->image) }}" height="90px">
                            </td>
                            <td>
-                                <a href="{{ route('admin.berita.edit', $glr) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('admin.galeri.edit', $glr) }}" class="btn btn-primary">Edit</a>
 
                                 <a href="{{ route('admin.galeri.delete', $glr->id) }}" class="btn btn-danger">Delete</a> 
 

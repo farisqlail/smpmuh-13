@@ -70,6 +70,18 @@ class GaleriController extends Controller
      */
     public function edit(Galeri $galeri)
     {
+       return view('admin.galeri.edit', compact('galeri'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Galeri $galeri)
+    {
         if($galeri->image){
             \Storage::delete($galeri->image);
         }
@@ -82,18 +94,6 @@ class GaleriController extends Controller
         ]);
 
         return redirect()->route('admin.galeri-admin.index');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
