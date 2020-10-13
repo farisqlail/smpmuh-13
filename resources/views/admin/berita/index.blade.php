@@ -20,6 +20,7 @@
               <tr>
                 <th>Judul</th>
                 <th>Deskripsi</th>
+                <th>Banner</th>
                 <th>Created at</th>
                 <th>Actions</th>
               </tr>
@@ -27,7 +28,8 @@
             <tfoot>
               <tr>
                 <th>Judul</th>
-                {{-- <th>Deskripsi</th> --}}
+                <th>Deskripsi</th>
+                <th>Banner</th>
                 <th>Created at</th>
                 <th>Actions</th>
               </tr>
@@ -40,6 +42,9 @@
                   @php
                     echo $brt->deskripsi;
                   @endphp
+                </td>
+                <td align="center"> 
+                  <img src="{{ asset('storage/'.$brt->image) }}" height="90px">
                 </td>
                 <td>{{ $brt->created_at }}</td>
                 <td>

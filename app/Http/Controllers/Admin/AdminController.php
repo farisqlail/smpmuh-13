@@ -18,7 +18,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $berita = Berita::all();
+        $berita = Berita::latest()->paginate(3);
+        $berita = Berita::orderBy('created_at', 'desc')->get();
         $beritaCount = $berita->count();
 
         $staff = Staff::all();
@@ -27,7 +28,7 @@ class AdminController extends Controller
         $galeri = Galeri::all();
         $galeriCount = $galeri->count();
 
-        return view('admin.dashboard', compact('beritaCount', 'staffCount', 'galeriCount'));
+        return view('admin.dashboard', compact('berita', 'beritaCount', 'staffCount', 'galeriCount'));
     }
 
     /**
