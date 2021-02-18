@@ -31,7 +31,7 @@
             <div id="berita" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ url('/berita-admin') }}">List Berita</a>
-              <a class="collapse-item" href="{{ route('admin.berita-admin.create') }}">Tambah Berita</a>
+              <a class="collapse-item" href="{{ route('frontend.berita-admin.create') }}">Tambah Berita</a>
               </div>
             </div>
           </li>

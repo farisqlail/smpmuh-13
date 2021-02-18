@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
-use App\Galeri;
+use App\Staff;
 
-class GaleriController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +19,15 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        $galeri = Galeri::all();
+        $staff = Staff::latest()->paginate(10);
 
-        return view('admin.galeri.index', compact('galeri'));
+        return view('admin.staff.index', compact('staff'));
     }
 
     public function home(){
-        
-        $galeri = Galeri::all();
+        $staff = Staff::latest()->paginate(10);
 
-        return view('frontend.profile.galeri', compact('galeri'));
+        return view('frontend.profile.staf', compact('staff'));
     }
 
     /**
@@ -38,7 +37,7 @@ class GaleriController extends Controller
      */
     public function create()
     {
-        return view('admin.galeri.create');
+        return view('admin.staff.create');
     }
 
     /**
@@ -51,12 +50,13 @@ class GaleriController extends Controller
     {
         Alert::success('Success', 'Berhasil Terupload');
 
-        Galeri::create([
+        Staff::create([
             'name' => request('name'),
-            'image' => request('image')->store('galeri')
+            'jabatan' => request('jabatan'),
+            'image' => request('image')->store('staff')
         ]);
 
-        return redirect()->route('admin.galeri-admin.index');
+        return redirect()->route('admin.staff-admin.index');
     }
 
     /**
@@ -67,7 +67,7 @@ class GaleriController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -76,9 +76,9 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Galeri $galeri)
+    public function edit(Staff $staff)
     {
-       return view('admin.galeri.edit', compact('galeri'));
+        return view('admin.staff.edit', compact('staff'));
     }
 
     /**
@@ -88,20 +88,21 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Galeri $galeri)
+    public function update(Staff $staff)
     {
-        if($galeri->image){
-            \Storage::delete($galeri->image);
+        if($staff->image){
+            \Storage::delete($staff->image);
         }
 
-        Alert::success('Success', 'Berhasil Terupdate');
+        Alert::success('Success', 'erhasil Terupdate');
 
-        $galeri->update([
+        $staff->update([
             'name' => request('name'),
-            'image' => request('image')->store('galeri')
+            'jabatan' => request('jabatan'),
+            'image' => request('image')->store('staff')
         ]);
 
-        return redirect()->route('admin.galeri-admin.index');
+        return redirect()->route('admin.staff-admin.index');
     }
 
     /**
@@ -110,12 +111,12 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Galeri $galeri)
+    public function destroy(Staff $staff)
     {
-        $galeri->delete();
+        $staff->delete();
         Alert::success('Success', 'Berhasil Dihapus');
-        \Storage::delete($galeri->image);
+        \Storage::delete($staff->image);
 
-        return redirect()->route('admin.galeri-admin.index');
+        return redirect()->route('admin.staff-admin.index');
     }
 }
