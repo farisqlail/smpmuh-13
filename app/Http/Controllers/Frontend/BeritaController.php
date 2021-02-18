@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 use App\Berita;
 
 class BeritaController extends Controller
@@ -24,11 +26,26 @@ class BeritaController extends Controller
         return view('admin.berita.index', compact('berita'));
     }
 
-    public function home(){
+    public function home()
+    {
 
         $berita = Berita::latest()->paginate(10);
 
         return view('frontend.berita.index', compact('berita'));
+    }
+
+    public function search(Request $request)
+    {
+        // menangkap data pencarian
+        $search = $request->search;
+
+        // mengambil data dari table pegawai sesuai pencarian data
+        $berita = DB::table('beritas')
+            ->where('judul', 'like', "%" . $search . "%")
+            ->paginate();
+
+        // mengirim data pegawai ke view index
+        return view('frontend.berita.index', ['berita' => $berita]);
     }
 
     /**
@@ -94,7 +111,7 @@ class BeritaController extends Controller
      */
     public function update(Berita $berita)
     {
-        if($berita->image){
+        if ($berita->image) {
             \Storage::delete($berita->image);
         }
 

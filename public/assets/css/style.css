@@ -1528,3 +1528,14 @@ figure.snip1205.hover i {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
+.section-5 .btn-search {
+  background: #3B519C; 
+  color: #fff; 
+  border: none;
+  margin-left: -10;
+}
+
+.section-5 .btn-search:hover {
+  background: #5F8CE1;
+}
