@@ -56,7 +56,7 @@ class StaffController extends Controller
             'image' => request('image')->store('staff')
         ]);
 
-        return redirect()->route('admin.staff-admin.index');
+        return redirect()->route('frontend.staff-admin.index');
     }
 
     /**
@@ -102,7 +102,7 @@ class StaffController extends Controller
             'image' => request('image')->store('staff')
         ]);
 
-        return redirect()->route('admin.staff-admin.index');
+        return redirect()->route('frontend.staff-admin.index');
     }
 
     /**
@@ -117,6 +117,6 @@ class StaffController extends Controller
         Alert::success('Success', 'Berhasil Dihapus');
         \Storage::delete($staff->image);
 
-        return redirect()->route('admin.staff-admin.index');
+        return redirect()->route('frontend.staff-admin.index');
     }
 }

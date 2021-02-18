@@ -64,7 +64,7 @@
     </div>
 
     <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
-        <h1 class="h3 mb-0 text-gray-800">Cerita Terbaru</h1>
+        <h1 class="h3 mb-0 text-gray-800">Artikel Terbaru</h1>
     </div>
 
     {{-- Card --}}
@@ -85,19 +85,6 @@
             @endforeach
         </div>
 
-        <div class="col-lg-6 mb-4">
-            <div class="card shadow mb-4">
-                <div class="card-header bg-primary py-3">
-                    <h6 class="m-0 font-weight-bold text-white">Data Terbaru</h6>
-                </div>
-                <div class="card-body">
-                    <div class="text-center">
-                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="{{ asset('sb-admin/img/undraw_posting_photo.svg')}}" alt="">
-                    </div>
-                    <p>Data terbaru dari teman kita yang ingin menceritakan tentang apa yang diarasakan. Ayo dengarkan mereka.</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 

@@ -7,7 +7,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Data Staff</h1>
-        <a href="{{ route('admin.galeri-admin.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Galeri</a>
+        <a href="{{ route('frontend.galeri-admin.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Galeri</a>
     </div>
 
     <!-- DataTales Example -->
@@ -40,9 +40,9 @@
                              <img src="{{ asset('storage/'.$glr->image) }}" height="90px">
                            </td>
                            <td>
-                                <a href="{{ route('admin.galeri.edit', $glr) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('frontend.galeri.edit', $glr) }}" class="btn btn-primary">Edit</a>
 
-                                <a href="{{ route('admin.galeri.delete', $glr->id) }}" class="btn btn-danger">Delete</a> 
+                                <a href="{{ route('frontend.galeri.delete', $glr->id) }}" class="btn btn-danger">Delete</a> 
 
                             </td>
                         </tr>

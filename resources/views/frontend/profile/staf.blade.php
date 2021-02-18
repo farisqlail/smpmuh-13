@@ -9,25 +9,25 @@
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{{ asset('assets/img/logo.png')}}" rel="icon">
+    <!-- Favicons -->
+    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
 
-  <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -40,11 +40,14 @@
                 <i class="icofont-envelope"></i><a href="mailto:smpmuh_13sby@yahoo.com">smpmuh_13sby@yahoo.com</a>
             </div>
             <div class="social-links">
-                <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook" target="blank"><i class="icofont-facebook"></i></a>
-                <a href="https://www.instagram.com/smpmuh13sby/" class="instagram" target="blank"><i class="icofont-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube" target="blank"><i class="icofont-youtube"></i></a>
+                <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"
+                    target="blank"><i class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/smpmuh13sby/" class="instagram" target="blank"><i
+                        class="icofont-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube" target="blank"><i
+                        class="icofont-youtube"></i></a>
                 <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-              </div>
+            </div>
         </div>
     </section>
 
@@ -53,7 +56,8 @@
         <div class="container d-flex">
 
             <div class="logo mr-auto">
-                <a href="{{ url('/') }}"><img src="{{ asset('./assets/img/logo-navbar.png')}}" class="img-fluid mt-1 ml-3" alt=""></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('./assets/img/logo-navbar.png') }}"
+                        class="img-fluid mt-1 ml-3" alt=""></a>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -64,19 +68,19 @@
                             <li><a href="{{ url('/visi') }}">Visi Misi</a></li>
                             <li><a href="{{ url('/akreditasi') }}">Akreditasi Sekolah</a></li>
                             <li><a href="{{ url('/beasiswa') }}">Beasiswa</a></li>
-                            <li><a href="{{ url('/staf') }}">Stuf dan Guru</a></li>
+                            <li><a href="{{ url('/staf') }}">Staff dan Guru</a></li>
                             <li><a href="{{ url('/mars') }}">Mars Muhammadiyah</a></li>
                         </ul>
-                      </li>
-                      <li><a href="{{ url('/ekstra')}}">Ekstrakulikuler</a></li>
-                      <li><a href="{{ url('/galeri') }}">Galeri</a></li>
-                      <li><a href="{{ url('/berita') }}">Berita</a></li>
-                      <li class="drop-down"><a href="">Pendaftaran</a>
+                    </li>
+                    <li><a href="{{ url('/ekstra') }}">Ekstrakulikuler</a></li>
+                    <li><a href="{{ url('/galeri') }}">Galeri</a></li>
+                    <li><a href="{{ url('/berita') }}">Berita</a></li>
+                    <li class="drop-down"><a href="">Pendaftaran</a>
                         <ul>
-                          <li><a href="ppdb.html">Info Pendaftaran</a></li>
-                          <li><a href="ppdb.html">Daftar Online</a></li>
+                            <li><a href="ppdb.html">Info Pendaftaran</a></li>
+                            <li><a href="ppdb.html">Daftar Online</a></li>
                         </ul>
-                      </li>
+                    </li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -85,16 +89,16 @@
 
     <section id="hero-1">
         <div class="hero1-container" data-aos="fade-up">
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <h1>Staff Dan Guru</h1>
-              </div>
-              <div class="col-lg-6" align="center">
-                <img src="{{ asset('assets/img/staff-img.png') }}" class="img-fluid" width="250px" alt="">
-              </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <h1>Staff Dan Guru</h1>
+                    </div>
+                    <div class="col-lg-6" align="center">
+                        <img src="{{ asset('assets/img/staff-img.png') }}" class="img-fluid" width="250px" alt="">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
 
     </section>
@@ -116,100 +120,23 @@
             <br>
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <div class="uk-child-width-1-2@m" uk-grid align="center">
-                            <div style="width: 340px;">
-                                <div class="uk-card uk-card-default">
-                                    <div class="uk-card-media-top">
-                                        <img src="./assets/img/staff-1.png" class="mt-1" alt="">
-                                    </div>
-                                    <div class="uk-card-body">
-                                        <h3 class="uk-card-title">Wilson Schlire</h3>
-                                        <p>Head Master of SPEMGALAS</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><br>
-                        </div>
-                        <div class="col">
-                            <div class="uk-child-width-1-2@m" uk-grid align="center">
-                                <div style="width: 340px;">
-                                    <div class="uk-card uk-card-default" >
-                                        <div class="uk-card-media-top">
-                                            <img src="./assets/img/staff-1.png" class="mt-1" alt="">
-                                        </div>
-                                        <div class="uk-card-body">
-                                            <h3 class="uk-card-title">Wilson Schlire</h3>
-                                            <p>Head Master of SPEMGALAS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><br>
-                        </div>
-                        <div class="col">
-                            <div class="uk-child-width-1-2@m" uk-grid align="center">
-                                <div style="width: 340px;">
-                                    <div class="uk-card uk-card-default" >
-                                        <div class="uk-card-media-top">
-                                            <img src="./assets/img/staff-1.png" class="mt-1" alt="">
-                                        </div>
-                                        <div class="uk-card-body">
-                                            <h3 class="uk-card-title">Wilson Schlire</h3>
-                                            <p>Head Master of SPEMGALAS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><br>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
+                    @foreach ($staff as $stf)
+                        <div class="col-md-4">
                             <div class="uk-child-width-1-2@m" uk-grid align="center">
                                 <div style="width: 340px;">
                                     <div class="uk-card uk-card-default">
                                         <div class="uk-card-media-top">
-                                            <img src="./assets/img/staff-1.png" class="mt-1" alt="">
+                                            <img src="{{ asset('storage/' . $stf->image) }}" class="mt-1" alt="">
                                         </div>
                                         <div class="uk-card-body">
-                                            <h3 class="uk-card-title">Wilson Schlire</h3>
-                                            <p>Head Master of SPEMGALAS</p>
+                                            <h3 class="uk-card-title">{{ $stf->name }}</h3>
+                                            <p>{{ $stf->jabatan }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div><br>
-                            </div>
-                            <div class="col">
-                                <div class="uk-child-width-1-2@m" uk-grid align="center">
-                                    <div style="width: 340px;">
-                                        <div class="uk-card uk-card-default" >
-                                            <div class="uk-card-media-top">
-                                                <img src="./assets/img/staff-1.png" class="mt-1" alt="">
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <h3 class="uk-card-title">Wilson Schlire</h3>
-                                                <p>Head Master of SPEMGALAS</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><br>
-                            </div>
-                            <div class="col">
-                                <div class="uk-child-width-1-2@m" uk-grid align="center">
-                                    <div style="width: 340px;">
-                                        <div class="uk-card uk-card-default" >
-                                            <div class="uk-card-media-top">
-                                                <img src="./assets/img/staff-1.png" class="mt-1" alt="">
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <h3 class="uk-card-title">Wilson Schlire</h3>
-                                                <p>Head Master of SPEMGALAS</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                    @endforeach
                 </div>
         </section>
 
@@ -217,98 +144,99 @@
 
 
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
 
-    <div class="footer-top">
+        <div class="footer-top">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4" align="left">
-            <img src="{{ asset('./assets/img/logo-2.png')}}" class="img-fluid" alt="">
-            <p>Hallo, Selamat Datang di SMP Muhammadiyah 
-              13 Surabaya. Sekolah islam memadukan nilai-nilai 
-              tauhid ke seluruh kurikulum dan aktivitasnya </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4" align="left">
+                        <img src="{{ asset('./assets/img/logo-2.png') }}" class="img-fluid" alt="">
+                        <p>Hallo, Selamat Datang di SMP Muhammadiyah
+                            13 Surabaya. Sekolah islam memadukan nilai-nilai
+                            tauhid ke seluruh kurikulum dan aktivitasnya </p>
 
-              <div class="social-links">
-                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                <a href="#" class="youtube"><i class="icofont-youtube"></i></a>
-                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-              </div><br><br>
-          </div>
-          <div class="col-sm-4" align="left">
-            <h5>Menu</h5><br><br>
-              <div class="row">
-                <div class="col">
-                  <a href="{{ url('/tentang') }}">Tentang Kami</a><br>
-                  <a href="{{ url('/visi') }}">Visi Misi</a><br>
-                  <a href="{{ url('/akreditasi') }}">Akreditasi</a><br>
-                  <a href="{{ url('/beasiswa') }}">Beasiswa</a><br>
-                  <a href="{{ url('/staf') }}">Staff dan Guru</a><br>
-                  <a href="{{ url('/mars') }}">Mars Muhammadiyah</a><br>
-            
+                        <div class="social-links">
+                            <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                            <a href="#" class="youtube"><i class="icofont-youtube"></i></a>
+                            <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                        </div><br><br>
+                    </div>
+                    <div class="col-sm-4" align="left">
+                        <h5>Menu</h5><br><br>
+                        <div class="row">
+                            <div class="col">
+                                <a href="{{ url('/tentang') }}">Tentang Kami</a><br>
+                                <a href="{{ url('/visi') }}">Visi Misi</a><br>
+                                <a href="{{ url('/akreditasi') }}">Akreditasi</a><br>
+                                <a href="{{ url('/beasiswa') }}">Beasiswa</a><br>
+                                <a href="{{ url('/staf') }}">Staff dan Guru</a><br>
+                                <a href="{{ url('/mars') }}">Mars Muhammadiyah</a><br>
+
+                            </div>
+                            <div class="col">
+                                <a href="{{ url('/ekstra') }}">Ekstrakulikuler</a><br><br>
+                                <a href="{{ url('/galeri') }}">Galeri</a><br><br>
+                                <a href="{{ url('/berita') }}">Berita</a><br><br>
+                                <a href="{{ url('/') }}">Pendaftaran</a><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" align="left">
+                        <h5>Informasi</h5>
+                        <p><i class="icofont-location-arrow"></i> Jl. Tambak Segaran No. 27 Surabaya<br />
+                            <i class="icofont-phone"></i> 031-3772661 <br />
+                            <i class="icofont-envelope"></i> smpmuh_13sby@yahoo.com
+                        </p>
+                    </div>
                 </div>
-                <div class="col">
-                  <a href="{{ url('/ekstra') }}">Ekstrakulikuler</a><br><br>
-                  <a href="{{ url('/galeri') }}">Galeri</a><br><br>
-                  <a href="{{ url('/berita') }}">Berita</a><br><br>
-                  <a href="{{ url('/') }}">Pendaftaran</a><br><br>
-                </div>
-              </div>
-          </div>
-          <div class="col-sm-4" align="left">
-            <h5>Informasi</h5>
-            <p><i class="icofont-location-arrow"></i> Jl. Tambak Segaran No. 27 Surabaya<br/>
-               <i class="icofont-phone"></i> 031-3772661 <br/>
-               <i class="icofont-envelope"></i> smpmuh_13sby@yahoo.com</p>
-          </div>
-        </div>
-      </div>
+            </div>
 
     </footer><!-- End Footer -->
-        <div class="akhir" align="center">
-          <small class="mt-1">2020 © All Rights Reserved Design By @Tim Elit</small>
-        </div>
+    <div class="akhir" align="center">
+        <small class="mt-1">2020 © All Rights Reserved Design By @Tim Elit</small>
+    </div>
 
-  <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+    <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
-  <script src="{{ asset('assets/vendor/jquery-sticky/jquery.sticky.js')}}"></script>
-  <script src="{{ asset('assets/vendor/venobox/venobox.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/counterup/counterup.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+    <script src="{{ asset('assets/vendor/venobox/venobox.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
     <!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
 
-  <script>
-    var sp = document.querySelector('.search-open');
-    var searchbar = document.querySelector('.search-inline');
-    var shclose = document.querySelector('.search-close');
+    <script>
+        var sp = document.querySelector('.search-open');
+        var searchbar = document.querySelector('.search-inline');
+        var shclose = document.querySelector('.search-close');
 
-    function changeClass() {
-        searchbar.classList.add('search-visible');
-    }
+        function changeClass() {
+            searchbar.classList.add('search-visible');
+        }
 
-    function closesearch() {
-        searchbar.classList.remove('search-visible');
-    }
+        function closesearch() {
+            searchbar.classList.remove('search-visible');
+        }
 
-    sp.addEventListener('click', changeClass);
-    shclose.addEventListener('click', closesearch);
-                
-  </script>
+        sp.addEventListener('click', changeClass);
+        shclose.addEventListener('click', closesearch);
 
-  <!-- Template Main JS File -->
-  <script src="{{ asset('assets/js/main.js')}}"></script>
+    </script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 

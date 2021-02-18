@@ -38,7 +38,7 @@
 
           <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#profile" aria-expanded="true" aria-controls="collapsePages">
-              <i class="fas fa-fw fa-poll"></i>
+              <i class="fas fa-fw fa-id-badge"></i>
               <span>Profile</span>
             </a>
             <div id="profile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">

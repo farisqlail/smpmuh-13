@@ -48,11 +48,11 @@
                 </td>
                 <td>{{ $brt->created_at }}</td>
                 <td>
-                  <a href="{{ route('admin.berita.edit', $brt) }}" class="btn btn-success">Show</a>
+                  <a href="{{ route('frontend.berita.edit', $brt) }}" class="btn btn-success">Show</a>
 
-                  <a href="{{ route('admin.berita.edit', $brt) }}" class="btn btn-primary">Edit</a>
+                  <a href="{{ route('frontend.berita.edit', $brt) }}" class="btn btn-primary">Edit</a>
 
-                  <a href="{{ route('admin.berita.delete', $brt->id) }}" class="btn btn-danger">Delete</a>
+                  <a href="{{ route('frontend.berita.delete', $brt->id) }}" class="btn btn-danger">Delete</a>
 
                 </td>
               </tr>

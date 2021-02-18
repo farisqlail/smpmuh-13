@@ -62,7 +62,7 @@
                   <li><a href="{{ url('/visi') }}">Visi Misi</a></li>
                   <li><a href="{{ url('/akreditasi') }}">Akreditasi Sekolah</a></li>
                   <li><a href="{{ url('/beasiswa') }}">Beasiswa</a></li>
-                  <li><a href="{{ url('/staf') }}">Stuf dan Guru</a></li>
+                  <li><a href="{{ url('/staf') }}">Staff dan Guru</a></li>
                   <li><a href="{{ url('/mars') }}">Mars Muhammadiyah</a></li>
               </ul>
             </li>
@@ -137,79 +137,7 @@
                     <a href="./assets/img/gal-3.png" data-gall="galeri" class="venobox"></a>
                   </figure>
                 </div>
-            </div> <br><br>
-
-            <div class="row">
-                <div class="col">
-                     <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-2.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-2.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-                </div>
-                <div class="col">
-                     <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-5.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-5.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-                </div>
-                <div class="col">
-                     <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-6.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-6.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-                </div>
-            </div> <br><br>
-
-            <div class="row">
-              <div class="col">
-                   <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-3.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-3.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-              </div>
-              <div class="col">
-                   <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-2.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-2.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-              </div>
-              <div class="col">
-                   <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-3.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-3.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-              </div>
-          </div> <br><br>
-
-          <div class="row">
-            <div class="col">
-                 <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-4.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-4.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-            </div>
-            <div class="col">
-                 <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-5.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-5.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-            </div>
-            <div class="col">
-                 <figure class="snip1205 blue">
-                    <img src="./assets/img/gal-6.png" alt="sample43"/>
-                    <i class="icofont-search"></i>
-                    <a href="./assets/img/gal-6.png" data-gall="galeri" class="venobox"></a>
-                  </figure>
-            </div>
-        </div> <br><br>
+            </div> <br> <br>
 
         </div>
     </section>

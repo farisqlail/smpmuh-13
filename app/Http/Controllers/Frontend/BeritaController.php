@@ -58,7 +58,7 @@ class BeritaController extends Controller
             'deskripsi' => request('deskripsi')
         ]);
 
-        return redirect()->route('admin.berita-admin.index');
+        return redirect()->route('frontend.berita-admin.index');
     }
 
     /**
@@ -108,7 +108,7 @@ class BeritaController extends Controller
             'deskripsi' => request('deskripsi')
         ]);
 
-        return redirect()->route('admin.berita-admin.index');
+        return redirect()->route('frontend.berita-admin.index');
     }
 
     /**
@@ -125,6 +125,6 @@ class BeritaController extends Controller
         Alert::success('Success', 'Berhasul Dihapus');
         \Storage::delete($berita->image);
 
-        return redirect()->route('admin.berita-admin.index');
+        return redirect()->route('frontend.berita-admin.index');
     }
 }

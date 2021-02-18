@@ -7,7 +7,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Data Staff</h1>
-        <a href="{{ route('admin.staff-admin.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Staff</a>
+        <a href="{{ route('frontend.staff-admin.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Staff</a>
     </div>
 
     <!-- DataTales Example -->
@@ -44,9 +44,9 @@
                             </td>
                             <td>
 
-                            <a href="{{ route('admin.staff.edit', $stf) }}" class="btn btn-primary">Edit</a>
+                            <a href="{{ route('frontend.staff.edit', $stf) }}" class="btn btn-primary">Edit</a>
 
-                            <a href="{{ route('admin.staff.delete', $stf->id) }}" class="btn btn-danger">Delete</a>
+                            <a href="{{ route('frontend.staff.delete', $stf->id) }}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach

@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
 
-            <form action="{{ route('admin.staff.update', $staff) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('frontend.staff.update', $staff) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
 

@@ -56,7 +56,7 @@ class GaleriController extends Controller
             'image' => request('image')->store('galeri')
         ]);
 
-        return redirect()->route('admin.galeri-admin.index');
+        return redirect()->route('frontend.galeri-admin.index');
     }
 
     /**
@@ -101,7 +101,7 @@ class GaleriController extends Controller
             'image' => request('image')->store('galeri')
         ]);
 
-        return redirect()->route('admin.galeri-admin.index');
+        return redirect()->route('frontend.galeri-admin.index');
     }
 
     /**
@@ -116,6 +116,6 @@ class GaleriController extends Controller
         Alert::success('Success', 'Berhasil Dihapus');
         \Storage::delete($galeri->image);
 
-        return redirect()->route('admin.galeri-admin.index');
+        return redirect()->route('frontend.galeri-admin.index');
     }
 }

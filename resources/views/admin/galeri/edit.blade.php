@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
 
-            <form action="{{ route('admin.galeri-admin.update', $galeri) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('frontend.galeri-admin.update', $galeri) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
 

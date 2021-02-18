@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
 
-            <form action="{{ route('admin.berita-admin.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('frontend.berita-admin.store') }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
 
                     <div class="form-goup">

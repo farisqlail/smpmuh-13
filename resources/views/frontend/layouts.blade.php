@@ -62,7 +62,7 @@
                             <li><a href="{{ url('/visi') }}">Visi Misi</a></li>
                             <li><a href="{{ url('/akreditasi') }}">Akreditasi Sekolah</a></li>
                             <li><a href="{{ url('/beasiswa') }}">Beasiswa</a></li>
-                            <li><a href="{{ url('/staf') }}">Stuf dan Guru</a></li>
+                            <li><a href="{{ url('/staf') }}">Staff dan Guru</a></li>
                             <li><a href="{{ url('/mars') }}">Mars Muhammadiyah</a></li>
                         </ul>
                     </li>
