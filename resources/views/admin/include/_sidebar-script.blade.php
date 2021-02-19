@@ -52,8 +52,9 @@
         <li class="nav-item">
           <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
-            <span>Setting</span></a>
+            <span>Pendaftaran</span></a>
         </li>
+        
   
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

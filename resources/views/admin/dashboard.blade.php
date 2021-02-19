@@ -68,11 +68,10 @@
     </div>
 
     {{-- Card --}}
-    <div class="row">
-        <div class="col-lg-6 mb-4">
-
+    {{-- <div class="row">
+        <div class="col-lg-6">
             @foreach($berita as $brt)
-            <div class="card shadow mb-4">
+            <div class="card mt-3 shadow">
                 <div class="card-header bg-dark py-3">
                     <h6 class="m-0 font-weight-bold text-white">{{ $brt->judul }}</h6>
                 </div>
@@ -85,7 +84,7 @@
             @endforeach
         </div>
 
-    </div>
+    </div> --}}
 
 
 </div>

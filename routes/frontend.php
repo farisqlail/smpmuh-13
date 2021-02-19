@@ -32,6 +32,10 @@ Route::name('frontend.')->group(function () {
             Route::get('/staf', 'StaffController@home')->name('staf');
             Route::get('/tentang', 'TentangController@index')->name('tentang');
             Route::get('/visi', 'VisiController@index')->name('visi');
+
+            //Comment 
+            Route::resource('/comment', 'CommentController');
+            // Route::post('/berita/{comment}/comment', 'CommentController@store')->name('berita-comment');
         }
 
     );
@@ -40,6 +44,7 @@ Route::name('frontend.')->group(function () {
 Route::name('frontend.')->group(function () {
     Route::group([
         'namespace' => 'Frontend',
+        'middleware' => 'auth'
     ], function () {
         Route::get('/admin', 'AdminController@index')->name('admin');
 
