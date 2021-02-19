@@ -88,7 +88,7 @@ class BeritaController extends Controller
     {
         $berita = Berita::all();
 
-        return view('admin.berita.index', ['berita' => $berita]);
+        return view('frontend.berita.show-berita', ['berita' => $berita]);
     }
 
     /**

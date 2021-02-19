@@ -37,13 +37,17 @@
                         @foreach ($berita as $brt)
                             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                                 <div class="uk-card-media-left uk-cover-container">
-                                    <img src="{{ asset('storage/' . $brt->image) }}" alt="" uk-cover>
-                                    <canvas width="600" height="400"></canvas>
+                                    <a href="{{ route('frontend.show-berita', $brt) }}">
+                                        <img src="{{ asset('storage/' . $brt->image) }}" alt="" uk-cover>
+                                    </a>
+                                        <canvas width="600" height="400"></canvas>
                                 </div>
 
                                 <div>
                                     <div class="uk-card-body">
-                                        <h3 class="uk-card-title">{{ $brt->judul }}</h3>
+                                        <a href="{{ route('frontend.show-berita', $brt) }}" class="link">
+                                            <h3 class="uk-card-title">{{ $brt->judul }}</h3>
+                                        </a>
                                         <p>
                                             {!! Str::limit($brt->deskripsi, 30) !!}
                                         </p>
@@ -93,10 +97,11 @@
                                     Berita Terbaru
                                     <div class="border-1 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
                                 </h6>
-                                <a href="#" class="berita-terbaru"> PPDB SMP Muhammadiyah 13 2020-2021</a><br>
-                                <a href="#" class="berita-terbaru"> PPDB SMP Muhammadiyah 13 2020-2021</a><br>
-                                <a href="#" class="berita-terbaru"> PPDB SMP Muhammadiyah 13 2020-2021</a><br>
-                                <a href="#" class="berita-terbaru"> PPDB SMP Muhammadiyah 13 2020-2021</a>
+                                @foreach ($berita as $brt)
+                                    <a href="{{ route('frontend.show-berita', $brt) }}"
+                                        class="berita-terbaru">{{ $brt->judul }}</a><br>
+                                @endforeach
+
                             </div>
                         </div><br>
 

@@ -111,10 +111,10 @@
             <div class="row">
                 <div class="col-lg-8">
 
-                    <h2 style="font-weight: 600;">Info PPDB SMP Muhammadiyah 13 Surabaya</h2>
+                    <h2 style="font-weight: 600;">{{ $berita[0]->judul }}</h2>
                     <div class="row">
                         <div class="col">
-                            <small><i class="icofont-calendar"></i>&nbsp; 26 April 2020</small>
+                            <small><i class="icofont-calendar"></i>&nbsp; {{ \Carbon\Carbon::parse($berita[0]->created_at)->diffForHumans() }}</small>
                         </div>
                         <div class="col" align="right">
                             <div class="social-links">
@@ -126,66 +126,12 @@
                         </div>
                     </div><br>
 
-                    <img src="./assets/img/show.png" class="img-fluid" style="width: 100%;" alt=""><br><br>
+                    <img src="{{ asset('storage/' . $berita[0]->image) }}" class="img-fluid" style="width: 100%;" alt=""><br><br>
 
                     <p>
-                        Informasi Penerimaan Peserta Didik Baru SMP Al Hikmah Surabaya 2020-2021<br><br>
-
-                        Penerimaan Peserta Didik Baru SMP Al Hikmah segera dibuka, berikut Informasi lengkap tentang Pendaftaran SMP Al Hikmah:<br><br>
-
-                        A. Biaya Pendaftaran
-                        Rp. 500.000<br><br>
-
-                        B. Biaya Pendidikan
-                        1. Infaq : Rp. 30.000.000
-                        2. DPP : Rp. 5.750.000/tahun
-                        3. BPP : Rp. 2.400.000/bulan
-                        *DPP : Dana Pengembangan Pendidikan
-                        *BPP : Biaya Penyelenggaraan Pendidikan<br><br>
-
-                        C . Waktu
-                        – 04 – 11 November ’19 : Pendaftaran di Tempat
-                        – 04 Nov – 13 Des ’19 : Pendaftaran secara online
-                        – 14 – 15 Des ’19 : Observasi (Tes Psikologi, Tes Akademik, Al-Quran)
-                        – 18 Januari 2020 : PENGUMUMAN HASIL OBSERVASI<br><br>
-
-                        D. Tes dan Observasi
-                        1. Tes Akademik (Bahasa Indonesia, Matematika, IPA)
-                        2. Psikotest
-                        3. Observasi Kemampuan membaca Al-Quran
-                        4. Observasi Hafalan surat-surat pilihan antara lain :
-                        – Ad Dhuha
-                        – Al Humazah
-                        – Al Qodar
-                        – Al Qori’ah
-                        – Quriasy
-                        – At Tiin
-                        – Al Insyirah
-                        – Al ‘Adiyat
-                        – An Nasr<br><br>
-
-                        Untuk pendaftaran di tempat (04-11 Nov 2019), datang langsung ke Kampus SMP Al Hikmah Jl. Kebonsari ELVEKA V Surabaya dan dibutuhkan informasi awal sebagai berikut :<br><br>
-
-                            NIK calon siswa (bisa membawa FC KK)
-                            NISN calon siswa
-                            No. Induk Siswa (Khusus dari SD Al hikmah)<br><br>
-
-                        Link Alur Pendaftaran  |  Langkah pendaftaran online  |  Link Pendaftaran Online<br><br>
-
-                        
-
-                            Informasi lebih lanjut bisa Telp. di 031-8288228 – Whatsapps
-                            Datang langsung ke kampus SMP Al Hikmah
-                            Jl. Kebonsari ELVEKA V Jambangan Surabaya<br><br>
-
-                        KETENTUAN PEMBAYARAN<br><br>
-
-                            Bagi orang tua yang putra/putrinya telah dinyatakan diterima, wajib melunasi biaya pendidikan paling lambat 10 hari efektif setelah pengumuman.
-                            Apabila sampai waktu yang ditentukan tersebut diatas belum menyelesaikan kewajiban melunasi biaya pendidikan, maka calon siswa tersebut dinyatakan mengundurkan diri.<br>
-                            Bagi orang tua yang mempunyai putra/putri di al hikmah lebih dari 1 (satu) pada tahun pelajaran 2020/2021, anak ke dua dan seterusnya akan mendapatkan potongan BPP/bulan sebesar 10%.
-                            Siswa mengundurkan diri sebelum tahun pelajaran 2020/2021 dimulai, berkewajiban membuat surat pengunduran diri secara tertulis ditujukan kepada kepala sekolah, serta membayar Ta’widl Pembatalan sebesar 75% dari biaya infaq.<br>
-                            Ketentuan tersebut di atas bersifat mengikat dan final menjadi salah satu persyaratan diterimanya calon peserta didik.
-
+                      @php
+                          echo $berita[0]->deskripsi;
+                      @endphp
                     </p>
                     <br><br>
                    
@@ -197,10 +143,9 @@
                             Berita Terbaru
                             <div class="border-1 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
                           </h6>
-                          <a href="#" class="berita-terbaru">PPDB SMP Muhammadiyah 13 2020-2021</a><br>
-                          <a href="#" class="berita-terbaru">PPDB SMP Muhammadiyah 13 2020-2021</a><br>
-                          <a href="#" class="berita-terbaru">PPDB SMP Muhammadiyah 13 2020-2021</a><br>
-                          <a href="#" class="berita-terbaru">PPDB SMP Muhammadiyah 13 2020-2021</a>
+                          @foreach ($berita as $brt)
+                          <a href="{{ route('frontend.show-berita', $brt) }}" class="berita-terbaru">{{ $brt->judul }}</a><br>
+                          @endforeach
                         </div>
                       </div><br>
                       
@@ -212,7 +157,7 @@
                           </h4>
                           <div class="row">
                             <div class="col">
-                              <img src="./assets/img/logo.png" class="img-fluid" alt="">
+                              <img src="{{asset('/assets/img/logo.png')}}" class="img-fluid" alt="">
                             </div>
                             <div class="col">
                               <strong>smp muhammadiyah 13 surabaya</strong>

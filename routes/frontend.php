@@ -18,7 +18,7 @@ Route::name('frontend.')->group(function () {
 
             // Berita
             Route::get('/berita', 'BeritaController@home')->name('berita');
-            Route::get('/show-berita', 'BeritaController@show')->name('show-berita');
+            Route::get('/show-berita/{berita}', 'BeritaController@show')->name('show-berita');
             Route::get('/berita/search', 'BeritaController@search')->name('berita-search');
 
             // Akademik
