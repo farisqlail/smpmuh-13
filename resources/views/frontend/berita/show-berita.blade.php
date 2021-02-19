@@ -102,7 +102,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb shadow p-3 mb-5 bg-white rounded">
                 <li class="breadcrumb-item"><a href="#">Profile</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Info PPDB SMP Muhammadiyah 13 Surabaya</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $berita[0]->judul }}</li>
             </ol>
         </nav>
     </div>
@@ -241,7 +241,7 @@
                 <br><br>
                 <h6>Tinggalkan Komentar</h6>
                 <form action="{{ route('frontend.comment.store') }}" method="POST">
-                    {{ csrf_field() }}
+                  {{ csrf_field() }}
                     <div class="form-group">
                         <label>Komentar</label>
                         <textarea class="form-control" name="content" rows="5"></textarea>
@@ -261,9 +261,9 @@
                         </div>
                     </div><br>
 
-                    <div class="form-group" align="center">
-                        <input type="submit" class="btn btn-komentar" value="Kirim Komentar" />
-                    </div>
+                    
+                    <input value="Kirim Komentar" type="submit" class="btn btn-komentar" />
+                    
                 </form>
             </div>
         </section>

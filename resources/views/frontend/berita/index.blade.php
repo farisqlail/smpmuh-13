@@ -39,8 +39,8 @@
                                 <div class="uk-card-media-left uk-cover-container">
                                     <a href="{{ route('frontend.show-berita', $brt) }}">
                                         <img src="{{ asset('storage/' . $brt->image) }}" alt="" uk-cover>
-                                    </a>
                                         <canvas width="600" height="400"></canvas>
+                                    </a>
                                 </div>
 
                                 <div>
@@ -59,10 +59,10 @@
                                         </small>
                                     </div>
                                 </div>
-                            </div><br><br>
+                            </div>
                         @endforeach
 
-
+                        <br><br>
                         <nav aria-label="Page navigation example">
                             <ul class="pagination d-flex justify-content-center">
                                 <li class="page-item">
@@ -84,11 +84,11 @@
                         </nav>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-10">
                         <form action="{{ route('frontend.berita-search') }}" method="GET">
                             <input class="form-control" name="search" value="{{ old('search') }}" type="text"
                                 placeholder="Search ...">
-
+                        
                             <br>
                         </form>
                         <div class="card">
@@ -101,34 +101,15 @@
                                     <a href="{{ route('frontend.show-berita', $brt) }}"
                                         class="berita-terbaru">{{ $brt->judul }}</a><br>
                                 @endforeach
-
+                        
                             </div>
                         </div><br>
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 style="font-weight: 500;">
-                                    Feed Instagram SPEMGALAS
-                                    <div class="border-2 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
-                                </h4>
-                                <div class="row">
-                                    <div class="col">
-                                        <img src="./assets/img/logo.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="col">
-                                        <strong>smp muhammadiyah 13 surabaya</strong>
-                                        <p>@smpmuh13sby</p>
-                                        <a href="https://www.instagram.com/smpmuh13sby/" target="blank" class="btn"
-                                            style="background-color: #3B519C; color: #fff;">Follow</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/smpmuh13sby/" target="blank">
-                                <img src="./assets/img/feed.png" class="img-fluid mt-3" style="width: 100%;" alt="">
-                            </a>
-                        </div>
+                        
 
                     </div>
+                </div>
+            </div>
 
         </section>
 

@@ -39,9 +39,7 @@
               <tr>
                 <td>{{ $brt->judul }}</td>
                 <td>
-                  @php
-                    echo $brt->deskripsi;
-                  @endphp
+                  {!! Str::limit($brt->deskripsi, 50) !!}
                 </td>
                 <td align="center"> 
                   <img src="{{ asset('storage/'.$brt->image) }}" height="90px">
