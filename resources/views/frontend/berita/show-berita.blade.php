@@ -149,30 +149,25 @@
                     <div class="border-4 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
                 </h4><br>
 
-                <div class="media mt-3 mb-3">
-                    <img src="./assets/img/user.png" class="mr-3 ml-2" style="width: 60px" alt="...">
-                    <div class="media-body">
-                        <h5 class="mt-0" style="font-weight: 500;">Mustofa</h5>
-                        <small><i class="icofont-calendar"></i>&nbsp; 24 April 2020 at 15:20</small>
-                        <p>Wah informasinya keren</p>
-                    </div>
-                </div><br>
-
-
-                <div class="media mt-3 mb-3">
-                    <img src="./assets/img/user.png" class="mr-3 ml-2" style="width: 60px" alt="...">
-                    <div class="media-body">
-                        <h5 class="mt-0" style="font-weight: 500;">Mustofa</h5>
-                        <small><i class="icofont-calendar"></i>&nbsp; 24 April 2020 at 15:20</small>
-                        <p>Wah informasinya keren</p>
-                    </div>
-                </div>
-
+                @foreach ($comment as $cmt)
+                    <div class="media mt-3 mb-3">
+                        <img src="{{asset('/assets/img/user.png')}}" class="mr-3 ml-2" style="width: 60px" alt="...">
+                        <div class="media-body">
+                            <h5 class="mt-0" style="font-weight: 500;">{{ $cmt->name }}</h5>
+                            <small><i class="icofont-calendar"></i>&nbsp; {{ \Carbon\Carbon::parse($cmt->created_at)->diffForHumans() }}</small>
+                            <p>
+                                {{ $cmt->content }}
+                            </p>
+                        </div>
+                    </div><br>
+                @endforeach
 
                 <br><br>
                 <h6>Tinggalkan Komentar</h6>
-                <form action="{{ route('frontend.comment.store') }}" method="POST">
+                <form action="{{ route('frontend.comment.store') }}" id="formKomen" method="POST">
                     {{ csrf_field() }}
+                    <input class="form-control" type="hidden" name="berita_id" value="{{ $berita->id }}">
+
                     <div class="form-group">
                         <label>Komentar</label>
                         <textarea class="form-control" name="content" rows="5"></textarea>
@@ -193,7 +188,7 @@
                     </div><br>
 
 
-                    <input value="Kirim Komentar" type="submit" class="btn btn-komentar" />
+                    <button type="submit" id="btnKomen" class="btn btn-komentar">Kirim Komentar</button>
 
                 </form>
             </div>
@@ -276,26 +271,17 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
 
-    <script>
-        var sp = document.querySelector('.search-open');
-        var searchbar = document.querySelector('.search-inline');
-        var shclose = document.querySelector('.search-close');
-
-        function changeClass() {
-            searchbar.classList.add('search-visible');
-        }
-
-        function closesearch() {
-            searchbar.classList.remove('search-visible');
-        }
-
-        sp.addEventListener('click', changeClass);
-        shclose.addEventListener('click', closesearch);
-
-    </script>
-
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#btnKomen').on('click', function() {
+                $('#formKomen').submit();
+            });
+        });
+
+    </script>
 
 </body>
 

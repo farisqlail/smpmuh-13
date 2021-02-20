@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Berita;
 use App\Comment;
 
@@ -37,7 +38,8 @@ class CommentController extends Controller
      */
     public function store(Request $request, Berita $berita)
     {
-        dd($berita);
+        Alert::success('Success', 'Berhasil Menambah Komentar');
+            // dd($berita->id);
         Comment::create([
             'berita_id' => $request->get('berita_id'),
             'name' => request('name'),

@@ -11,6 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Berita;
+use App\Comment;
 
 class BeritaController extends Controller
 {
@@ -22,8 +23,9 @@ class BeritaController extends Controller
     public function index()
     {
         $berita = Berita::latest()->paginate(10);
+        $comment = Comment::all();
 
-        return view('admin.berita.index', compact('berita'));
+        return view('admin.berita.index', compact('berita', 'comment'));
     }
 
     public function home()
@@ -86,7 +88,9 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        return view('frontend.berita.show-berita', ['berita' => $berita]);
+        $comment = Comment::all();
+
+        return view('frontend.berita.show-berita', ['berita' => $berita, 'comment' => $comment]);
     }
 
     /**
