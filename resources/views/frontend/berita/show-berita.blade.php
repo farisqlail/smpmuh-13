@@ -102,7 +102,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb shadow p-3 mb-5 bg-white rounded">
                 <li class="breadcrumb-item"><a href="#">Profile</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ $berita[0]->judul }}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $berita->judul }}</li>
             </ol>
         </nav>
     </div>
@@ -112,105 +112,40 @@
 
         <section id="section-8" data-aos="fade-up">
             <div class="container">
+
+                <h2 style="font-weight: 600;">{{ $berita->judul }}</h2>
                 <div class="row">
-                    <div class="col-lg-8">
-
-                        <h2 style="font-weight: 600;">{{ $berita[0]->judul }}</h2>
-                        <div class="row">
-                            <div class="col">
-                                <small><i class="icofont-calendar"></i>&nbsp;
-                                    {{ \Carbon\Carbon::parse($berita[0]->created_at)->diffForHumans() }}</small>
-                            </div>
-                            <div class="col" align="right">
-                                <div class="social-links">
-                                    <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/"
-                                        class="facebook" target="blank"><i
-                                            class="icofont-facebook icofont-1x"></i></a>&nbsp;&nbsp;
-                                    <a href="https://www.instagram.com/smpmuh13sby/" class="instagram" target="blank"><i
-                                            class="icofont-instagram icofont-1x"></i></a>&nbsp;&nbsp;
-                                    <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"
-                                        target="blank"><i class="icofont-youtube icofont-1x"></i></a>&nbsp;&nbsp;
-                                    <a href="#" class="twitter"><i class="icofont-twitter icofont-1x"></i></a>
-                                </div>
-                            </div>
-                        </div><br>
-
-                        <img src="{{ asset('storage/' . $berita[0]->image) }}" class="img-fluid" style="width: 100%;"
-                            alt=""><br><br>
-
-                        <p>
-                            @php
-                                echo $berita[0]->deskripsi;
-                            @endphp
-                        </p>
-                        <br><br>
-
+                    <div class="col">
+                        <small><i class="icofont-calendar"></i>&nbsp;
+                            {{ \Carbon\Carbon::parse($berita->created_at)->diffForHumans() }}</small>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 style="font-weight: 500;">
-                                    Berita Terbaru
-                                    <div class="border-1 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
-                                </h6>
-                                @foreach ($berita as $brt)
-                                    <a href="{{ route('frontend.show-berita', $brt) }}"
-                                        class="berita-terbaru">{{ $brt->judul }}</a><br>
-                                @endforeach
-                            </div>
-                        </div><br>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 style="font-weight: 500;">
-                                    Feed Instagram SPEMGALAS
-                                    <div class="border-2 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
-                                </h4>
-                                <div class="row">
-                                    <div class="col">
-                                        <img src="{{ asset('/assets/img/logo.png') }}" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="col">
-                                        <strong>smp muhammadiyah 13 surabaya</strong>
-                                        <p>@smpmuh13sby</p>
-                                        <a href="https://www.instagram.com/smpmuh13sby/" target="blank" class="btn"
-                                            style="background-color: #3B519C; color: #fff;">Follow</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/smpmuh13sby/" target="blank">
-                                <img src="./assets/img/feed.png" class="img-fluid mt-3" style="width: 100%;" alt="">
-                            </a>
+                    <div class="col" align="right">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/"
+                                class="facebook" target="blank"><i
+                                    class="icofont-facebook icofont-1x"></i></a>&nbsp;&nbsp;
+                            <a href="https://www.instagram.com/smpmuh13sby/" class="instagram" target="blank"><i
+                                    class="icofont-instagram icofont-1x"></i></a>&nbsp;&nbsp;
+                            <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"
+                                target="blank"><i class="icofont-youtube icofont-1x"></i></a>&nbsp;&nbsp;
+                            <a href="#" class="twitter"><i class="icofont-twitter icofont-1x"></i></a>
                         </div>
-
                     </div>
-                </div>
+                </div><br>
+
+                <img src="{{ asset('storage/' . $berita->image) }}" class="img-fluid" style="width: 100%;"
+                    alt=""><br><br>
+
+                <p>
+                    @php
+                        echo $berita->deskripsi;
+                    @endphp
+                </p>
+                <br><br>
             </div>
-            </div>
-            </div><br>
+
 
             <div class="container">
-                <div class="border-6" style="border: 1px solid #909090;"></div>
-                <h4 style="font-weight: 500;">Berita lainnya
-                    <div class="border-4 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
-                </h4><br>
-
-                <div class="row">
-                    @foreach ($berita as $brt)
-                        <div class="col">
-                            <div class="card berita-lainnya">
-                                <img src="{{ asset('/assets/img/gal-3.png') }}" alt="">
-                                <div class="card-body">
-                                    <a href="">
-                                        <h5 style="font-weight: 500;">{{ $brt->judul }}
-                                        </h5>
-                                    </a>
-                                </div>
-                            </div><br>
-                        </div>
-                    @endforeach
-
-                </div>
                 <br>
                 <div class="border-6" style="border: 1px solid #909090;"></div>
                 <br>
@@ -241,7 +176,7 @@
                 <br><br>
                 <h6>Tinggalkan Komentar</h6>
                 <form action="{{ route('frontend.comment.store') }}" method="POST">
-                  {{ csrf_field() }}
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label>Komentar</label>
                         <textarea class="form-control" name="content" rows="5"></textarea>
@@ -261,9 +196,9 @@
                         </div>
                     </div><br>
 
-                    
+
                     <input value="Kirim Komentar" type="submit" class="btn btn-komentar" />
-                    
+
                 </form>
             </div>
         </section>

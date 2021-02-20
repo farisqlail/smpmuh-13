@@ -46,7 +46,7 @@
                                 <div>
                                     <div class="uk-card-body">
                                         <a href="{{ route('frontend.show-berita', $brt) }}" class="link">
-                                            <h3 class="uk-card-title">{{ $brt->judul }}</h3>
+                                            <h3 class="uk-card-title"><b>{{ $brt->judul }}</b></h3>
                                         </a>
                                         <p>
                                             {!! Str::limit($brt->deskripsi, 30) !!}

@@ -86,8 +86,6 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        $berita = Berita::all();
-
         return view('frontend.berita.show-berita', ['berita' => $berita]);
     }
 

@@ -9,14 +9,16 @@ Route::name('frontend.')->group(function () {
             'namespace' => 'Frontend'
         ],
         function () {
+            Route::get('/', 'HomeController@index')->name('welcome');
 
-            Route::get('/', function () {
-                return view('welcome');
-            });
+            // Route::get('/', function () {
+            //     return view('welcome');
+            // });
 
             // Route Lain
 
             // Berita
+            Route::resource('/berita', 'BeritaController');
             Route::get('/berita', 'BeritaController@home')->name('berita');
             Route::get('/show-berita/{berita}', 'BeritaController@show')->name('show-berita');
             Route::get('/berita/search', 'BeritaController@search')->name('berita-search');
@@ -48,7 +50,7 @@ Route::name('frontend.')->group(function () {
     ], function () {
         Route::get('/admin', 'AdminController@index')->name('admin');
 
-        Route::get('/berita-admin/{berita}/delete', 'BeritaController@destroy')->name('berita.delete');
+            Route::get('/berita-admin/{berita}/delete', 'BeritaController@destroy')->name('berita.delete');
             Route::get('/berita-admin/{berita}/edit', 'BeritaController@edit')->name('berita.edit');
             Route::patch('/berita-admin/{berita}', 'BeritaController@update')->name('berita.update');
             Route::resource('/berita-admin', 'BeritaController');

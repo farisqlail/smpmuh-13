@@ -1539,3 +1539,8 @@ figure.snip1205.hover i {
 .section-5 .btn-search:hover {
   background: #5F8CE1;
 }
+
+.card-berita-home img {
+  
+  max-height: 200px !important;
+}
