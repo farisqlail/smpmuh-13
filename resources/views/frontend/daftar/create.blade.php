@@ -104,8 +104,8 @@
 
     <main id="main">
 
-        <div class="container mb-3">
-            <h4 align="center" data-aos="fade-up">Form Pendaftaran</h4><br>
+        <div class="container mb-3" data-aos="fade-up">
+            <h4 align="center" >Form Pendaftaran</h4><br>
 
             <form action="{{ route('frontend.daftar.store') }}" id="formDaftar" method="POST">
                 {{ csrf_field() }}
@@ -135,7 +135,7 @@
 
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label>Tempat Tanggal Lahir</label>
+                            <label>Tanggal Lahir</label>
                             <div class="input-group date" id="datetimepicker2">
                                 <input type="text" name="birth" class="form-control"><span class="input-group-addon"><i
                                         class="fas fa-calendar-alt"></i></span>

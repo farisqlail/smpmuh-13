@@ -70,5 +70,7 @@ Route::name('frontend.')->group(function () {
             Route::patch('/staff-admin/{staff}', 'StaffController@update')->name('staff.update');
             Route::get('/staff-admin/{staff}/delete', 'StaffController@destroy')->name('staff.delete');
             Route::resource('/staff-admin', 'StaffController');
+
+            Route::get('/daftar-admin', 'DaftarController@admin')->name('daftar.admin');
     });
 });

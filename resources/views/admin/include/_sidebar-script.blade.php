@@ -50,7 +50,7 @@
           </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="{{ url('/daftar-admin') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Pendaftaran</span></a>
         </li>
