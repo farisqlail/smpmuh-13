@@ -9,21 +9,21 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-   <!-- Favicons -->
-   <link href="{{ asset('assets/img/logo.png')}}" rel="icon">
+  <!-- Favicons -->
+  <link href="{{ asset('assets/img/logo.png')}}" rel="icon">
 
-   <!-- Google Fonts -->
-   <link
-     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-     rel="stylesheet">
- 
-   <!-- Vendor CSS Files -->
-   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-   <link href="{{ asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
-   <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-   <link href="{{ asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-   <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-   <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
 
   <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
 </head>
@@ -41,7 +41,7 @@
         <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook" target="blank"><i class="icofont-facebook"></i></a>
         <a href="https://www.instagram.com/smpmuh13sby/" class="instagram" target="blank"><i class="icofont-instagram"></i></a>
         <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube" target="blank"><i class="icofont-youtube"></i></a>
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></i></a>
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
       </div>
     </div>
   </section>
@@ -69,6 +69,7 @@
         <li><a href="{{ url('/ekstra')}}">Ekstrakulikuler</a></li>
         <li><a href="{{ url('/galeri') }}">Galeri</a></li>
         <li><a href="{{ url('/berita') }}">Berita</a></li>
+        <li class="drop-down"><a href="">Pendaftaran</a>
         <li><a href="{{ url('/daftar') }}">Pendaftaran</a></li>
         </li>
 
@@ -78,30 +79,29 @@
     </div>
   </header><!-- End Header -->
 
-
   <section id="hero-1">
     <div class="hero1-container" data-aos="fade-up">
       <div class="container">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <h1>Mars Muhammadiyah</h1>
-            </div>
-            <div class="col-lg-6" align="center">
-              <img src="{{ asset('assets/img/mars-img.png') }}" class="img-fluid" width="250px" alt="">
-            </div>
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <h1>Informasi PPDB</h1>
+          </div>
+          <div class="col-lg-6" align="center">
+            <img src="{{ asset('assets/img/info.png') }}" class="img-fluid" alt="">
           </div>
         </div>
+      </div>
     </div>
     
     
     
-</section>    
+</section>  
 
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb shadow p-3 mb-5 bg-white rounded">
           <li class="breadcrumb-item"><a href="#">Profile</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Mars Muhammadiyah</li>
+          <li class="breadcrumb-item active" aria-current="page">Info</li>
         </ol>
       </nav>
 </div>
@@ -109,16 +109,11 @@
 
   <main id="main">
 
-    <h4 align="center" data-aos="fade-up">Mars Muhammadiyah</h4>
-    <section id="section-3" data-aos="fade-up">
-      <div class="col-xl-12 video-box align-self-baseline" align="center">   
-        
-        <img src="./assets/img/mas.png" width="1000px" class="img-fluid" alt="">    
-        <a href="https://www.youtube.com/watch?v=kyc9rmW7Ijg" class="venobox play-btn mb-4" align="center" data-vbtype="video" data-autoplay="true"></a>
-      </div>
-    </section>
-  
-  </main><!-- End #main -->
+    <div class="container mb-3">
+        <img src="{{ asset('./assets/img/ppdb-info.jpeg') }}" style="width: 600px;" class="img-fluid">
+    </div>
+
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

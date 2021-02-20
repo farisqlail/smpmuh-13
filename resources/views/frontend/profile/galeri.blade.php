@@ -73,11 +73,8 @@
                     <li><a href="{{ url('/ekstra') }}">Ekstrakulikuler</a></li>
                     <li><a href="{{ url('/galeri') }}">Galeri</a></li>
                     <li><a href="{{ url('/berita') }}">Berita</a></li>
-                    <li class="drop-down"><a href="">Pendaftaran</a>
-                        <ul>
-                            <li><a href="ppdb.html">Info Pendaftaran</a></li>
-                            <li><a href="ppdb.html">Daftar Online</a></li>
-                        </ul>
+                    <li><a href="{{ url('/daftar') }}">Pendaftaran</a></li>
+                        
                     </li>
                 </ul>
             </nav><!-- .nav-menu -->
@@ -125,7 +122,8 @@
                             <figure class="snip1205 blue">
                                 <img src="{{ asset('storage/' . $glr->image) }}" alt="sample43" />
                                 <i class="icofont-search"></i>
-                                <a href="{{ asset('storage/' . $glr->image) }}" data-gall="galeri" class="venobox"></a>
+                                <a href="{{ asset('storage/' . $glr->image) }}" data-gall="galeri"
+                                    class="venobox"></a>
                             </figure>
                         </div>
                     @endforeach

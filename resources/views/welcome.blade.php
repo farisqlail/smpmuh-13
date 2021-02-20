@@ -70,10 +70,7 @@
           <li><a href="{{ url('/galeri') }}">Galeri</a></li>
           <li><a href="{{ url('/berita') }}">Berita</a></li>
           <li class="drop-down"><a href="">Pendaftaran</a>
-            <ul>
-              <li><a href="ppdb.html">Info Pendaftaran</a></li>
-              <li><a href="ppdb.html">Daftar Online</a></li>
-            </ul>
+          <li><a href="{{ url('/daftar') }}">Pendaftaran</a></li>
           </li>
 
         </ul>
@@ -173,7 +170,7 @@
                   {!! Str::limit($brt->deskripsi, 50) !!}
                 </p>
                   <hr>
-                <span class="text-muted"><i class="icofont-calendar" style="color: #3B519C;"></i>&nbsp; February, 19 september 2020</span>
+                <span class="text-muted"><i class="icofont-calendar" style="color: #3B519C;"></i>&nbsp;  {{ \Carbon\Carbon::parse($brt->created_at)->diffForHumans() }}</span>
               </div>
             </div>
           </div>

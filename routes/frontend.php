@@ -38,6 +38,12 @@ Route::name('frontend.')->group(function () {
             //Comment 
             Route::resource('/comment', 'CommentController');
             // Route::post('/berita/{comment}/comment', 'CommentController@store')->name('berita-comment');
+
+            //Info PPDB
+            Route::get('/info', 'InfoController@index')->name('info');
+
+            //Daftar PPDB
+            Route::resource('/daftar', 'DaftarController');
         }
 
     );

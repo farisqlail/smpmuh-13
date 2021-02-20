@@ -70,10 +70,7 @@
         <li><a href="{{ url('/galeri') }}">Galeri</a></li>
         <li><a href="{{ url('/berita') }}">Berita</a></li>
         <li class="drop-down"><a href="">Pendaftaran</a>
-          <ul>
-            <li><a href="ppdb.html">Info Pendaftaran</a></li>
-            <li><a href="ppdb.html">Daftar Online</a></li>
-          </ul>
+          <li><a href="{{ url('/daftar') }}">Pendaftaran</a></li>
         </li>
 
         </ul>
