@@ -268,7 +268,7 @@
   <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
   <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
   <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
-
+{{-- 
   <script>
     var sp = document.querySelector('.search-open');
     var searchbar = document.querySelector('.search-inline');
@@ -285,7 +285,7 @@
     sp.addEventListener('click', changeClass);
     shclose.addEventListener('click', closesearch);
                 
-  </script>
+  </script> --}}
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js')}}"></script>

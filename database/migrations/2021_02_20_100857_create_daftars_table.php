@@ -17,6 +17,7 @@ class CreateDaftarsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
+            $table->string('city');
             $table->date('birth');
             $table->string('from');
             $table->string('father');

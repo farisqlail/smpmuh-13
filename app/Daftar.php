@@ -9,6 +9,7 @@ class Daftar extends Model
     protected $fillable = [
         'name',
         'address',
+        'city',
         'birth',
         'from',
         'father',

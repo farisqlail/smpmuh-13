@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Daftar;
 
 class DaftarController extends Controller
 {
@@ -14,7 +15,9 @@ class DaftarController extends Controller
      */
     public function index()
     {
-        return view('frontend.daftar.create');
+        $daftar = Daftar::all();
+
+        return view('frontend.daftar.create', compact('daftar'));
     }
 
     /**
@@ -33,10 +36,23 @@ class DaftarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Daftar $daftar)
     {
-        
-        
+        $birth = date('Y-m-d', strtotime(request('birth')));
+
+        Daftar::create([
+            'name' => request('name'),
+            'address' => request('address'),
+            'city' => request('city'),
+            'birth' => $birth,
+            'from' => request('from'),
+            'father' => request('father'),
+            'number-father' => request('number-father'),
+            'mother' => request('mother'),
+            'number-mother' => request('number-mother')
+        ]);
+
+        return redirect()->back();
     }
 
     /**

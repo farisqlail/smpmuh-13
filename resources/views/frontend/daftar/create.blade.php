@@ -26,7 +26,9 @@
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" rel="stylesheet">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -105,26 +107,76 @@
         <div class="container mb-3">
             <h4 align="center" data-aos="fade-up">Form Pendaftaran</h4><br>
 
-            <form action="" method="POST">
+            <form action="{{ route('frontend.daftar.store') }}" id="formDaftar" method="POST">
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label>Nama Lengkap</label>
-                            <input type="text" class="form-control" name="name" placeholder="Nama Lengkap ...">
+                            <input type="text" class="form-control" name="name">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label>Alamat Lengkap</label>
-                            <input type="text" class="form-control" name="address" placeholder="Alamat Lengkap ...">
+                            <input type="text" class="form-control" name="address">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Kota Lahir</label>
+                            <input type="text" class="form-control" name="city">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Tempat Tanggal Lahir</label>
+                            <div class="input-group date" id="datetimepicker2">
+                                <input type="text" name="birth" class="form-control"><span class="input-group-addon"><i
+                                        class="fas fa-calendar-alt"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Tempat Tanggal Lahir</label>
-                    <input type="text" class="form-control" name="birth" placeholder="Alamat Lengkap ...">
+                    <label>Asal Sekolah</label>
+                    <input type="text" class="form-control" name="from">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Nama Ayah</label>
+                            <input type="text" class="form-control" name="father" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nomor HP Ayah</label>
+                            <input type="tel" class="form-control" name="number-father" >
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Nama Ibu</label>
+                            <input type="text" class="form-control" name="mother">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nomor HP Ibu</label>
+                            <input type="tel" class="form-control" name="number-mother">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3" align="center">
+                    <button type="submit" id="btnDaftar" class="btn btn-komentar">Daftar</button>
                 </div>
 
             </form>
@@ -202,36 +254,34 @@
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
-
-    <script>
-        var sp = document.querySelector('.search-open');
-        var searchbar = document.querySelector('.search-inline');
-        var shclose = document.querySelector('.search-close');
-
-        function changeClass() {
-            searchbar.classList.add('search-visible');
-        }
-
-        function closesearch() {
-            searchbar.classList.remove('search-visible');
-        }
-
-        sp.addEventListener('click', changeClass);
-        shclose.addEventListener('click', closesearch);
-
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.es.min.js">
     </script>
 
     <script type="text/javascript">
-        $('.birth').datepicker({
-
-            format: 'mm-dd-yyyy'
-
+        $('#datetimepicker2').datepicker({
+            weekStart: 0,
+            todayBtn: "linked",
+            language: "id",
+            orientation: "bottom auto",
+            keyboardNavigation: false,
+            autoclose: true
         });
 
     </script>
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#btnDaftar').on('click', function () {
+                $('#formDaftar').submit();
+            });
+        });
+    </script>
 
 </body>
 
