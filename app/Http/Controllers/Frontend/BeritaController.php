@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
 use App\Berita;
 use App\Comment;
@@ -22,7 +23,7 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $berita = Berita::latest()->paginate(10);
+        $berita = Berita::latest()->paginate(3);
         $comment = Comment::all();
 
         return view('admin.berita.index', compact('berita', 'comment'));
@@ -31,7 +32,7 @@ class BeritaController extends Controller
     public function home()
     {
 
-        $berita = Berita::latest()->paginate(10);
+        $berita = Berita::latest()->paginate(3);
 
         return view('frontend.berita.index', compact('berita'));
     }

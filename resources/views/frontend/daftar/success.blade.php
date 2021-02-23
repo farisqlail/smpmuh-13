@@ -33,10 +33,25 @@
 
 <body>
 
-</footer><!-- End Footer -->
+    
+    <section id="verif-section" class="verif-section">
+        <div class="container">
+            <div class="ilus" align="center">
+                <img src="{{ asset('assets/img/success.png') }}" width="400px" class="img-fluid" alt="">
+                <h2>Pendaftaran Selesai Segera Konfirmasi Ke WA ini</h2>
+                <a href="https://wa.me/085646482325" id="success" target="blank" class="btn btn-verif mt-3">Konfirmasi</a>
+                {{-- <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                    @csrf
+                </form> --}}
+            </div>
+
+        </div>
+    </section>
+    
+{{-- </footer><!-- End Footer -->
 <div class="akhir" align="center">
     <small class="mt-1">2020 © All Rights Reserved Design By @Tim Elit</small>
-</div>
+</div> --}}
 
 <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
 
@@ -79,6 +94,12 @@
             $('#formDaftar').submit();
         });
     });
+
+    $(document).ready(function() {
+            $('#sucess').on('click', function() {
+                window.location='{{ URL::route('frontend.welcome') }}';
+            });
+        });
 </script>
 
 </body>

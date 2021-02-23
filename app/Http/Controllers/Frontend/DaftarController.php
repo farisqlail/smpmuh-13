@@ -28,6 +28,12 @@ class DaftarController extends Controller
         return view('admin.daftar.index', compact('daftar'));
     }
 
+    public function success(){
+
+        return view('frontend.daftar.success');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -62,7 +68,7 @@ class DaftarController extends Controller
             'number-mother' => request('number-mother')
         ]);
 
-        return redirect()->back();
+        return redirect()->route('frontend.success');
     }
 
     /**

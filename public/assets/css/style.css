@@ -2223,3 +2223,29 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   margin-left: -5px;
   margin-right: -5px;
 }
+
+.verif-section h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+#verif-section .btn-verif {
+  background: #337ab7;
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 50px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#verif-section .btn-verif:hover {
+  background: #008a63;
+}

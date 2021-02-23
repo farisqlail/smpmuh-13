@@ -63,7 +63,8 @@
                         @endforeach
 
                         <br><br>
-                        <nav aria-label="Page navigation example">
+                        {{ $berita->links() }}
+                        {{-- <nav aria-label="Page navigation example">
                             <ul class="pagination d-flex justify-content-center">
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Previous">
@@ -71,9 +72,8 @@
                                         <span class="sr-only">Previous</span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                                <li class="page-item"><a class="page-link" href="#">{{ $berita->links() }}</a></li>
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Next">
                                         <span aria-hidden="true">»</span>
@@ -81,14 +81,14 @@
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> --}}
                     </div>
 
                     <div class="col-md-10">
                         <form action="{{ route('frontend.berita-search') }}" method="GET">
                             <input class="form-control" name="search" value="{{ old('search') }}" type="text"
                                 placeholder="Search ...">
-                        
+
                             <br>
                         </form>
                         <div class="card">
@@ -101,11 +101,11 @@
                                     <a href="{{ route('frontend.show-berita', $brt) }}"
                                         class="berita-terbaru">{{ $brt->judul }}</a><br>
                                 @endforeach
-                        
+
                             </div>
                         </div><br>
 
-                        
+
 
                     </div>
                 </div>
