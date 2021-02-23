@@ -12,7 +12,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $berita = Berita::all();
+        $berita = Berita::latest()->paginate(3);
 
         return view('welcome', compact('berita'));
     }

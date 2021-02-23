@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Berita;
 use App\Staff;
 use App\Galeri;
+use App\Daftar;
 
 class AdminController extends Controller
 {
@@ -28,7 +29,10 @@ class AdminController extends Controller
         $galeri = Galeri::all();
         $galeriCount = $galeri->count();
 
-        return view('admin.dashboard', compact('berita', 'beritaCount', 'staffCount', 'galeriCount'));
+        $daftar = Daftar::all();
+        $daftarCount = $daftar->count();
+
+        return view('admin.dashboard', compact('berita', 'beritaCount', 'staffCount', 'galeriCount', 'daftar', 'daftarCount'));
     }
 
     /**

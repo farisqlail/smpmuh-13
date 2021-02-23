@@ -6,5 +6,6 @@
   
   <!-- Custom styles for this template-->
   <link href="{{ asset('sb-admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
 
   @stack('header-scripts')
