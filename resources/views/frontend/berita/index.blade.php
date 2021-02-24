@@ -97,7 +97,7 @@
                                     Berita Terbaru
                                     <div class="border-1 mt-2" style="border: 2px solid #3B519C; width: 40px;"></div>
                                 </h6>
-                                @foreach ($berita as $brt)
+                                @foreach ($beritaBaru as $brt)
                                     <a href="{{ route('frontend.show-berita', $brt) }}"
                                         class="berita-terbaru">{{ $brt->judul }}</a><br>
                                 @endforeach

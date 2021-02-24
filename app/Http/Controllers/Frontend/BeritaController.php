@@ -33,8 +33,9 @@ class BeritaController extends Controller
     {
 
         $berita = Berita::latest()->paginate(3);
+        $beritaBaru = Berita::latest()->take(5)->get();
 
-        return view('frontend.berita.index', compact('berita'));
+        return view('frontend.berita.index', compact('berita', 'beritaBaru'));
     }
 
     public function search(Request $request)
