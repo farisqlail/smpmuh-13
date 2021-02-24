@@ -90,7 +90,7 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        $comment = Comment::all();
+        $comment = Comment::find($berita);
 
         return view('frontend.berita.show-berita', ['berita' => $berita, 'comment' => $comment]);
     }
