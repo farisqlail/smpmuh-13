@@ -39,7 +39,7 @@
             <div class="ilus" align="center">
                 <img src="{{ asset('assets/img/success.png') }}" width="400px" class="img-fluid" alt="">
                 <h2>Pendaftaran Selesai Segera Konfirmasi Ke WA ini</h2>
-                <a href="https://wa.me/085646482325" id="success" target="blank" class="btn btn-verif mt-3">Konfirmasi</a>
+                <a href="https://wa.me/6281357574687" id="success" target="blank" class="btn btn-verif mt-3">Konfirmasi</a>
                 <a href="{{ url('/') }}" class="btn btn-verif-2 ml-2 mt-3">Selesai Konfirmasi</a>
                 {{-- <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                     @csrf

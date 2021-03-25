@@ -55,6 +55,18 @@ class DaftarController extends Controller
         Alert::success('Success', 'Data Berhasil Terdaftar');
 
         $birth = date('Y-m-d', strtotime(request('birth')));
+        
+        $this->validate(request(), [
+            'name' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'birth' => 'required',
+            'from' => 'required',
+            'father' => 'required',
+            'number-father' => 'required',
+            'mother' => 'required',
+            'number-mother' => 'required',
+        ]);
 
         Daftar::create([
             'name' => request('name'),
