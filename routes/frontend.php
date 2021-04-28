@@ -15,8 +15,6 @@ Route::name('frontend.')->group(function () {
             //     return view('welcome');
             // });
 
-            // Route Lain
-
             // Berita
             Route::resource('/berita', 'BeritaController');
             Route::get('/berita', 'BeritaController@home')->name('berita');
@@ -30,7 +28,7 @@ Route::name('frontend.')->group(function () {
 
             // Profile
             Route::get('/galeri', 'GaleriController@home')->name('galeri');
-            Route::get('/mars', 'MarsController@index')->name('mars');
+            Route::get('/Kur', 'KurController@index')->name('Kur');
             Route::get('/staf', 'StaffController@home')->name('staf');
             Route::get('/tentang', 'TentangController@index')->name('tentang');
             Route::get('/visi', 'VisiController@index')->name('visi');

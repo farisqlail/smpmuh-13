@@ -22,6 +22,12 @@
         <!-- Divider -->
         <hr class="sidebar-divider">
   
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/daftar-admin') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Pendaftaran</span></a>
+        </li>
+
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#berita" aria-expanded="true" aria-controls="collapsePages">
@@ -43,17 +49,39 @@
             </a>
             <div id="profile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Tentang</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Akreditasi</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Beasiswa</a>
                 <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Kur & Pemb</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Galeri</a>
+                
               </div>
             </div>
           </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/daftar-admin') }}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Pendaftaran</span></a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#prestasi" aria-expanded="true" aria-controls="collapsePages">
+              <i class="fas fa-fw fa-user-graduate"></i>
+              <span>Prestasi Siswa</span>
+            </a>
+            <div id="prestasi" class="collapse" aria-labelledby="headingPages" data-parent="#prestasi">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ url('/') }}">Akademik</a>
+                <a class="collapse-item" href="{{ url('/') }}">Non Akademik</a>
+                
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/') }}">
+              <i class="fas fa-fw fa-phone-square-alt"></i>
+              <span>Kontak</span></a>
+          </li>
+
         
   
         <!-- Divider -->
