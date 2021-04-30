@@ -28,7 +28,7 @@
                     <label for="">Kelas Siswa</label>
                     <select name="jenis" class="form-control" id="">
                         <option value="akademik">Akademik</option>
-                        <option value="nonAkademik">Non Akademik</option>
+                        <option value="non akademik">Non Akademik</option>
                     </select>
                 </div>
 

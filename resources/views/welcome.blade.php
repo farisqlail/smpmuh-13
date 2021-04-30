@@ -36,8 +36,8 @@
     <section id="topbar" class="d-none d-lg-block">
         <div class="container d-flex">
             <div class="contact-info mr-auto">
-                <i class="icofont-phone"></i> +62856-4648-2325 (bu Santi) &nbsp;
-                <i class="icofont-envelope"></i><a href="mailto:smpm13sby@gmail.com">smpm13sby@gmail.com</a>
+                <i class="icofont-phone"></i> {{ $kontak[0]->telp }} &nbsp;
+                <i class="icofont-envelope"></i><a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"
@@ -274,8 +274,8 @@
                     <div class="col-sm-4" align="left">
                         <h5>Informasi</h5>
                         <p><i class="icofont-location-arrow"></i> Jl. Tambak Segaran No. 27 Surabaya<br />
-                            <i class="icofont-phone"></i> +62856-4648-2325 (bu Santi) <br />
-                            <i class="icofont-envelope"></i> smpm13sby@gmail.com</p>
+                            <i class="icofont-phone"></i> {{ $kontak[0]->telp }} <br>
+                            <i class="icofont-envelope"></i><a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
                     </div>
                 </div>
             </div>

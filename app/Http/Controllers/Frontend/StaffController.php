@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Staff;
+use App\Kontak;
 
 class StaffController extends Controller
 {
@@ -26,8 +27,9 @@ class StaffController extends Controller
 
     public function home(){
         $staff = Staff::latest()->paginate(10);
-
-        return view('frontend.profile.staf', compact('staff'));
+        $kontak = Kontak::all();
+        
+        return view('frontend.profile.staf', compact('staff', 'kontak'));
     }
 
     /**

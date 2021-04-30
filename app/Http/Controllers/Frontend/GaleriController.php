@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Galeri;
+use App\Kontak;
 
 class GaleriController extends Controller
 {
@@ -20,15 +21,17 @@ class GaleriController extends Controller
     public function index()
     {
         $galeri = Galeri::all();
+        $kontak = Kontak::all();
 
-        return view('admin.galeri.index', compact('galeri'));
+        return view('admin.galeri.index', compact('galeri', 'kontak'));
     }
 
     public function home(){
         
         $galeri = Galeri::all();
+        $kontak = Kontak::all();
 
-        return view('frontend.profile.galeri', compact('galeri'));
+        return view('frontend.profile.galeri', compact('galeri', 'kontak'));
     }
 
     /**
@@ -78,6 +81,7 @@ class GaleriController extends Controller
      */
     public function edit(Galeri $galeri)
     {
+        // dd($galeri['id']);
        return view('admin.galeri.edit', compact('galeri'));
     }
 

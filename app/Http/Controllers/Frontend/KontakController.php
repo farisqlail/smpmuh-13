@@ -67,6 +67,7 @@ class KontakController extends Controller
      */
     public function edit(Kontak $kontak)
     {
+        // dd($kontak['id']);
         $kontak = Kontak::find(1);
 
         return view('admin.kontak.edit', compact('kontak'));

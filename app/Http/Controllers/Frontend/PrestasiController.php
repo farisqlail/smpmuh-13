@@ -78,6 +78,7 @@ class PrestasiController extends Controller
      */
     public function edit(Prestasi $prestasi)
     {
+
         return view('admin.prestasi.edit', compact('prestasi'));
 
     }
@@ -89,7 +90,7 @@ class PrestasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prestasi $prestasi)
+    public function update(Prestasi $prestasi)
     {
         Alert::success('Success', 'Data prestasi siswa berhasil diedit');
 

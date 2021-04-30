@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Daftar;
+use App\Kontak;
 
 class DaftarController extends Controller
 {
@@ -17,8 +18,9 @@ class DaftarController extends Controller
     public function index()
     {
         $daftar = Daftar::all();
+        $kontak = Kontak::all();;
 
-        return view('frontend.daftar.create', compact('daftar'));
+        return view('frontend.daftar.create', compact('daftar', 'kontak'));
     }
 
     public function admin(){

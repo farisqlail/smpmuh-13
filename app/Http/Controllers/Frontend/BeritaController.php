@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
 use App\Berita;
 use App\Comment;
+use App\Kontak;
 
 class BeritaController extends Controller
 {
@@ -25,8 +26,9 @@ class BeritaController extends Controller
     {
         $berita = Berita::latest()->paginate(3);
         $comment = Comment::all();
+        $kontak = Kontak::all();
 
-        return view('admin.berita.index', compact('berita', 'comment'));
+        return view('admin.berita.index', compact('berita', 'comment', 'kontak'));
     }
 
     public function home()
@@ -34,8 +36,9 @@ class BeritaController extends Controller
 
         $berita = Berita::latest()->paginate(3);
         $beritaBaru = Berita::latest()->take(5)->get();
+        $kontak = Kontak::all();
 
-        return view('frontend.berita.index', compact('berita', 'beritaBaru'));
+        return view('frontend.berita.index', compact('berita', 'beritaBaru', 'kontak'));
     }
 
     public function search(Request $request)
@@ -91,8 +94,9 @@ class BeritaController extends Controller
     public function show(Berita $berita)
     {
         $comment = Comment::find($berita);
+        $kontak = Kontak::all();
 
-        return view('frontend.berita.show-berita', ['berita' => $berita, 'comment' => $comment]);
+        return view('frontend.berita.show-berita', ['berita' => $berita, 'comment' => $comment, 'kontak' => $kontak]);
     }
 
     /**
