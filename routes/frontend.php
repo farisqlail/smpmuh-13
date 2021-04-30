@@ -77,5 +77,14 @@ Route::name('frontend.')->group(function () {
             Route::resource('/staff-admin', 'StaffController');
 
             Route::get('/daftar-admin', 'DaftarController@admin')->name('daftar.admin');
+
+            Route::resource('/kontak-admin', 'KontakController');
+            Route::get('/kontak-admin/{kontak}/edit', 'KontakController@edit')->name('kontak.edit');
+            Route::patch('/kontak-admin/{kontak}', 'KontakController@update')->name('kontak.update');
+
+            Route::resource('/prestasi-admin', 'PrestasiController');
+            Route::get('/prestasi-admin/{prestasi}/edit', 'PrestasiController@edit')->name('prestasi.edit');
+            Route::patch('/prestasi-admin/{prestasi}', 'PrestasiController@update')->name('prestasi.update');
+            Route::get('/prestasi-admin/{prestasi}/delete', 'PrestasiController@destroy')->name('prestasi.delete');
     });
 });

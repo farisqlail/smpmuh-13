@@ -63,21 +63,13 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#prestasi" aria-expanded="true" aria-controls="collapsePages">
+            <a class="nav-link" href="{{ url('/prestasi-admin') }}">
               <i class="fas fa-fw fa-user-graduate"></i>
-              <span>Prestasi Siswa</span>
-            </a>
-            <div id="prestasi" class="collapse" aria-labelledby="headingPages" data-parent="#prestasi">
-              <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ url('/') }}">Akademik</a>
-                <a class="collapse-item" href="{{ url('/') }}">Non Akademik</a>
-                
-              </div>
-            </div>
+              <span>Prestasi SIswa</span></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/') }}">
+            <a class="nav-link" href="{{ url('/kontak-admin') }}">
               <i class="fas fa-fw fa-phone-square-alt"></i>
               <span>Kontak</span></a>
           </li>
