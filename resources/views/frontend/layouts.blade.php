@@ -82,7 +82,7 @@
                     <li class="drop-down"><a href="">Kegiatan</a>
                         <ul>
                             <li><a href="{{ url('/ekstra') }}">Ekstrakurikuler</a></li>
-                            <li><a href="{{ url('/ekstra') }}">Prestasi Siswa</a></li>
+                            <li><a href="{{ url('/prestasi') }}">Prestasi Siswa</a></li>
                             <li><a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a></li>
                         </ul>
                     </li>
@@ -135,7 +135,7 @@
                                 <a href="{{ url('/staf') }}">Staff dan Guru</a><br>
                                 <a href="{{ url('/kur') }}">Kur dan Pemb</a><br>
                                 <a href="{{ url('/ekstra') }}">Ekstrakurikuler</a><br>
-                                <a href="{{ url('/ekstra') }}">Prestasi Siswa</a><br>
+                                <a href="{{ url('/prestasi') }}">Prestasi Siswa</a><br>
                                 <a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a><br>
 
                             </div>

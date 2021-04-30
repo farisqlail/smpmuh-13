@@ -90,7 +90,7 @@ class PrestasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Prestasi $prestasi)
+    public function update(Request $request, Prestasi $prestasi)
     {
         Alert::success('Success', 'Data prestasi siswa berhasil diedit');
 
@@ -106,7 +106,7 @@ class PrestasiController extends Controller
             'jenis' => request('jenis'),
             'image' => request('image')->store('prestasi')
         ]);
-
+        
         return redirect()->route('frontend.prestasi-admin.index');
 
     }

@@ -49,6 +49,9 @@ Route::name('frontend.')->group(function () {
 
             //Alumni
             Route::get('/alumni', 'HomeController@alumni')->name('alumni');
+
+            //prestasi
+            Route::get('/prestasi', 'HomeController@prestasi')->name('prestasi');
         }
 
     );

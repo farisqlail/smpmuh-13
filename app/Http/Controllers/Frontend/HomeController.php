@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Berita;
 use App\Kontak;
+use App\Prestasi;
 
 class HomeController extends Controller
 {
@@ -31,5 +32,13 @@ class HomeController extends Controller
         $kontak = Kontak::all();
 
         return view('frontend.alumni.index', compact('kontak'));
+    }
+
+    public function prestasi(){
+
+        $prestasi = Prestasi::all();
+        $kontak = Kontak::all();
+
+        return view('frontend.prestasi.index', compact('prestasi', 'kontak'));
     }
 }

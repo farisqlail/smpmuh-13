@@ -2295,3 +2295,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   color: #fff;
   border: none;
 }
+
+.image-alumni {
+  height: max-content;
+  width: auto;
+}

@@ -84,7 +84,7 @@
                         </nav> --}}
                     </div>
 
-                    <div class="col-md-10">
+                    <div class="col-md-4">
                         <form action="{{ route('frontend.berita-search') }}" method="GET">
                             <input class="form-control" name="search" value="{{ old('search') }}" type="text"
                                 placeholder="Search ...">
