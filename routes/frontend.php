@@ -43,6 +43,12 @@ Route::name('frontend.')->group(function () {
             //Daftar PPDB
             Route::resource('/daftar', 'DaftarController');
             Route::get('/success', 'DaftarController@success')->name('success');
+
+            //Kontak
+            Route::get('/kontak', 'HomeController@kontak')->name('kontak');
+
+            //Alumni
+            Route::get('/alumni', 'HomeController@alumni')->name('alumni');
         }
 
     );

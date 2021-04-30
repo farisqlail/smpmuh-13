@@ -2267,3 +2267,31 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 #verif-section .btn-verif:hover {
   background: #337ab7;
 }
+
+.btn-kontak {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 5px;
+  transition: 0.5s;
+  background-color: #3B519C;
+  color: #fff;
+  border: none;
+}
+
+.btn-kontak:hover {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 5px;
+  transition: 0.5s;
+  background-color: #1e296e;
+  color: #fff;
+  border: none;
+}

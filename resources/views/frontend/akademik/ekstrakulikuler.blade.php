@@ -21,7 +21,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb shadow p-3 mb-5 bg-white rounded">
           <li class="breadcrumb-item"><a href="#">Profile</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Ekstrakulikler</li>
+          <li class="breadcrumb-item active" aria-current="page">Ekstrakurikler</li>
         </ol>
       </nav>
 </div>
@@ -30,7 +30,7 @@
   <main id="main">
 
     <section id="section-6" data-aos="fade-up">
-        <h4 align="center">Ekstrakulikuler SPEMGALAS</h4>
+        <h4 align="center">Ekstrakurikler SPEMGALAS</h4>
         <br>
         
         <div class="container">
@@ -56,7 +56,7 @@
                  <div class="border-9 mb-3" style="border: 2px solid #3B519C; width: 60px;"></div>
                  <h4>Untuk Ekstrakulikuler 
                   Pilihan di SPEMGALAS</h4>
-                  <p>Ada 5 Ekstrakulikler di SMP 
+                  <p>Ada 5 Ekstrakurikler di SMP 
                     Muhammadiyah 13 Surabaya
                     diantaranya adalah</p>
               </div>

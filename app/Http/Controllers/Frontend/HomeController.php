@@ -17,4 +17,14 @@ class HomeController extends Controller
         return view('welcome', compact('berita'));
     }
 
+
+    public function kontak(){
+
+        return view('frontend.kontak.index');
+    }
+
+    public function alumni(){
+
+        return view('frontend.alumni.index');
+    }
 }
