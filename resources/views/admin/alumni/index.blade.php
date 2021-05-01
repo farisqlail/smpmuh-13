@@ -41,7 +41,7 @@
                                     <td>{{ $alm->nama }}</td>
                                     <td>{{ $alm->testimoni }}</td>
                                     <td align="center">
-                                        <img src="{{ asset('storage/' . $alm->image) }}" height="90px">
+                                        <img src="{{ asset('storage/alumni/' . $alm->image) }}" height="90px">
                                     </td>
                                     <td>
                                         <a href="{{ route('frontend.alumni.edit', $alm) }}"

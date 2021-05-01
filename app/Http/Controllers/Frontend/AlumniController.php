@@ -11,6 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
+use Image;
 use App\Alumni;
 
 class AlumniController extends Controller
@@ -47,10 +48,16 @@ class AlumniController extends Controller
     {
         Alert::success('Success', 'Data alumni berhasil ditambah');
 
+        $image = $request->file('image');
+        $filename = $image->getClientOriginalName();
+        $image_resize = Image::make($image->getRealPath());
+        $image_resize->resize(300, 300);
+        $image_resize->save(public_path('storage/alumni/'.$filename));
+
         Alumni::create([
             'nama' => request('nama'),
             'testimoni' => request('testimoni'),
-            'image' => request('image')->store('alumni')
+            'image' => $filename
         ]);
 
         return redirect()->route('frontend.alumni-admin.index');
@@ -85,7 +92,7 @@ class AlumniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Alumni $alumni)
+    public function update(Request $request, Alumni $alumni)
     {
         Alert::success('Success', 'Data alumni berhasil diperbarui');
 
@@ -93,10 +100,16 @@ class AlumniController extends Controller
             \Storage::delete($alumni->image);
         }
 
+        $image = $request->file('image');
+        $filename = $image->getClientOriginalName();
+        $image_resize = Image::make($image->getRealPath());
+        $image_resize->resize(500, 350);
+        $image_resize->save(public_path('storage/alumni/'.$filename));
+
         $alumni->update([
             'nama' => request('nama'),
             'testimoni' => request('testimoni'),
-            'image' => request('image')->store('alumni')
+            'image' => $filename
         ]);
 
         return redirect()->route('frontend.alumni-admin.index');

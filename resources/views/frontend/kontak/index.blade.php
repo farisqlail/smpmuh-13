@@ -48,7 +48,8 @@
                         <div id="mapid"></div>
                     </div>
                     <div class="col-md-6 align-self-center">
-                        <form action="" method="post">
+                        <form action="{{ route('frontend.pesan.store') }}" method="post">
+                            {{ csrf_field() }}
                             <div class="form-group">
                             <label for="">Nama Lengkap</label>
                                 <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap">
@@ -64,7 +65,7 @@
                                 <textarea class="form-control" name="deskripsi" rows="3"></textarea>
                             </div>
 
-                            <button class="btn-kontak">Kirim</button>
+                            <button class="btn-kontak" type="submit" value="save">Kirim</button>
                         </form>
                     </div>
                 </div>

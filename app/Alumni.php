@@ -9,6 +9,6 @@ class Alumni extends Model
     protected $fillable = [
         'nama',
         'testimoni',
-        'image'
+        'image',
     ];
 }

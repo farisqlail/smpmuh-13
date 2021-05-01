@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Berita;
 use App\Kontak;
 use App\Prestasi;
+use App\Alumni;
 
 class HomeController extends Controller
 {
@@ -29,9 +30,10 @@ class HomeController extends Controller
 
     public function alumni(){
 
+        $alumni = Alumni::all();
         $kontak = Kontak::all();
 
-        return view('frontend.alumni.index', compact('kontak'));
+        return view('frontend.alumni.index', compact('kontak', 'alumni'));
     }
 
     public function prestasi(){
