@@ -38,12 +38,12 @@
                     <div class="card shadow mb-5 bg-white rounded">
                         <img src="{{ asset('storage/' . $prst->image) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h4>{{ $prst->nama }}</h4>
-                            <small><i>Kelas {{ $prst->kelas }}</i></small>
+                            <h4 style="font-weight: 500">{{ $prst->nama }}</h4>
+                            <small class="mt-2"><i>Kelas {{ $prst->kelas }}</i></small>
                             <p class="mt-1">
                                 {{ $prst->deskripsi }}
                             </p>
-                            <a href="" class="text-primary">Baca Selengkapnya</a>
+                            <a href="{{ route('frontend.show-prestasi', $prst) }}" class="text-primary">Baca Selengkapnya</a>
                         </div>
                     </div>
                     @endforeach

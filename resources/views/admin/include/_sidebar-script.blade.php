@@ -67,6 +67,12 @@
               <i class="fas fa-fw fa-user-graduate"></i>
               <span>Prestasi SIswa</span></a>
           </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/alumni-admin') }}">
+              <i class="fas fa-fw fa-graduation-cap"></i>
+              <span>Alumni</span></a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/kontak-admin') }}">
@@ -74,7 +80,7 @@
               <span>Kontak</span></a>
           </li>
 
-        
+
   
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

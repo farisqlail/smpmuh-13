@@ -52,6 +52,7 @@ Route::name('frontend.')->group(function () {
 
             //prestasi
             Route::get('/prestasi', 'HomeController@prestasi')->name('prestasi');
+            Route::get('/show-prestasi/{prestasi}', 'PrestasiController@show')->name('show-prestasi');
         }
 
     );
@@ -89,5 +90,10 @@ Route::name('frontend.')->group(function () {
             Route::patch('/prestasi-admin/{prestasi}', 'PrestasiController@update')->name('prestasi.update');
             Route::get('/prestasi-admin/{prestasi}/delete', 'PrestasiController@destroy')->name('prestasi.delete');
             Route::resource('/prestasi-admin', 'PrestasiController');
+            
+            Route::get('/alumni-admin/{alumni}/edit', 'AlumniController@edit')->name('alumni.edit');
+            Route::patch('/alumni-admin/{alumni}', 'AlumniController@update')->name('alumni.update');
+            Route::get('/alumni-admin/{alumni}/delete', 'AlumniController@destroy')->name('alumni.delete');
+            Route::resource('alumni-admin', 'AlumniController');
     });
 });

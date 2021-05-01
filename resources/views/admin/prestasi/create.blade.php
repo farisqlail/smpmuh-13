@@ -1,54 +1,59 @@
 @extends('admin.layouts')
 
 @section('content-admin')
-<!-- Begin Page Content -->
-<div class="container-fluid">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
 
-    <div class="card">
-        <div class="card-body">
-            <form action="{{ route('frontend.prestasi-admin.store' ) }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
+        <div class="card">
+            <div class="card-body">
+                <form action="{{ route('frontend.prestasi-admin.store') }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
 
-                <div class="form-group">
-                    <label for="">Nama Lengkap Siswa</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Nama lengkap siswa">
-                </div>
+                    <div class="form-group">
+                        <label for="">Nama Lengkap Siswa</label>
+                        <input type="text" class="form-control" name="nama" placeholder="Nama lengkap siswa">
+                    </div>
 
-                <div class="form-group">
-                    <label for="">Kelas Siswa</label>
-                    <input type="text" class="form-control" name="kelas" placeholder="Kelas siswa">
-                </div>
+                    <div class="form-group">
+                        <label for="">Kelas Siswa</label>
+                        <input type="text" class="form-control" name="kelas" placeholder="Kelas siswa">
+                    </div>
 
-                <div class="form-group">
-                    <label for="">Nama Prestasi</label>
-                    <input type="text" class="form-control" name="namaAcara" placeholder="Nama Prestasi">
-                </div>
+                    <div class="form-group">
+                        <label for="">Nama Prestasi</label>
+                        <input type="text" class="form-control" name="namaAcara" placeholder="Nama Prestasi">
+                    </div>
 
-                <div class="form-group">
-                    <label for="">Kelas Siswa</label>
-                    <select name="jenis" class="form-control" id="">
-                        <option value="akademik">Akademik</option>
-                        <option value="non akademik">Non Akademik</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label for="">Kelas Siswa</label>
+                        <select name="jenis" class="form-control" id="">
+                            <option value="akademik">Akademik</option>
+                            <option value="non akademik">Non Akademik</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="">Deskripsi Prestasi</label>
-                    <textarea class="form-control" name="deskripsi" rows="3"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="">Deskripsi Prestasi</label>
+                        <textarea class="form-control" name="deskripsi" rows="3"></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label for="">Foto Siswa</label>
-                    <input type="file" class="form-control-file" required name="image" id="">
-                </div>
+                    <div class="form-group">
+                        <label for="">Foto Siswa</label>
+                        <input type="file" class="form-control-file" required name="image" id="">
+                    </div>
 
-                <div class="form-group">
-                    <button class="btn btn-primary float-right" type="submit" value="save">Tambah</button>
-                </div>
-            </form>
+                    <div class="form-group">
+                        <button class="btn btn-primary float-right" type="submit" value="save">Tambah</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
     </div>
 
-</div>
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('deskripsi');
 
+    </script>
 @endsection

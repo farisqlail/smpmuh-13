@@ -4,7 +4,7 @@
     <section id="hero-1">
         <div class="hero1-container" data-aos="fade-up">
             <div class="container align-self-center">
-                <h1>Berita</h1>
+                <h1>{{ $berita->judul }}</h1>
             </div>
         </div>
 

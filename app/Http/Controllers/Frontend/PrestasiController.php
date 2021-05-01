@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
 use App\Prestasi;
+use App\Kontak;
 
 class PrestasiController extends Controller
 {
@@ -67,7 +68,9 @@ class PrestasiController extends Controller
      */
     public function show(Prestasi $prestasi)
     {
-        return view('frontend.prestasi.show', compact('prestasi'));
+        $kontak = Kontak::all();
+
+        return view('frontend.prestasi.show', compact('prestasi', 'kontak'));
     }
 
     /**
@@ -78,7 +81,8 @@ class PrestasiController extends Controller
      */
     public function edit(Prestasi $prestasi)
     {
-
+   
+        
         return view('admin.prestasi.edit', compact('prestasi'));
 
     }
