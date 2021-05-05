@@ -28,7 +28,7 @@ Route::name('frontend.')->group(function () {
 
             // Profile
             Route::get('/galeri', 'GaleriController@home')->name('galeri');
-            Route::get('/Kur', 'KurController@index')->name('Kur');
+            Route::get('/kurikulum', 'KurController@index')->name('kurikulum');
             Route::get('/staf', 'StaffController@home')->name('staf');
             Route::get('/tentang', 'TentangController@index')->name('tentang');
             Route::get('/visi', 'VisiController@index')->name('visi');

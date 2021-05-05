@@ -8,6 +8,7 @@ class Alumni extends Model
 {
     protected $fillable = [
         'nama',
+        'status',
         'testimoni',
         'image',
     ];

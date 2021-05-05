@@ -16,6 +16,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="">Status pekerjaan/sekolah</label>
+                    <input type="text" class="form-control" name="status" value="{{ $alumni->status }}">
+                </div>
+
+                <div class="form-group">
                     <label for="">Testimoni</label>
                     <textarea class="form-control" name="testimoni" rows="3">{{ $alumni->testimoni }}</textarea>
                 </div>

@@ -48,16 +48,17 @@ class AlumniController extends Controller
     {
         Alert::success('Success', 'Data alumni berhasil ditambah');
 
-        $image = $request->file('image');
-        $filename = $image->getClientOriginalName();
-        $image_resize = Image::make($image->getRealPath());
-        $image_resize->resize(300, 300);
-        $image_resize->save(public_path('storage/alumni/'.$filename));
+        // $image = $request->file('image');
+        // $filename = $image->getClientOriginalName();
+        // $image_resize = Image::make($image->getRealPath());
+        // $image_resize->resize(300, 300);
+        // $image_resize->save(public_path('storage/alumni/'.$filename));
 
         Alumni::create([
             'nama' => request('nama'),
+            'status' => request('status'),
             'testimoni' => request('testimoni'),
-            'image' => $filename
+            'image' => request('image')->store('alumni')
         ]);
 
         return redirect()->route('frontend.alumni-admin.index');
@@ -100,16 +101,17 @@ class AlumniController extends Controller
             \Storage::delete($alumni->image);
         }
 
-        $image = $request->file('image');
-        $filename = $image->getClientOriginalName();
-        $image_resize = Image::make($image->getRealPath());
-        $image_resize->resize(500, 350);
-        $image_resize->save(public_path('storage/alumni/'.$filename));
+        // $image = $request->file('image');
+        // $filename = $image->getClientOriginalName();
+        // $image_resize = Image::make($image->getRealPath());
+        // $image_resize->resize(500, 350);
+        // $image_resize->save(public_path('storage/alumni/'.$filename));
 
         $alumni->update([
             'nama' => request('nama'),
+            'status' => request('status'),
             'testimoni' => request('testimoni'),
-            'image' => $filename
+            'image' => request('image')->store('alumni')
         ]);
 
         return redirect()->route('frontend.alumni-admin.index');

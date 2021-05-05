@@ -16,6 +16,7 @@ class CreateAlumnisTable extends Migration
         Schema::create('alumnis', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('status');
             $table->string('testimoni');
             $table->string('image');
             $table->timestamps();

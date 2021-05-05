@@ -22,6 +22,7 @@
                         <thead>
                             <tr>
                                 <th>Nama</th>
+                                <th>Status</th>
                                 <th>Testimoni</th>
                                 <th>Image</th>
                                 <th>Actions</th>
@@ -30,6 +31,7 @@
                         <tfoot>
                             <tr>
                                 <th>Nama</th>
+                                <th>Status</th>
                                 <th>Testimoni</th>
                                 <th>Image</th>
                                 <th>Actions</th>
@@ -39,9 +41,10 @@
                             @foreach ($alumni as $alm)
                                 <tr>
                                     <td>{{ $alm->nama }}</td>
+                                    <td>{{ $alm->status }}</td>
                                     <td>{{ $alm->testimoni }}</td>
                                     <td align="center">
-                                        <img src="{{ asset('storage/alumni/' . $alm->image) }}" height="90px">
+                                        <img src="{{ asset('storage/' . $alm->image) }}" height="90px">
                                     </td>
                                     <td>
                                         <a href="{{ route('frontend.alumni.edit', $alm) }}"

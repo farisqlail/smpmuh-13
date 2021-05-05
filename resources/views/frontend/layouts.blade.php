@@ -18,13 +18,11 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}"
-        rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}"
-        rel="stylesheet">
+    <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
@@ -62,8 +60,7 @@
         <div class="container d-flex">
 
             <div class="logo mr-auto">
-                <a href="{{ url('/') }}"><img
-                        src="{{ asset('./assets/img/logo-navbar.png') }}"
+                <a href="{{ url('/') }}"><img src="{{ asset('./assets/img/logo-navbar.png') }}"
                         class="img-fluid mt-1 ml-3" alt=""></a>
             </div>
 
@@ -76,15 +73,15 @@
                             <li><a href="{{ url('/akreditasi') }}">Akreditasi Sekolah</a></li>
                             <li><a href="{{ url('/beasiswa') }}">Beasiswa</a></li>
                             <li><a href="{{ url('/staf') }}">Staff dan Guru</a></li>
-                            <li><a href="{{ url('/Kur') }}">Kur dan Pemb</a></li>
+                            <li><a href="{{ url('/kurikulum') }}">kurikulum dan Pembelajaran</a></li>
                         </ul>
                     </li>
                     <li class="drop-down"><a href="">Kegiatan</a>
-                        <ul>
-                            <li><a href="{{ url('/ekstra') }}">Ekstrakurikuler</a></li>
-                            <li><a href="{{ url('/prestasi') }}">Prestasi Siswa</a></li>
-                            <li><a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a></li>
-                        </ul>
+                    <ul>
+                        <li><a href="{{ url('/ekstra') }}">Ekstrakurikuler</a></li>
+                        <li><a href="{{ url('/prestasi') }}">Prestasi Siswa</a></li>
+                        <li><a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a></li>
+                    </ul>
                     </li>
                     <li><a href="{{ url('/galeri') }}">Galeri</a></li>
                     <li><a href="{{ url('/berita') }}">Berita</a></li>
@@ -111,8 +108,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4" align="left">
-                        <img src="{{ asset('./assets/img/logo-2.png') }}" class="img-fluid"
-                            alt="">
+                        <img src="{{ asset('./assets/img/logo-2.png') }}" class="img-fluid" alt="">
                         <p>Hallo, Selamat Datang di SMP Muhammadiyah
                             13 Surabaya. Sekolah islam memadukan nilai-nilai
                             tauhid ke seluruh kurikulum dan aktivitasnya </p>
@@ -133,7 +129,7 @@
                                 <a href="{{ url('/akreditasi') }}">Akreditasi</a><br>
                                 <a href="{{ url('/beasiswa') }}">Beasiswa</a><br>
                                 <a href="{{ url('/staf') }}">Staff dan Guru</a><br>
-                                <a href="{{ url('/kur') }}">Kur dan Pemb</a><br>
+                                <a href="{{ url('/kurikulum') }}">kurikulum dan Pembelajaran</a><br>
                                 <a href="{{ url('/ekstra') }}">Ekstrakurikuler</a><br>
                                 <a href="{{ url('/prestasi') }}">Prestasi Siswa</a><br>
                                 <a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a><br>
@@ -145,7 +141,7 @@
                                 <a href="{{ url('/berita') }}">Berita</a><br>
                                 <a href="{{ url('/alumni') }}">Alumni</a><br>
                                 <a href="{{ url('/kontak') }}">Kontak</a><br>
-                                <a href="{{ url('/') }}">Pendaftaran</a><br>
+                                <a href="{{ url('/daftar') }}">Pendaftaran</a><br>
                             </div>
                         </div>
                     </div>
@@ -153,7 +149,8 @@
                         <h5>Informasi</h5>
                         <p><i class="icofont-location-arrow"></i> Jl. Tambak Segaran No. 27 Surabaya<br />
                             <i class="icofont-phone"></i> {{ $kontak[0]->telp }} <br>
-                            <i class="icofont-envelope"></i><a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
+                            <i class="icofont-envelope"></i><a
+                                href="mailto:{{ $kontak[0]->email }}">{{ $kontak[0]->email }}</a>
                     </div>
                 </div>
             </div>

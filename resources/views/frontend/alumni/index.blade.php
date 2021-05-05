@@ -34,16 +34,19 @@
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{ asset('storage/alumni/' . $alm->image) }}" alt="">
+                                {{-- Foto harus berukuran 500 x 532 --}}
+                                <img src="{{ asset('storage/' . $alm->image) }}" alt="">
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">{{ $alm->nama }}</h3>
+                                <h3 class="uk-card-title" style="margin-bottom: -5px;">{{ $alm->nama }}</h3>
+                                <small>Pekerjaan</small>
                                 <p><i>"{{ $alm->testimoni }}"</i></p>
                             </div>
                         </div>
                     </div>
                     @endforeach
                 </div>
+
 
         </div>
     </main>

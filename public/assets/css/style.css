@@ -2300,3 +2300,17 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   height: max-content;
   width: auto;
 }
+
+
+.team .member {
+  width: 20rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
