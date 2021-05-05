@@ -35,13 +35,13 @@
             <div class="row">
                 <div class="card-columns">
                 @foreach ($prestasi as $prst)
-                    <div class="card shadow mb-5 bg-white rounded">
+                    <div class="card shadow mb-5 bg-white rounded" style="width: 20rem;">
                         <img src="{{ asset('storage/' . $prst->image) }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4 style="font-weight: 500">{{ $prst->nama }}</h4>
                             <small class="mt-2"><i>Kelas {{ $prst->kelas }}</i></small>
                             <p class="mt-1">
-                                {{ $prst->deskripsi }}
+                                {!! Str::limit($prst->deskripsi, 50) !!}
                             </p>
                             <a href="{{ route('frontend.show-prestasi', $prst) }}" class="text-primary">Baca Selengkapnya</a>
                         </div>

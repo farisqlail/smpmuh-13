@@ -47,7 +47,7 @@
                             <td>{{ $prestasi->kelas }}</td>
                             <td>{{ $prestasi->namaAcara }}</td>
                             <td>{{ $prestasi->jenis }}</td>
-                            <td>{{ $prestasi->deskripsi }}</td>
+                            <td> {!! Str::limit($prestasi->deskripsi, 50) !!}</td>
                             <td align="center">
                                 <img src="{{ asset('storage/'.$prestasi->image) }}" height="90px">
                             </td>

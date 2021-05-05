@@ -30,7 +30,7 @@ Route::name('frontend.')->group(function () {
             Route::get('/galeri', 'GaleriController@home')->name('galeri');
             Route::get('/kurikulum', 'KurController@index')->name('kurikulum');
             Route::get('/staf', 'StaffController@home')->name('staf');
-            Route::get('/tentang', 'TentangController@index')->name('tentang');
+            Route::get('/tentang', 'TentangController@home')->name('tentang');
             Route::get('/visi', 'VisiController@index')->name('visi');
 
             //Comment 
@@ -96,5 +96,13 @@ Route::name('frontend.')->group(function () {
             Route::patch('/alumni-admin/{alumni}', 'AlumniController@update')->name('alumni.update');
             Route::get('/alumni-admin/{alumni}/delete', 'AlumniController@destroy')->name('alumni.delete');
             Route::resource('alumni-admin', 'AlumniController');
+
+            Route::get('/tentang-admin/{tentang}/editTentang', 'TentangController@editTentang')->name('tentang.editTentang');
+            Route::patch('/tentang-admin/{tentang}', 'TentangController@updateTentang')->name('tentang.updateTentang');
+
+            Route::get('/tentang-admin/{tentang}/edit', 'TentangController@edit')->name('tentang.edit');
+            Route::patch('/tentang-admin/{tentang}', 'TentangController@update')->name('tentang.update');
+            Route::get('/tentang-admin/{tentang}/delete', 'TentangController@destroy')->name('tentang.delete');
+            Route::resource('tentang-admin', 'TentangController');
     });
 });

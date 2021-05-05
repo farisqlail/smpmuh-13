@@ -4,6 +4,14 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
+        <h1 class="h3 mb-2 text-gray-800">Tambah Data Prestasi Siswa</h1>
+
+        <div class="card shadow mb-4 mt-3">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Prestasi Siswa</h6>
+            </div>
+
+
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('frontend.prestasi-admin.store') }}" method="POST" enctype="multipart/form-data">

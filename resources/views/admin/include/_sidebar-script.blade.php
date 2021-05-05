@@ -49,7 +49,7 @@
             </a>
             <div id="profile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Tentang</a>
+                <a class="collapse-item" href="{{ url('/tentang-admin') }}">Tentang</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Akreditasi</a>
