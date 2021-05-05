@@ -41,22 +41,7 @@
                   <div class="col-lg-6 pt-5 pt-lg-0 align-self-center">
                     <h4>Visi</h4>
                       <p>
-                        SMP Muhammadiyah 13 Unggul dalam IMTAQ, IPTEK, Berprestasi, dan Berbudaya Lingkungan.
-                        Indikator visi:<br>
-                        1. Terwujudnya peran sekolah sebagai pembentuk karakter peserta didik<br>
-                        2. Terciptanya peserta didik yang beriman yang menjalankan seluruh <br>
-                            kegiatan berdasarkan syariat islam<br>
-                        3. Terciptanya peserta didik yang dapat menjalankan ibadah wajib dengan 
-                            kesadaran diri<br>
-                        4. Terciptanya peserta didik yang berkepribadian santun, sopan, jujur, 
-                            bertanggung jawab, disiplin, percaya diri, dan mandiri<br>
-                        5. Terciptanya peserta didik yang cerdas, kreatif dan inovatif<br>
-                        6. Terciptanya peserta didik yang memiliki wawasan luas terhadap  informasi   
-                              dan teknologi<br>
-                        7. Terwujudnya generasi islam yang mampu mandiri dan bersaing 
-                            menghadapi persaingan global<br>
-                        8. Terciptanya peserta didik yang peduli dan mau menjaga kebersihan 
-                              lingkungan dimanapun mereka berada<br>
+                       {!! $visi[0]->visi !!}
                       </p>
                   </div>
                   <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1" >
@@ -72,16 +57,7 @@
                   <div class="col-lg-6 pt-5 pt-lg-0 align-self-center">
                     <h4>Misi</h4>
                       <p>
-                        1. Mewujudkan iklim sekolah yang disiplin dan islami<br>
-                        2. Menciptakan peserta didik yang beriman dan bertaqwa<br>
-                        3. Menciptakan peserta didik yang berakhlaqul karimah<br>
-                        4. Mewujudkan  peserta didik yang berkepribadian santun, sopan, jujur, bertanggung jawab, disiplin, percaya diri, dan mandiri<br>
-                        5. Mewujudkan peserta didik yang cerdas, kreatif dan inovatif<br>
-                        6. Menciptakan peserta didik yang  memiliki kompetensi dalam penguasaan 
-                            iptek<br>
-                        7. Mewujudkan generasi islam yang mandiri dan kompetitif dalam 
-                            menghadapi persaingan global<br>
-                        8. Menciptakan peserta didik yang berbudaya lingkungan
+                       {!! $visi[0]->misi !!}
                       </p>
                   </div>
                 </div>

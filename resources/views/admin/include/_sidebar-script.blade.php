@@ -50,13 +50,12 @@
             <div id="profile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ url('/tentang-admin') }}">Tentang</a>
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Akreditasi</a>
+                <a class="collapse-item" href="{{ url('/visi-admin') }}">Visi Misi</a>
+                <a class="collapse-item" href="{{ url('/akreditasi-admin') }}">Akreditasi</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Beasiswa</a>
                 <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Kur & Pemb</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Galeri</a>
-                
               </div>
             </div>
           </li>

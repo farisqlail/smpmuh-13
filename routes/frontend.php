@@ -23,7 +23,7 @@ Route::name('frontend.')->group(function () {
 
             // Akademik
             Route::get('/ekstra', 'EkstraController@index')->name('ekstra');
-            Route::get('/akreditasi', 'AkreditasiController@index')->name('akreditasi');
+            Route::get('/akreditasi', 'AkreditasiController@home')->name('akreditasi');
             Route::get('/beasiswa', 'BeasiswaController@index')->name('beasiswa');
 
             // Profile
@@ -31,7 +31,7 @@ Route::name('frontend.')->group(function () {
             Route::get('/kurikulum', 'KurController@index')->name('kurikulum');
             Route::get('/staf', 'StaffController@home')->name('staf');
             Route::get('/tentang', 'TentangController@home')->name('tentang');
-            Route::get('/visi', 'VisiController@index')->name('visi');
+            Route::get('/visi', 'VisiController@home')->name('visi');
 
             //Comment 
             Route::resource('/comment', 'CommentController');
@@ -100,12 +100,19 @@ Route::name('frontend.')->group(function () {
 
             Route::get('/tentang-admin/{tentang}/edit', 'TentangController@edit')->name('tentang.edit');
             Route::patch('/tentang-admin/{tentang}', 'TentangController@update')->name('tentang.update');
-            Route::get('/tentang-admin/{tentang}/delete', 'TentangController@destroy')->name('tentang.delete');
             Route::resource('tentang-admin', 'TentangController');
 
             Route::get('/karakter-admin/{karakter}/edit', 'KarakterController@edit')->name('karakter.edit');
             Route::patch('/karakter-admin/{karakter}', 'KarakterController@update')->name('karakter.update');
             Route::get('/karakter-admin/{karakter}/delete', 'KarakterController@destroy')->name('karakter.delete');
             Route::resource('karakter-admin', 'KarakterController');
+
+            Route::get('/visi-admin/{visi}/edit', 'VisiController@edit')->name('visi.edit');
+            Route::patch('/visi-admin/{visi}', 'VisiController@update')->name('visi.update');
+            Route::resource('visi-admin', 'VisiController');
+
+            Route::get('/akreditasi-admin/{akreditasi}/edit', 'AkreditasiController@edit')->name('akreditasi.edit');
+            Route::patch('/akreditasi-admin/{akreditasi}', 'AkreditasiController@update')->name('akreditasi.update');
+            Route::resource('akreditasi-admin', 'AkreditasiController');
     });
 });
