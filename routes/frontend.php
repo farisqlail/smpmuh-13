@@ -97,12 +97,14 @@ Route::name('frontend.')->group(function () {
             Route::get('/alumni-admin/{alumni}/delete', 'AlumniController@destroy')->name('alumni.delete');
             Route::resource('alumni-admin', 'AlumniController');
 
-            Route::get('/tentang-admin/{tentang}/editTentang', 'TentangController@editTentang')->name('tentang.editTentang');
-            Route::patch('/tentang-admin/{tentang}', 'TentangController@updateTentang')->name('tentang.updateTentang');
-
             Route::get('/tentang-admin/{tentang}/edit', 'TentangController@edit')->name('tentang.edit');
             Route::patch('/tentang-admin/{tentang}', 'TentangController@update')->name('tentang.update');
             Route::get('/tentang-admin/{tentang}/delete', 'TentangController@destroy')->name('tentang.delete');
             Route::resource('tentang-admin', 'TentangController');
+
+            Route::get('/karakter-admin/{karakter}/edit', 'KarakterController@edit')->name('karakter.edit');
+            Route::patch('/karakter-admin/{karakter}', 'KarakterController@update')->name('karakter.update');
+            Route::get('/karakter-admin/{karakter}/delete', 'KarakterController@destroy')->name('karakter.delete');
+            Route::resource('karakter-admin', 'KarakterController');
     });
 });

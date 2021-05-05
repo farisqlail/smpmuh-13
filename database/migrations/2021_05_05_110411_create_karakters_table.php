@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTentangsTable extends Migration
+class CreateKaraktersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateTentangsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tentangs', function (Blueprint $table) {
+        Schema::create('karakters', function (Blueprint $table) {
             $table->id();
-            $table->longtext("deskripsi");
+            $table->string("namaKarakter");
+            $table->longText("deskripsiKarakter");
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateTentangsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tentangs');
+        Schema::dropIfExists('karakters');
     }
 }

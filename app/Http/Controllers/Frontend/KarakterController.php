@@ -8,11 +8,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
-use App\Kontak;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Paginator;
+use Carbon\Carbon;
 use App\Tentang;
 use App\Karakter;
 
-class TentangController extends Controller
+class KarakterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,19 +23,10 @@ class TentangController extends Controller
      */
     public function index()
     {
-       $tentang = Tentang::all();
-       $karakter = Karakter::all();
-
-       return view('admin.tentang.index', compact('tentang', 'karakter'));
-    }
-
-    public function home(){
-
-        $kontak = Kontak::all();
         $tentang = Tentang::all();
         $karakter = Karakter::all();
 
-        return view('frontend.profile.tentang', compact('kontak', 'tentang', 'karakter'));
+        return view('admin.tentang.index', compact('tentang', 'karakter'));
     }
 
     /**
@@ -43,7 +36,7 @@ class TentangController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.karakter.createKarakter');
     }
 
     /**
@@ -54,7 +47,14 @@ class TentangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Alert::success('Success', 'Berhasil menambah data karakter!');
+
+        Karakter::create([
+            'namaKarakter' => request('namaKarakter'),
+            'deskripsiKarakter' => request('deskripsiKarakter')
+        ]);
+
+        return redirect()->route('frontend.karakter-admin.index');
     }
 
     /**
@@ -67,17 +67,16 @@ class TentangController extends Controller
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tentang $tentang)
+    public function edit(Karakter $karakter)
     {
-        $tentang = Tentang::find(1);
-
-        return view('admin.tentang.edit', compact('tentang'));
+        return view('admin.karakter.editKarakter', compact('karakter'));
     }
 
     /**
@@ -87,15 +86,16 @@ class TentangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Tentang $tentang)
+    public function update(Karakter $karakter)
     {
-        Alert::success('success', 'Berhasil mengupdate tentang skeolah!');
+        Alert::success('Success', 'Berhasil menambah data karakter!');
 
-        $tentang->update([
-            'deskripsi' => request('deskripsi')
+        $karakter->update([
+            'namaKarakter' => request('namaKarakter'),
+            'deskripsiKarakter' => request('deskripsiKarakter')
         ]);
 
-        return redirect()->route('frontend.tentang-admin.index');
+        return redirect()->route('frontend.karakter-admin.index');
     }
 
     /**
@@ -104,8 +104,11 @@ class TentangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Karakter $karakter)
     {
-        //
+        $karakter->delete();
+        Alert::success('Success', 'Berhasil menghapus data karakter');
+
+        return redirect()->route('frontend.karakter-admin.index');
     }
 }

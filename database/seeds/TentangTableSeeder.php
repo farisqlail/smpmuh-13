@@ -20,8 +20,7 @@ class TentangTableSeeder extends Seeder
             SMP Muhammadiyah 13 Surabaya hadir untuk memberikan solusi terbaik bagi generasi pelanjut dengan pendidikan yang menumbuhkembangkan potensi fitrah; yang meliputi aspek akal, spiritual, fisik, sosial secara optimal dan berimbang.
             
             SMP Muhammadiyah 13 Surabaya mengintegrasikan keyakinan, pikiran dan tindakan ke dalam lingkungan belajar; baik di sekolah, masjid, keluarga dan masyarakat secara seimbang sehingga akan melahirkan lulusan yang berkualitas, cerdas, kreatif dan siap menghadapi tantangan ke depan serta memberikan pondasi pembentukan manusia seutuhnya, yakni manusia yang beriman, bertaqwa, menguasai IPTEK, berakhlak mulia, cerdas menuju ridha Allah SWT. ',
-            'namaKarakter' => '',
-            'deskripsiKarakter' => ''
+            
         ]);
     }
 }

@@ -43,7 +43,7 @@
 
               <div class="col-lg-6">
                 <p>
-                  {{ $tentang[0]->deskripsi }}
+                    {!! $tentang[0]->deskripsi !!}
                 </p>
               </div>
             </div>
