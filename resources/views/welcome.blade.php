@@ -275,7 +275,7 @@
                         <h5>Informasi</h5>
                         <p><i class="icofont-location-arrow"></i> Jl. Tambak Segaran No. 27 Surabaya<br />
                             <i class="icofont-phone"></i> {{ $kontak[0]->telp }} <br>
-                            <i class="icofont-envelope"></i><a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
+                            <i class="icofont-envelope"></i> <a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
                     </div>
                 </div>
             </div>

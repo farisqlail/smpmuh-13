@@ -21,6 +21,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="">Alamat Lengkap</label>
+                    <input type="text" class="form-control" name="alamat" placeholder="{{ $kontak->alamat }}">
+                </div>
+
+
+                <div class="form-group">
                     <button class="btn btn-primary" type="submit" value="save">Update</button>
                 </div>
             </form>

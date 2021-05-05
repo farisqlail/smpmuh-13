@@ -51,7 +51,6 @@
               <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ url('/tentang-admin') }}">Tentang</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Visi Misi</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Akreditasi</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Beasiswa</a>
                 <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>

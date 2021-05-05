@@ -13,7 +13,8 @@ class KontakTableSeeder extends Seeder
     {
         DB::table('kontaks')->insert([
             'email' => 'smpm13sby@gmail.com',
-            'telp' => '08988989'
+            'telp' => '08988989',
+            'alamat' => 'Jl. Tambak Segaran No. 27 Surabaya'
         ]);
     }
 }

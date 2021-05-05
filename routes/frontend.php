@@ -46,7 +46,8 @@ Route::name('frontend.')->group(function () {
 
             //Kontak
             Route::get('/kontak', 'HomeController@kontak')->name('kontak');
-            Route::resource('pesan', 'PesanController');
+            // Route::get('/kontak', 'PesanController@create')->name('kontak');
+            // Route::resource('pesan', 'PesanController');
 
             //Alumni
             Route::get('/alumni', 'HomeController@alumni')->name('alumni');

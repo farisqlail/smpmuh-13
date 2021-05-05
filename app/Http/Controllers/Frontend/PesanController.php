@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
 use App\Pesan;
+use App\Kontak;
 
 class PesanController extends Controller
 {
@@ -32,7 +33,9 @@ class PesanController extends Controller
      */
     public function create()
     {
-        //
+        $kontak = Kontak::all();
+
+        return view('frontend.kontak.index', compact('kontak'));
     }
 
     /**

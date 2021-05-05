@@ -15,4 +15,6 @@ class MarsController extends Controller
 
         return view('frontend.profile.mars', compact('kontak'));
     }
+
+    
 }
