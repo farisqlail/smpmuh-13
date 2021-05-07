@@ -11,30 +11,30 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
+use App\Kurikulum;
 use App\Kontak;
-use App\Beasiswa;
 
-class BeasiswaController extends Controller
+class KurikulumController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-
+    public function index()
+    {
         $kontak = Kontak::all();
-        $beasiswa = Beasiswa::all();
+        $kurikulum = Kurikulum::all();
 
-        return view('admin.beasiswa.index', compact('kontak', 'beasiswa'));
+        return view('admin.kurikulum.index', compact('kontak', 'kurikulum'));
     }
 
     public function home(){
-        
-        $kontak = Kontak::all();
-        $beasiswa = Beasiswa::all();
 
-        return view('frontend.akademik.beasiswa', compact('kontak', 'beasiswa'));
+        $kontak = Kontak::all();
+        $kurikulum = Kurikulum::all();
+
+        return view('frontend.profile.kur', compact('kontak', 'kurikulum'));
     }
 
     /**
@@ -44,7 +44,7 @@ class BeasiswaController extends Controller
      */
     public function create()
     {
-        return view('admin.beasiswa.create');
+        //
     }
 
     /**
@@ -55,14 +55,7 @@ class BeasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        Alert::success('Success', 'Behasil menambah data beasiswa!');
-
-        Beasiswa::create([
-            'namaBeasiswa' => request('namaBeasiswa'),
-            'deskripsi' => request('deskripsi')
-        ]);
-
-        return redirect()->route('frontend.beasiswa-admin.index');
+        //
     }
 
     /**
@@ -82,9 +75,9 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Beasiswa $beasiswa)
+    public function edit(Kurikulum $kurikulum)
     {
-        return view('admin.beasiswa.edit', compact('beasiswa'));
+        return view('admin.kurikulum.edit', compact('kurikulum'));
     }
 
     /**
@@ -94,16 +87,16 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Beasiswa $beasiswa)
+    public function update(Request $request, Kurikulum $kurikulum)
     {
-        Alert::success('Success', 'Berhasil mengubah data beasiswa!');
+        Alert::success('Success', 'Berhasil mengubah data kurikulum');
 
-        $beasiswa->update([
-            'namaBeasiswa' => request('namaBeasiswa'),
-            'deskripsi' => request('deskripsi')
+        $kurikulum->update([
+            'deskripsi' => request('deskripsi'),
+            'image' => request('image')->store('kurikulum')
         ]);
 
-        return redirect()->route('frontend.beasiswa-admin.index');
+        return redirect()->route('frontend.kurikulum-admin.index');
     }
 
     /**
@@ -112,11 +105,8 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Beasiswa $beasiswa)
+    public function destroy($id)
     {
-        Alert::success('Success', 'Berhasil menghapus data beasiswa!');
-        $beasiswa->delete();
-
-        return redirect()->route('frontend.beasiswa-admin.index');
+        //
     }
 }

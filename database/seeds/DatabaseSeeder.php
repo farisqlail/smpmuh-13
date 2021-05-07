@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(VisiTableSeeder::class);
         $this->call(AkreditasiTableSeeder::class);
         $this->call(BeasiswaTableSeeder::class);
+        $this->call(KurikulumTableSeeder::class);
     }
 }

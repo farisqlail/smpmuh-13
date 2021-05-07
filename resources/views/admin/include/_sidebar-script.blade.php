@@ -54,7 +54,7 @@
                 <a class="collapse-item" href="{{ url('/akreditasi-admin') }}">Akreditasi</a>
                 <a class="collapse-item" href="{{ url('/beasiswa-admin') }}">Beasiswa</a>
                 <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Kurikulum & Pembelajaran</a>
+                <a class="collapse-item" href="{{ url('/kurikulum-admin') }}">Kurikulum & <br> Pembelajaran</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Galeri</a>
               </div>
             </div>

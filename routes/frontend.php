@@ -28,7 +28,7 @@ Route::name('frontend.')->group(function () {
 
             // Profile
             Route::get('/galeri', 'GaleriController@home')->name('galeri');
-            Route::get('/kurikulum', 'KurController@index')->name('kurikulum');
+            Route::get('/kurikulum', 'KurikulumController@home')->name('kurikulum');
             Route::get('/staf', 'StaffController@home')->name('staf');
             Route::get('/tentang', 'TentangController@home')->name('tentang');
             Route::get('/visi', 'VisiController@home')->name('visi');
@@ -119,5 +119,9 @@ Route::name('frontend.')->group(function () {
             Route::patch('/beasiswa-admin/{beasiswa}', 'BeasiswaController@update')->name('beasiswa.update');
             Route::get('/beasiswa-admin/{beasiswa}/delete', 'BeasiswaController@destroy')->name('beasiswa.delete');
             Route::resource('beasiswa-admin', 'BeasiswaController');
+
+            Route::get('/kurikulum-admin/{kurikulum}/edit', 'KurikulumController@edit')->name('kurikulum.edit');
+            Route::patch('/kurikulum-admin/{kurikulum}', 'KurikulumController@update')->name('kurikulum.update');
+            Route::resource('/kurikulum-admin', 'KurikulumController');
     });
 });

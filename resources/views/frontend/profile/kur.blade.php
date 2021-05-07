@@ -2,38 +2,48 @@
 
 @section('content')
 
-  <section id="hero-1">
-    <div class="hero1-container" data-aos="fade-up">
-      <div class="container">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <h1>Kur dan Pemb </h1>
+    <section id="hero-1">
+        <div class="hero1-container" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <h1>Kur dan Pemb </h1>
+                    </div>
+                    <div class="col-lg-6" align="center">
+                        <img src="{{ asset('assets/img/mars-img.png') }}" class="img-fluid" width="250px" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6" align="center">
-              <img src="{{ asset('assets/img/mars-img.png') }}" class="img-fluid" width="250px" alt="">
-            </div>
-          </div>
         </div>
+
+
+
+    </section>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb shadow p-3 mb-5 bg-white rounded">
+                <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Kur & Pemb</li>
+            </ol>
+        </nav>
     </div>
-    
-    
-    
-</section>    
-
-<div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb shadow p-3 mb-5 bg-white rounded">
-          <li class="breadcrumb-item"><a href="#">Profile</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Kur & Pemb</li>
-        </ol>
-      </nav>
-</div>
 
 
-  <main id="main">
+    <main id="main" data-aos="fade-up">
 
-    <h4 align="center" data-aos="fade-up">Kur dan Pemb</h4>
-   
-  
-  </main><!-- End #main -->
+        <h4 align="center" data-aos="fade-up">Kur dan Pemb</h4>
+
+        <div class="container">
+            <div class="image-kur" align="center">
+                <img src="https://images.unsplash.com/photo-1620321271188-3f1043222e80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    class="img-fluid mb-3" width="800" alt="" srcset="">
+            </div>
+
+            <p class="mb-3">
+
+            </p>
+        </div>
+
+    </main><!-- End #main -->
 @endsection

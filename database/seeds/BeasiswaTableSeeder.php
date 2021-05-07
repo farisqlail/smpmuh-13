@@ -22,7 +22,7 @@ class BeasiswaTableSeeder extends Seeder
             ],
             [
                 'namaBeasiswa' => 'Beasiswa Untuk Siswa Tidak Mampu',
-                'deskripsi' => 'Beasiswa ini diberikan untuk siswa yang kurang mampu bahkan kita membebaskan biaya SPP untuk siswa yang tidak mampu tapi selalu berprestasi. )'
+                'deskripsi' => 'Beasiswa ini diberikan untuk siswa yang kurang mampu bahkan kita membebaskan biaya SPP untuk siswa yang tidak mampu tapi selalu berprestasi.'
             ],
         ]);
     }
