@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(KarakterTableSeeder::class);
         $this->call(VisiTableSeeder::class);
         $this->call(AkreditasiTableSeeder::class);
+        $this->call(BeasiswaTableSeeder::class);
     }
 }

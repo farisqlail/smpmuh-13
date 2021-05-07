@@ -52,18 +52,25 @@
                 <a class="collapse-item" href="{{ url('/tentang-admin') }}">Tentang</a>
                 <a class="collapse-item" href="{{ url('/visi-admin') }}">Visi Misi</a>
                 <a class="collapse-item" href="{{ url('/akreditasi-admin') }}">Akreditasi</a>
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Beasiswa</a>
+                <a class="collapse-item" href="{{ url('/beasiswa-admin') }}">Beasiswa</a>
                 <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>
-                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Kur & Pemb</a>
+                <a class="collapse-item" href="{{ url('/galeri-admin') }}">Kurikulum & Pembelajaran</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Galeri</a>
               </div>
             </div>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/prestasi-admin') }}">
-              <i class="fas fa-fw fa-user-graduate"></i>
-              <span>Prestasi SIswa</span></a>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#kegiatan" aria-expanded="true" aria-controls="collapsePages">
+              <i class="fas fa-fw fa-snowboarding"></i>
+              <span>Kegiatan</span>
+            </a>
+            <div id="kegiatan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ url('/prestasi-admin') }}">Prestasi Siswa</a>
+                <a class="collapse-item" href="{{ url('/prestasi-admin') }}">Ekstrakurikuler</a>
+              </div>
+            </div>
           </li>
           
           <li class="nav-item">

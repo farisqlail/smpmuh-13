@@ -24,7 +24,7 @@ Route::name('frontend.')->group(function () {
             // Akademik
             Route::get('/ekstra', 'EkstraController@index')->name('ekstra');
             Route::get('/akreditasi', 'AkreditasiController@home')->name('akreditasi');
-            Route::get('/beasiswa', 'BeasiswaController@index')->name('beasiswa');
+            Route::get('/beasiswa', 'BeasiswaController@home')->name('beasiswa');
 
             // Profile
             Route::get('/galeri', 'GaleriController@home')->name('galeri');
@@ -114,5 +114,10 @@ Route::name('frontend.')->group(function () {
             Route::get('/akreditasi-admin/{akreditasi}/edit', 'AkreditasiController@edit')->name('akreditasi.edit');
             Route::patch('/akreditasi-admin/{akreditasi}', 'AkreditasiController@update')->name('akreditasi.update');
             Route::resource('akreditasi-admin', 'AkreditasiController');
+
+            Route::get('/beasiswa-admin/{beasiswa}/edit', 'BeasiswaController@edit')->name('beasiswa.edit');
+            Route::patch('/beasiswa-admin/{beasiswa}', 'BeasiswaController@update')->name('beasiswa.update');
+            Route::get('/beasiswa-admin/{beasiswa}/delete', 'BeasiswaController@destroy')->name('beasiswa.delete');
+            Route::resource('beasiswa-admin', 'BeasiswaController');
     });
 });
