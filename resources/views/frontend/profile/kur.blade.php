@@ -32,16 +32,21 @@
 
     <main id="main" data-aos="fade-up">
 
-        <h4 align="center" data-aos="fade-up">Kur dan Pemb</h4>
+        <h4 align="center" data-aos="fade-up">Kurikulum dan Pembelajaran</h4>
 
         <div class="container">
-            <div class="image-kur" align="center">
-                <img src="https://images.unsplash.com/photo-1620321271188-3f1043222e80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                    class="img-fluid mb-3" width="800" alt="" srcset="">
-            </div>
+            @if ($kurikulum[0]->image == null)
+                <div class="image-null" align="center">
+                    <img src="http://mundalodge.com/images/joomlart/demo/default.jpg" class="img-fluid">
+                </div>
+            @else
+                <div class="image-null" align="center">
+                    <img src="{{ asset('storage/' . $kurikulum[0]->image) }}" class="img-fluid" >
+                </div>
+            @endif
 
-            <p class="mb-3">
-
+            <p class="mt-3 mb-3">
+              {!! $kurikulum[0]->deskripsi !!}
             </p>
         </div>
 

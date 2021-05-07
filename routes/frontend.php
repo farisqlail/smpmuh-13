@@ -22,7 +22,7 @@ Route::name('frontend.')->group(function () {
             Route::get('/berita/search', 'BeritaController@search')->name('berita-search');
 
             // Akademik
-            Route::get('/ekstra', 'EkstraController@index')->name('ekstra');
+            Route::get('/ekstra', 'EkstraController@home')->name('ekstra');
             Route::get('/akreditasi', 'AkreditasiController@home')->name('akreditasi');
             Route::get('/beasiswa', 'BeasiswaController@home')->name('beasiswa');
 
@@ -123,5 +123,14 @@ Route::name('frontend.')->group(function () {
             Route::get('/kurikulum-admin/{kurikulum}/edit', 'KurikulumController@edit')->name('kurikulum.edit');
             Route::patch('/kurikulum-admin/{kurikulum}', 'KurikulumController@update')->name('kurikulum.update');
             Route::resource('/kurikulum-admin', 'KurikulumController');
+
+            Route::get('/ekstra-admin/{ekstra}/edit', 'EkstraController@edit')->name('ekstra.edit');
+            Route::patch('/ekstra-admin/{ekstra}', 'EkstraController@update')->name('ekstra.update');
+            Route::get('/ekstra-admin/{ekstra}/delete', 'EkstraController@destroy')->name('ekstra.delete');
+            Route::resource('/ekstra-admin', 'EkstraController');
+
+            Route::get('/deskripsi-ekstra-admin/{desk}/edit', 'DeskripsiEkstraController@edit')->name('desk.edit');
+            Route::patch('/deskripsi-ekstra-admin/{desk}', 'DeskripsiEkstraController@update')->name('desk.update');
+
     });
 });

@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AkreditasiTableSeeder::class);
         $this->call(BeasiswaTableSeeder::class);
         $this->call(KurikulumTableSeeder::class);
+        $this->call(DeskEkstraTableSeeder::class);
     }
 }
