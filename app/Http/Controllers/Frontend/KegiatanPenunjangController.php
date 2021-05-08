@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\KegiatanPenunjang;
 use App\Kontak;
+use App\DeskripsiKegiatan;
 
 class KegiatanPenunjangController extends Controller
 {
@@ -22,16 +23,19 @@ class KegiatanPenunjangController extends Controller
     public function index()
     {
         $kegiatanPenunjang = KegiatanPenunjang::all();
+        $deskripsiKegiatan = DeskripsiKegiatan::all();
+        // dd($deskripsiKegiatan);
 
-        return view('admin.kegiatanPenunjang.index', compact('kegiatanPenunjang'));
+        return view('admin.kegiatanPenunjang.index', compact('kegiatanPenunjang', 'deskripsiKegiatan'));
     }
 
     public function home(){
         
         $kontak = Kontak::all();
         $kegiatanPenunjang = KegiatanPenunjang::all();
+        $deskripsiKegiatan = DeskripsiKegiatan::all();
 
-        return view('frontend.akademik.kegiatanTambah', compact('kontak', 'kegiatanPenunjang'));
+        return view('frontend.akademik.kegiatanTambah', compact('kontak', 'kegiatanPenunjang', 'deskripsiKegiatan'));
     }
 
     /**

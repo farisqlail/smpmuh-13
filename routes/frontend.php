@@ -142,5 +142,8 @@ Route::name('frontend.')->group(function () {
             Route::patch('/kegiatanPenunjang-admin/{kegiatanPenunjang}', 'KegiatanPenunjangController@update')->name('kegiatanPenunjang.update');
             Route::get('/kegiatanPenunjang-admin/{kegiatanPenunjang}/delete', 'KegiatanPenunjangController@destroy')->name('kegiatanPenunjang.delete');
             Route::resource('/kegiatanPenunjang-admin', 'KegiatanPenunjangController');
+
+            Route::get('/deskripsiKegiatan-admin/{deskripsiKegiatan}/edit', 'DeskripsiKegiatanController@edit')->name('deskripsiKegiatan.edit');
+            Route::patch('/deskripsiKegiatan-admin/{deskripsiKegiatan}', 'DeskripsiKegiatanController@update')->name('deskripsiKegiatan.update');
     });
 });
