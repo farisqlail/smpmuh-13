@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEkstrasTable extends Migration
+class CreateKategoriEkstrasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateEkstrasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ekstras', function (Blueprint $table) {
+        Schema::create('kategori_ekstras', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('kategori_id');
-            $table->string('nama_ekstra');
+            $table->string('nama_kategori');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateEkstrasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ekstras');
+        Schema::dropIfExists('kategori_ekstras');
     }
 }

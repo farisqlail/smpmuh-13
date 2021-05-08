@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Ekstra extends Model
 {
     protected $fillable = [
-        'kategori_ekstra',
-        'nama_ekstra'
+        'kategori_id',
+        'nama_ekstra',
     ];
+
+    public function kategori(){
+
+        return $this->belongsTo(KategoriEkstra::class);
+    }
 }

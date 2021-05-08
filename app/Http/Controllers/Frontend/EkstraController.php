@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Kontak;
 use App\Ekstra;
 use App\DeskEKstra;
+use App\KategoriEkstra;
 
 class EkstraController extends Controller
 {
@@ -31,7 +33,8 @@ class EkstraController extends Controller
     public function home(){
 
         $kontak = Kontak::all();
-        $ekstra = Ekstra::all();
+        $ekstra = Ekstra::with('kategori')->get();
+        // dd($ekstra);
         $desk = DeskEKstra::all();
 
         return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk'));
@@ -44,7 +47,9 @@ class EkstraController extends Controller
      */
     public function create()
     {
-        return view('admin.ekstra.create');
+        $kategoriEkstra = KategoriEkstra::all();
+
+        return view('admin.ekstra.create', compact('kategoriEkstra'));
     }
 
     /**
@@ -58,8 +63,9 @@ class EkstraController extends Controller
         Alert::success('Success', 'Berhasil menambah data ekstrakurikuler!');
 
         Ekstra::create([
-            'kategori_ekstra' => request('kategori_ekstra'),
-            'nama_ekstra' => request('nama_ekstra')
+            'kategori_id' => request('kategori_id'),
+            'nama_ekstra' => request('nama_ekstra'),
+            'nama_kategori' => request('')
         ]);
 
         return redirect()->route('frontend.ekstra-admin.index');
@@ -84,7 +90,9 @@ class EkstraController extends Controller
      */
     public function edit(Ekstra $ekstra)
     {
-        return view('admin.ekstra.edit', compact('ekstra'));
+        $kategoriEkstra = KategoriEkstra::all();
+
+        return view('admin.ekstra.edit', compact('ekstra', 'kategoriEkstra'));
     }
 
     /**
@@ -99,7 +107,7 @@ class EkstraController extends Controller
         Alert::success('Success', 'Berhasil mengubah data ekstrakurikuler!');
 
         $ekstra->update([
-            'kategori_ekstra' => request('kategori_ekstra'),
+            'kategori_id' => request('kategori_id'),
             'nama_ekstra' => request('nama_ekstra')
         ]);
 

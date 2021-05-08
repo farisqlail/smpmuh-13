@@ -16,17 +16,15 @@
                 </div>
 
                 <div class="form-group">
-                    <select class="form-control" name="kategori_ekstra">
+                    <select class="form-control" name="kategori_id">
                         <option>Pilih Kategori</option>
-                        <option value="Olimpiade">Olimpiade</option>
-                        <option value="Kesenian">Kesenian</option>
-                        <option value="Olahraga">Olahraga</option>
-                        <option value="Kebahasaan">Kebahasaan</option>
-                        <option value="Keagamaan">Keagamaan</option>
+                        @foreach ($kategoriEkstra as $kate)
+                            <option value="{{ $kate->id }}">{{ $kate->nama_kategori }}</option>
+                        @endforeach
                       </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" align="right">
                     <button class="btn btn-primary" type="submit" value="save">Tambah</button>
                 </div>
             </form>

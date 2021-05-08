@@ -51,7 +51,7 @@
                             <div class="card shadow-sm p-3 mb-5 bg-white rounded" align="center">
                                 <div class="card-body mt-3">
                                     <img src="./assets/img/logo.png" class="img-fluid rounded-circle" alt="">
-                                    <h4 class="mt-3"></h4>
+                                    <h4 class="mt-3">{{ $eks->kategori->nama_kategori }}</h4>
                                     <small><img src="./assets/img/bunder.svg" alt=""> {{ $eks->nama_ekstra }}</small>
                                 </div>
                             </div>

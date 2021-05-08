@@ -132,5 +132,9 @@ Route::name('frontend.')->group(function () {
             Route::get('/deskripsi-ekstra-admin/{desk}/edit', 'DeskripsiEkstraController@edit')->name('desk.edit');
             Route::patch('/deskripsi-ekstra-admin/{desk}', 'DeskripsiEkstraController@update')->name('desk.update');
 
+            Route::get('/kategoriEkstra-admin/{kategoriEkstra}/edit', 'KategoriEkstraController@edit')->name('kategoriEkstra.edit');
+            Route::patch('/kategoriEkstra-admin/{kategoriEkstra}', 'KategoriEkstraController@update')->name('kategoriEkstra.update');
+            Route::get('/kategoriEkstra-admin/{kategoriEkstra}/delete', 'KategoriEkstraController@destroy')->name('kategoriEkstra.delete');
+            Route::resource('/kategoriEkstra-admin', 'KategoriEkstraController');
     });
 });
