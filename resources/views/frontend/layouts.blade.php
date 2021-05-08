@@ -80,7 +80,7 @@
                     <ul>
                         <li><a href="{{ url('/ekstra') }}">Ekstrakurikuler</a></li>
                         <li><a href="{{ url('/prestasi') }}">Prestasi Siswa</a></li>
-                        <li><a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a></li>
+                        <li><a href="{{ url('/kegiatan-penunjang') }}">Kegiatan Penunjang</a></li>
                     </ul>
                     </li>
                     <li><a href="{{ url('/galeri') }}">Galeri</a></li>
@@ -132,7 +132,7 @@
                                 <a href="{{ url('/kurikulum') }}">kurikulum dan Pembelajaran</a><br>
                                 <a href="{{ url('/ekstra') }}">Ekstrakurikuler</a><br>
                                 <a href="{{ url('/prestasi') }}">Prestasi Siswa</a><br>
-                                <a href="{{ url('/ekstra') }}">Kegiatan Penunjang</a><br>
+                                <a href="{{ url('/kegiatan-penunjang') }}">Kegiatan Penunjang</a><br>
 
                             </div>
                             <div class="col">

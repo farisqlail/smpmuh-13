@@ -68,6 +68,7 @@
             <div id="kegiatan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ url('/prestasi-admin') }}">Prestasi Siswa</a>
+                <a class="collapse-item" href="{{ url('/kegiatanPenunjang-admin') }}">Kegiatan Penunjang</a>
                 <a class="collapse-item" href="{{ url('/ekstra-admin') }}">Ekstrakurikuler</a>
                 <a class="collapse-item" href="{{ url('/kategoriEkstra-admin') }}">Kategori <br> Ekstrakurikuler</a>
               </div>

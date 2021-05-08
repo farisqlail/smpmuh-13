@@ -25,6 +25,7 @@ Route::name('frontend.')->group(function () {
             Route::get('/ekstra', 'EkstraController@home')->name('ekstra');
             Route::get('/akreditasi', 'AkreditasiController@home')->name('akreditasi');
             Route::get('/beasiswa', 'BeasiswaController@home')->name('beasiswa');
+            Route::get('/kegiatan-penunjang', 'KegiatanPenunjangController@home')->name('kegiatan-penunjang');
 
             // Profile
             Route::get('/galeri', 'GaleriController@home')->name('galeri');
@@ -136,5 +137,10 @@ Route::name('frontend.')->group(function () {
             Route::patch('/kategoriEkstra-admin/{kategoriEkstra}', 'KategoriEkstraController@update')->name('kategoriEkstra.update');
             Route::get('/kategoriEkstra-admin/{kategoriEkstra}/delete', 'KategoriEkstraController@destroy')->name('kategoriEkstra.delete');
             Route::resource('/kategoriEkstra-admin', 'KategoriEkstraController');
+
+            Route::get('/kegiatanPenunjang-admin/{kegiatanPenunjang}/edit', 'KegiatanPenunjangController@edit')->name('kegiatanPenunjang.edit');
+            Route::patch('/kegiatanPenunjang-admin/{kegiatanPenunjang}', 'KegiatanPenunjangController@update')->name('kegiatanPenunjang.update');
+            Route::get('/kegiatanPenunjang-admin/{kegiatanPenunjang}/delete', 'KegiatanPenunjangController@destroy')->name('kegiatanPenunjang.delete');
+            Route::resource('/kegiatanPenunjang-admin', 'KegiatanPenunjangController');
     });
 });

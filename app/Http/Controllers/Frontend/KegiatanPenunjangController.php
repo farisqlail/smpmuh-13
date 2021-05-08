@@ -5,16 +5,14 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Paginator;
-use Carbon\Carbon;
-use App\Akreditasi;
+use App\KegiatanPenunjang;
 use App\Kontak;
 
-class AkreditasiController extends Controller
+class KegiatanPenunjangController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,16 +21,17 @@ class AkreditasiController extends Controller
      */
     public function index()
     {
-        $akreditasi = Akreditasi::all();
+        $kegiatanPenunjang = KegiatanPenunjang::all();
 
-        return view('admin.akreditasi.index', compact('akreditasi'));
+        return view('admin.kegiatanPenunjang.index', compact('kegiatanPenunjang'));
     }
 
     public function home(){
-        $akreditasi = Akreditasi::all();
+        
         $kontak = Kontak::all();
+        $kegiatanPenunjang = KegiatanPenunjang::all();
 
-        return view('frontend.akademik.akreditasi', compact('akreditasi', 'kontak'));
+        return view('frontend.akademik.kegiatanTambah', compact('kontak', 'kegiatanPenunjang'));
     }
 
     /**
@@ -42,7 +41,7 @@ class AkreditasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.kegiatanPenunjang.create');
     }
 
     /**
@@ -53,7 +52,13 @@ class AkreditasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Alert::success('Success', 'Berhasil menambah data kegiatan penunjang!');
+
+        KegiatanPenunjang::create([
+            'nama_kegiatan' => request('nama_kegiatan')
+        ]);
+
+        return redirect()->route('frontend.kegiatanPenunjang-admin.index');
     }
 
     /**
@@ -73,9 +78,9 @@ class AkreditasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Akreditasi $akreditasi)
+    public function edit(KegiatanPenunjang $kegiatanPenunjang)
     {
-        return view('admin.akreditasi.edit', compact('akreditasi'));
+        return view('admin.kegiatanPenunjang.edit', compact('kegiatanPenunjang'));
     }
 
     /**
@@ -85,15 +90,15 @@ class AkreditasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Akreditasi $akreditasi)
+    public function update(Request $request, KegiatanPenunjang $kegiatanPenunjang)
     {
-        Alert::success('Success', 'Berhasil mengubah data akreditasi!');
+        Alert::success('Success', 'Berhasil mengubah data kegiatan penunjang!');
 
-        $akreditasi->update([
-            'deskripsi' => request('deskripsi')
+        $kegiatanPenunjang->update([
+            'nama_kegiatan' => request('nama_kegiatan')
         ]);
 
-        return redirect()->route('frontend.akreditasi-admin.index');
+        return redirect()->route('frontend.kegiatanPenunjang-admin.index');
     }
 
     /**
@@ -102,8 +107,12 @@ class AkreditasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(KegiatanPenunjang $kegiatanPenunjang)
     {
-        //
+        Alert::success('Success', 'Berhasil mengubah data kegiatan penunjang!');
+
+        $kegiatanPenunjang->delete();
+
+        return redirect()->route('frontend.kegiatanPenunjang-admin.index');
     }
 }
