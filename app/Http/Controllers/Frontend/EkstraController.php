@@ -33,11 +33,19 @@ class EkstraController extends Controller
     public function home(){
 
         $kontak = Kontak::all();
-        $ekstra = Ekstra::with('kategori')->get();
-        // dd($ekstra);
         $desk = DeskEKstra::all();
+        $ekstra = Ekstra::select('kategori_id')->groupBy('kategori_id')->get();
+        
+        $string = [];
+            foreach ($ekstra as $eks) {
+                $kategoriEkstra = KategoriEkstra::find($eks->kategori_id);
+                array_push($string, $kategoriEkstra);
+            }
 
-        return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk'));
+        $ekstra = Ekstra::all();
+        // dd($ekstra);
+
+        return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk', 'string'));
     }
 
     /**

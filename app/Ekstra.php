@@ -13,6 +13,6 @@ class Ekstra extends Model
 
     public function kategori(){
 
-        return $this->belongsTo(KategoriEkstra::class);
+        return $this->belongsTo(KategoriEkstra::class, 'kategori_id');
     }
 }

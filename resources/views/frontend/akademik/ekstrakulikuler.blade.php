@@ -46,13 +46,19 @@
                 </div><br><br><br><br>
 
                 <div class="row">
-                    @foreach ($ekstra as $eks)
+                    @foreach ($string as $str)
                         <div class="col-md-4">
                             <div class="card shadow-sm p-3 mb-5 bg-white rounded" align="center">
                                 <div class="card-body mt-3">
                                     <img src="./assets/img/logo.png" class="img-fluid rounded-circle" alt="">
-                                    <h4 class="mt-3">{{ $eks->kategori->nama_kategori }}</h4>
-                                    <small><img src="./assets/img/bunder.svg" alt=""> {{ $eks->nama_ekstra }}</small>
+                                    <h4 class="mt-3">{{ $str->nama_kategori }}</h4>
+                                    @foreach ($ekstra as $eks)
+                                        @if ($str->id === $eks->kategori_id)
+                                            <small><img src="./assets/img/bunder.svg" alt="">
+                                                {{ $eks->nama_ekstra }}
+                                            </small>
+                                        @endif
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

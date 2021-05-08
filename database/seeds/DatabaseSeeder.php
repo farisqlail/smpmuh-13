@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(BeasiswaTableSeeder::class);
         $this->call(KurikulumTableSeeder::class);
         $this->call(DeskEkstraTableSeeder::class);
+        $this->call(KategoriEkstraTableSeeder::class);
     }
 }

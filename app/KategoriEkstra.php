@@ -10,5 +10,8 @@ class KategoriEkstra extends Model
         'nama_kategori'
     ];
 
+    public function ekstra(){
 
+        return $this->hasMany(Ekstra::class, 'kategori_id', 'id');
+    }
 }
