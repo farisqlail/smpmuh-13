@@ -1,13 +1,21 @@
 @extends('Frontend.layouts')
 
 @section('content')
-    <section id="hero-1">
-        <div class="hero1-container" data-aos="fade-up">
-            <div class="container align-self-center">
-                <h1>Pendaftaran Siswa Baru</h1>
+<section id="hero-1">
+    <div class="hero1-container" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <h1>Pendaftaran Siswa Baru</h1>
+                </div>
+                <div class="col-lg-6" align="center">
+                    <img src="{{ asset('assets/img/daftar.png') }}" class="img-fluid" width="250px" alt="">
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+</section>
 
     <div class="container">
         <nav aria-label="breadcrumb">

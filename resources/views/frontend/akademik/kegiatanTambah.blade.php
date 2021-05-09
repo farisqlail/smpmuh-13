@@ -9,7 +9,7 @@
                         <h1>Kegitan Penunjang</h1>
                     </div>
                     <div class="col-lg-6" align="center">
-                        <img src="{{ asset('assets/img/akre-img.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/img/kegiatan-penunjang.png') }}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>

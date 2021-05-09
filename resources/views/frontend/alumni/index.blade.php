@@ -10,7 +10,7 @@
                         <h1>Alumni</h1>
                     </div>
                     <div class="col-lg-6" align="center">
-                        <img src="{{ asset('assets/img/staff-img.png') }}" class="img-fluid" width="250px" alt="">
+                        <img src="{{ asset('assets/img/alumni.png') }}" class="img-fluid" width="250px" alt="">
                     </div>
                 </div>
             </div>

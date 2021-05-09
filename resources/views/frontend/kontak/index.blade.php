@@ -19,7 +19,7 @@
                         <h1>Kontak</h1>
                     </div>
                     <div class="col-lg-6" align="center">
-                        <img src="{{ asset('assets/img/staff-img.png') }}" class="img-fluid" width="250px" alt="">
+                        <img src="{{ asset('assets/img/kontak.svg') }}" class="img-fluid" width="250px" alt="">
                     </div>
                 </div>
             </div>
