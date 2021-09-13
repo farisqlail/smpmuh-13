@@ -73,7 +73,8 @@ class EkstraController extends Controller
         Ekstra::create([
             'kategori_id' => request('kategori_id'),
             'nama_ekstra' => request('nama_ekstra'),
-            'nama_kategori' => request('')
+            'slug' => str_slug(request('nama_ekstra')),
+            'deskripsi' => request('deskripsi')
         ]);
 
         return redirect()->route('frontend.ekstra-admin.index');
@@ -85,9 +86,10 @@ class EkstraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Ekstra $ekstra)
     {
-        //
+        $kontak = Kontak::all();
+        return view('frontend.akademik.ekstra-show', compact('ekstra', 'kontak'));
     }
 
     /**
@@ -116,7 +118,9 @@ class EkstraController extends Controller
 
         $ekstra->update([
             'kategori_id' => request('kategori_id'),
-            'nama_ekstra' => request('nama_ekstra')
+            'nama_ekstra' => request('nama_ekstra'),
+            'slug' => str_slug(request('nama_ekstra')),
+            'deskripsi' => request('deskripsi')
         ]);
 
         return redirect()->route('frontend.ekstra-admin.index');

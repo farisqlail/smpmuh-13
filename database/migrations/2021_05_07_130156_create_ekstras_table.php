@@ -16,7 +16,9 @@ class CreateEkstrasTable extends Migration
         Schema::create('ekstras', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('kategori_id');
+            $table->string('slug');
             $table->string('nama_ekstra');
+            $table->longText('deskripsi');
             $table->timestamps();
         });
     }

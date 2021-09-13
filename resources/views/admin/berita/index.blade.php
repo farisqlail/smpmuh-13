@@ -46,7 +46,6 @@
                 </td>
                 <td>{{ $brt->created_at }}</td>
                 <td>
-                  <a href="{{ route('frontend.berita.edit', $brt) }}" class="btn btn-success">Show</a>
 
                   <a href="{{ route('frontend.berita.edit', $brt) }}" class="btn btn-primary">Edit</a>
 

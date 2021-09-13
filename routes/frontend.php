@@ -23,6 +23,7 @@ Route::name('frontend.')->group(function () {
 
             // Akademik
             Route::get('/ekstra', 'EkstraController@home')->name('ekstra');
+            Route::get('/show-ekstra/{ekstra}', 'EkstraController@show')->name('show-ekstra');
             Route::get('/akreditasi', 'AkreditasiController@home')->name('akreditasi');
             Route::get('/beasiswa', 'BeasiswaController@home')->name('beasiswa');
             Route::get('/kegiatan-penunjang', 'KegiatanPenunjangController@home')->name('kegiatan-penunjang');

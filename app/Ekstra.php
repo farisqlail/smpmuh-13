@@ -9,6 +9,8 @@ class Ekstra extends Model
     protected $fillable = [
         'kategori_id',
         'nama_ekstra',
+        'slug',
+        'deskripsi'
     ];
 
     public function kategori(){

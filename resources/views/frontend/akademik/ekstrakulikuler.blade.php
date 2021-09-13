@@ -55,7 +55,7 @@
                                     @foreach ($ekstra as $eks)
                                         @if ($str->id === $eks->kategori_id)
                                             <small><img src="./assets/img/bunder.svg" alt="">
-                                                {{ $eks->nama_ekstra }}
+                                                <a href="{{ route('frontend.show-ekstra', $eks) }}"><u>{{ $eks->nama_ekstra }}</u></a>
                                             </small>
                                         @endif
                                     @endforeach

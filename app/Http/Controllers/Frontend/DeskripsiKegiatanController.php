@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\DeskripsiKegiatan;
+use App\KegiatanPenunjang;
 
 class DeskripsiKegiatanController extends Controller
 {

@@ -11,11 +11,6 @@
                 {{ method_field('PATCH') }}
 
                 <div class="form-group">
-                    <label for="">Nama Ekstrakurikuler</label>
-                    <input type="text" class="form-control" name="nama_ekstra" value="{{ $ekstra->nama_ekstra }}">
-                </div>
-
-                <div class="form-group">
                     <select class="form-control" name="kategori_id">
                         <option>Pilih Kategori</option>
                         @foreach ($kategoriEkstra as $kate)
@@ -28,6 +23,17 @@
                       </select>
                 </div>
 
+                <div class="form-group">
+                    <label for="">Nama Ekstrakurikuler</label>
+                    <input type="text" class="form-control" name="nama_ekstra" value="{{ $ekstra->nama_ekstra }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Deskripsi Ekstrakurikuler</label>
+                    <textarea class="form-control" name="deskripsi" id="deskripsi" required rows="3">{{ $ekstra->deskripsi }}</textarea>
+                </div>
+
+
                 <div class="form-group" align="right">
                     <button class="btn btn-primary" type="submit" value="save">Edit</button>
                 </div>
@@ -37,4 +43,8 @@
 
 </div>
 
+<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('deskripsi', options);
+</script>
 @endsection
