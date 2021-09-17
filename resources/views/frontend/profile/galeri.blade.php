@@ -44,6 +44,10 @@
                                 <a href="{{ asset('storage/' . $glr->image) }}" data-gall="galeri"
                                     class="venobox"></a>
                             </figure>
+
+                            <div align="center">
+                                <span><i>{{ $glr->name }}</i></span>
+                            </div>
                         </div>
                     @endforeach
                 </div> <br> <br>

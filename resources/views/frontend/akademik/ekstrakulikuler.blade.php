@@ -36,7 +36,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="./assets/img/xtra.png" class="img-fluid" alt="">
+                        {{-- <img src="./assets/img/xtra.png" class="img-fluid" alt=""> --}}
+
+                        @if ($desk[0]->image == null)
+                            <div class="image-null" align="center">
+                                <img src="http://mundalodge.com/images/joomlart/demo/default.jpg" class="img-fluid">
+                            </div>
+                        @else
+                            <div class="image-null" align="center">
+                                <img src="{{ asset('storage/' . $desk[0]->image) }}" class="img-fluid">
+                            </div>
+                        @endif
+                        <br>
                     </div>
                     <div class="col-lg-6 align-self-center">
                         <p>
@@ -55,7 +66,8 @@
                                     @foreach ($ekstra as $eks)
                                         @if ($str->id === $eks->kategori_id)
                                             <small><img src="./assets/img/bunder.svg" alt="">
-                                                <a href="{{ route('frontend.show-ekstra', $eks) }}"><u>{{ $eks->nama_ekstra }}</u></a>
+                                                <a
+                                                    href="{{ route('frontend.show-ekstra', $eks) }}"><u>{{ $eks->nama_ekstra }}</u></a>
                                             </small>
                                         @endif
                                     @endforeach

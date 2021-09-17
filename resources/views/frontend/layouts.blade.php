@@ -39,8 +39,8 @@
     <!-- ======= Top Bar ======= -->
     <section id="topbar" class="d-none d-lg-block">
         <div class="container d-flex">
-            <div class="contact-info mr-auto">
-                <i class="icofont-phone"></i> {{ $kontak[0]->telp }} &nbsp;
+            <div class="contact-info mr-auto align-items-center">
+                <i class="icofont-phone"></i><a href="https://wa.me/{{ $kontak[0]->telp }}" target="blank"> {{ $kontak[0]->telp }}</a> &nbsp;
                 <i class="icofont-envelope"></i><a href="mailto:smpmuh_13sby@yahoo.com">smpm13sby@gmail.com</a>
             </div>
             <div class="social-links">
@@ -50,7 +50,6 @@
                         class="icofont-instagram"></i></a>
                 <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube" target="blank"><i
                         class="icofont-youtube"></i></a>
-                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
             </div>
         </div>
     </section>
@@ -114,10 +113,9 @@
                             tauhid ke seluruh kurikulum dan aktivitasnya </p>
 
                         <div class="social-links">
-                            <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                            <a href="#" class="youtube"><i class="icofont-youtube"></i></a>
-                            <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                            <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"><i class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/smpmuh13sby/" class="instagram"><i class="icofont-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"><i class="icofont-youtube"></i></a>
                         </div><br><br>
                     </div>
                     <div class="col-sm-4" align="left">

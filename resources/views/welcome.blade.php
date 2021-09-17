@@ -36,7 +36,7 @@
     <section id="topbar" class="d-none d-lg-block">
         <div class="container d-flex">
             <div class="contact-info mr-auto">
-                <i class="icofont-phone"></i> {{ $kontak[0]->telp }} &nbsp;
+                <i class="icofont-phone"></i><a href="https://wa.me/{{ $kontak[0]->telp }}" target="blank"> {{ $kontak[0]->telp }}</a> &nbsp;
                 <i class="icofont-envelope"></i><a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
             </div>
             <div class="social-links">
