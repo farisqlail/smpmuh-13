@@ -41,7 +41,17 @@
                 <div class="container ml-3 bg-bea">
                     <div class="row">
                         <div class="col-lg-6">
-                            <img src="./assets/img/beasiswa.png" class="img-fluid" alt=""><br><br>
+                            {{-- <img src="./assets/img/beasiswa.png" class="img-fluid" alt=""><br><br> --}}
+                            @if ($deskBeasiswa[0]->image == null)
+                                <div class="image-null" align="center">
+                                    <img src="http://mundalodge.com/images/joomlart/demo/default.jpg"
+                                        class="img-fluid">
+                                </div>
+                            @else
+                                <div class="image-null" align="center">
+                                    <img src="{{ asset('storage/' . $deskBeasiswa[0]->image) }}" class="img-fluid">
+                                </div>
+                            @endif
                         </div>
                         <div class="col-lg-6 align-self-center">
                             <ul class="list-group">

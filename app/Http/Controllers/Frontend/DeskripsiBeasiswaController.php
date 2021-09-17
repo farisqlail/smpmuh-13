@@ -8,38 +8,22 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Paginator;
-use Carbon\Carbon;
-use App\Kontak;
-use App\Beasiswa;
 use App\DeskripsiBeasiswa;
+use App\Beasiswa;
 
-class BeasiswaController extends Controller
+class DeskripsiBeasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-
-        $kontak = Kontak::all();
-        $beasiswa = Beasiswa::all();
+    public function index()
+    {
         $deskBeasiswa = DeskripsiBeasiswa::all();
-
-        // dd($deskBeasiswa[0]['keterangan']);
-
-        return view('admin.beasiswa.index', compact('kontak', 'beasiswa', 'deskBeasiswa'));
-    }
-
-    public function home(){
-        
-        $kontak = Kontak::all();
         $beasiswa = Beasiswa::all();
-        $deskBeasiswa = DeskripsiBeasiswa::all();
 
-        return view('frontend.akademik.beasiswa', compact('kontak', 'beasiswa', 'deskBeasiswa'));
+        return view('admin.beasiswa.index', compact('deskBeasiswa', 'beasiswa'));
     }
 
     /**
@@ -49,7 +33,7 @@ class BeasiswaController extends Controller
      */
     public function create()
     {
-        return view('admin.beasiswa.create');
+        //
     }
 
     /**
@@ -60,17 +44,8 @@ class BeasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        Alert::success('Success', 'Behasil menambah data beasiswa!');
-
-        Beasiswa::create([
-            'namaBeasiswa' => request('namaBeasiswa'),
-            'deskripsi' => request('deskripsi')
-        ]);
-
-        return redirect()->route('frontend.beasiswa-admin.index');
+        //
     }
-
-    
 
     /**
      * Display the specified resource.
@@ -89,9 +64,9 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Beasiswa $beasiswa)
+    public function edit(DeskripsiBeasiswa $deskripsiBeasiswa)
     {
-        return view('admin.beasiswa.edit', compact('beasiswa'));
+        return view('admin.beasiswa.editDeskripsi', compact('deskripsiBeasiswa'));
     }
 
     /**
@@ -101,18 +76,18 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Beasiswa $beasiswa)
+    public function update(Request $request, DeskripsiBeasiswa $deskripsiBeasiswa)
     {
-        Alert::success('Success', 'Berhasil mengubah data beasiswa!');
+        
+        Alert::success('Success', 'Berhasil mengubah foto Beasiswa!');
 
-        $beasiswa->update([
-            'namaBeasiswa' => request('namaBeasiswa'),
-            'deskripsi' => request('deskripsi')
+        $deskripsiBeasiswa->update([
+            'image' => request('image')->store('deskripsiBeasiswa'),
+            'keterangan' => request('keterangan')
         ]);
 
         return redirect()->route('frontend.beasiswa-admin.index');
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -120,11 +95,8 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Beasiswa $beasiswa)
+    public function destroy($id)
     {
-        Alert::success('Success', 'Berhasil menghapus data beasiswa!');
-        $beasiswa->delete();
-
-        return redirect()->route('frontend.beasiswa-admin.index');
+        //
     }
 }

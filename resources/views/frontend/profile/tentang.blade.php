@@ -38,7 +38,16 @@
                 <h4 align="center">Tentang Sekolah</h4>
                 <div class="row" style="margin-top: 100px;">
                     <div class="col-lg-6">
-                        <img src="./assets/img/misi.png" class="img-fluid" alt="">
+                        {{-- <img src="./assets/img/misi.png" class="img-fluid" alt=""> --}}
+                        @if ($tentang[0]->image == null)
+                            <div class="image-null" align="center">
+                                <img src="http://mundalodge.com/images/joomlart/demo/default.jpg" class="img-fluid">
+                            </div>
+                        @else
+                            <div class="image-null" align="center">
+                                <img src="{{ asset('storage/' . $tentang[0]->image) }}" class="img-fluid">
+                            </div>
+                        @endif
                     </div>
 
                     <div class="col-lg-6">
