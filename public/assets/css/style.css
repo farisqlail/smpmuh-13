@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
+.logo-navbar {
+  /* width: 18rem; */
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1059,7 +1063,7 @@ section {
 }
 
 #footer .footer-top .social-links a .icofont-facebook{
-  font-size: 18px;
+  font-size: 20px;
   display: inline-block;
   color: #fff;
   line-height: 1;
@@ -1079,7 +1083,7 @@ section {
 }
 
 #footer .footer-top .social-links a .icofont-instagram{
-  font-size: 18px;
+  font-size: 20px;
   display: inline-block;
   color: #fff;
   line-height: 1;
@@ -1099,7 +1103,7 @@ section {
 }
 
 #footer .footer-top .social-links a .icofont-youtube{
-  font-size: 18px;
+  font-size: 20px;
   display: inline-block;
   color: #fff;
   line-height: 1;
@@ -1119,7 +1123,7 @@ section {
 }
 
 #footer .footer-top .social-links a .icofont-twitter{
-  font-size: 18px;
+  font-size: 20px;
   display: inline-block;
   color: #fff;
   line-height: 1;

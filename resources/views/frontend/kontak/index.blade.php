@@ -61,10 +61,9 @@
                             </p>
                             <div class="social-media">
                                 <div class="social-links">
-                                    <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-                                    <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                                    <a href="#" class="youtube"><i class="icofont-youtube"></i></a>
-                                    <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                                    <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"><i class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/smpmuh13sby/" class="instagram"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"><i class="icofont-youtube"></i></a>
                                 </div>
                             </div>
                         </div>

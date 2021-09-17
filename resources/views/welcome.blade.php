@@ -46,7 +46,6 @@
                         class="icofont-instagram"></i></a>
                 <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube" target="blank"><i
                         class="icofont-youtube"></i></a>
-                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
             </div>
         </div>
     </section>
@@ -58,7 +57,7 @@
             <div class="logo mr-auto">
                 <a href="{{ url('/') }}"><img
                         src="{{ asset('./assets/img/logo-navbar.png') }}"
-                        class="img-fluid mt-1 ml-3" alt=""></a>
+                        class="img-fluid mt-1 ml-3 logo-navbar"  alt=""></a>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -85,7 +84,7 @@
                     <li><a href="{{ url('/berita') }}">Berita</a></li>
                     <li><a href="{{ url('/alumni') }}">Alumni</a></li>
                     <li><a href="{{ url('/kontak') }}">Kontak</a></li>
-                    <li><a href="{{ url('/daftar') }}">Pendaftaran</a></li>
+                    <li><a href="https://bit.ly/PPDBSMPM13" target="blank">Pendaftaran</a></li>
                     </li>
 
                 </ul>
@@ -240,10 +239,9 @@
                             tauhid ke seluruh kurikulum dan aktivitasnya </p>
 
                         <div class="social-links">
-                            <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                            <a href="#" class="youtube"><i class="icofont-youtube"></i></a>
-                            <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                            <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"><i class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/smpmuh13sby/" class="instagram"><i class="icofont-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"><i class="icofont-youtube"></i></a>
                         </div><br><br>
                     </div>
                     <div class="col-sm-4" align="left">
