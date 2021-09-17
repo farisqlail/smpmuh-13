@@ -8,6 +8,8 @@ class Visi extends Model
 {
     protected $fillable = [
         'visi',
-        'misi'
+        'imageVisi',
+        'misi',
+        'imageMisi'
     ];
 }

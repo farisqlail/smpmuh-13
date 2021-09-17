@@ -16,7 +16,9 @@ class CreateVisisTable extends Migration
         Schema::create('visis', function (Blueprint $table) {
             $table->id();
             $table->longText('visi');
+            $table->string('imageVisi');
             $table->longText('misi'); 
+            $table->string('imageMisi');
             $table->timestamps();
         });
     }

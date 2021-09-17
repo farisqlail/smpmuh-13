@@ -16,13 +16,23 @@
                             {{ method_field('PATCH') }}
 
                             <div class="form-group">
-                                <label for="">Deskripsi tentang sekolah</label>
+                                <label for="">Deskripsi Visi</label>
                                 <textarea class="form-control" name="visi" rows="3">{{ $visi->visi }}</textarea>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Deskripsi tentang sekolah</label>
+                                <label for="exampleFormControlFile1">Gambar Visi</label>
+                                <input type="file" class="form-control-file" required name="imageVisi" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Deskripsi Misi</label>
                                 <textarea class="form-control" name="misi" rows="3">{{ $visi->misi }}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Gambar Misi</label>
+                                <input type="file" class="form-control-file" required name="imageMisi" id="">
                             </div>
 
                                 <div class="form-group">

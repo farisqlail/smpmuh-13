@@ -92,7 +92,9 @@ class VisiController extends Controller
 
         $visi->update([
             'visi' => request('visi'),
-            'misi' => request('misi')
+            'imageVisi' => request('imageVisi')->store('visiMisi'),
+            'misi' => request('misi'),
+            'imageMisi' => request('imageMisi')->store('visiMisi')
         ]);
 
         return redirect()->route('frontend.visi-admin.index');
