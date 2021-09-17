@@ -11,12 +11,12 @@
                     {{-- {{ method_field('PATCH') }} --}}
 
                     <div class="form-group">
-                        <select class="form-control" name="kategori_id">
+                        {{-- <select class="form-control" name="kategori_id">
                             <option>Pilih Kategori</option>
                             @foreach ($kategoriEkstra as $kate)
                                 <option value="{{ $kate->id }}">{{ $kate->nama_kategori }}</option>
                             @endforeach
-                        </select>
+                        </select> --}}
                     </div>
 
                     <div class="form-group">
@@ -40,6 +40,14 @@
 
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace('deskripsi', options);
+        var options = {
+          filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+          filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+          filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+          filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+        };
+    </script>
+    <script>
+        CKEDITOR.replace( 'deskripsi', options );
     </script>
 @endsection

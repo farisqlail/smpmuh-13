@@ -34,18 +34,18 @@ class EkstraController extends Controller
 
         $kontak = Kontak::all();
         $desk = DeskEKstra::all();
-        $ekstra = Ekstra::select('kategori_id')->groupBy('kategori_id')->get();
+        // $ekstra = Ekstra::select('kategori_id')->groupBy('kategori_id')->get();
         
-        $string = [];
-            foreach ($ekstra as $eks) {
-                $kategoriEkstra = KategoriEkstra::find($eks->kategori_id);
-                array_push($string, $kategoriEkstra);
-            }
+        // $string = [];
+        //     foreach ($ekstra as $eks) {
+        //         $kategoriEkstra = KategoriEkstra::find($eks->kategori_id);
+        //         array_push($string, $kategoriEkstra);
+        //     }
 
         $ekstra = Ekstra::all();
         // dd($ekstra);
 
-        return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk', 'string'));
+        return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk'));
     }
 
     /**
@@ -71,7 +71,6 @@ class EkstraController extends Controller
         Alert::success('Success', 'Berhasil menambah data ekstrakurikuler!');
 
         Ekstra::create([
-            'kategori_id' => request('kategori_id'),
             'nama_ekstra' => request('nama_ekstra'),
             'slug' => str_slug(request('nama_ekstra')),
             'deskripsi' => request('deskripsi')
@@ -117,7 +116,6 @@ class EkstraController extends Controller
         Alert::success('Success', 'Berhasil mengubah data ekstrakurikuler!');
 
         $ekstra->update([
-            'kategori_id' => request('kategori_id'),
             'nama_ekstra' => request('nama_ekstra'),
             'slug' => str_slug(request('nama_ekstra')),
             'deskripsi' => request('deskripsi')

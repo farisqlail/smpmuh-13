@@ -47,14 +47,12 @@
                         <thead>
                             <tr>
                                 <th>Nama Ekstra</th>
-                                <th>kategori</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>Nama Ekstra</th>
-                                <th>kategori</th>
                                 <th>Actions</th>
                             </tr>
                         </tfoot>
@@ -62,7 +60,6 @@
                             @foreach ($ekstra as $eks)
                                 <tr>
                                     <td>{{ $eks->nama_ekstra }}</td>
-                                    <td>{{ $eks->kategori->nama_kategori }}</td>
                                     <td>
                                         <a href="{{ route('frontend.ekstra.edit', $eks) }}"
                                             class="btn btn-primary">Edit</a>

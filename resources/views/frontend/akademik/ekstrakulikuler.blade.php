@@ -57,20 +57,24 @@
                 </div><br><br><br><br>
 
                 <div class="row">
-                    @foreach ($string as $str)
+                    @foreach ($ekstra as $eks)
                         <div class="col-md-4">
                             <div class="card shadow-sm p-3 mb-5 bg-white rounded" align="center">
                                 <div class="card-body mt-3">
                                     <img src="./assets/img/logo.png" class="img-fluid rounded-circle" alt="">
-                                    <h4 class="mt-3">{{ $str->nama_kategori }}</h4>
-                                    @foreach ($ekstra as $eks)
+                                    <h4 class="mt-3">{{ $eks->nama_kategori }}</h4>
+                                    <small><img src="./assets/img/bunder.svg" alt="">
+                                        <a
+                                            href="{{ route('frontend.show-ekstra', $eks) }}"><u>{{ $eks->nama_ekstra }}</u></a>
+                                    </small>
+                                    {{-- @foreach ($ekstra as $eks)
                                         @if ($str->id === $eks->kategori_id)
                                             <small><img src="./assets/img/bunder.svg" alt="">
                                                 <a
                                                     href="{{ route('frontend.show-ekstra', $eks) }}"><u>{{ $eks->nama_ekstra }}</u></a>
                                             </small>
                                         @endif
-                                    @endforeach
+                                    @endforeach --}}
                                 </div>
                             </div>
                         </div>
