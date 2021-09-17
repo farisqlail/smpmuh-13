@@ -18,13 +18,11 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}"
-        rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}"
-        rel="stylesheet">
+    <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -36,16 +34,18 @@
     <section id="topbar" class="d-none d-lg-block">
         <div class="container d-flex">
             <div class="contact-info mr-auto">
-                <i class="icofont-phone"></i><a href="https://wa.me/{{ $kontak[0]->telp }}" target="blank"> {{ $kontak[0]->telp }}</a> &nbsp;
-                <i class="icofont-envelope"></i><a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
+                <i class="icofont-phone"></i><a href="https://wa.me/{{ $kontak[0]->telp }}" target="blank">
+                    {{ $kontak[0]->telp }}</a> &nbsp;
+                <i class="icofont-envelope"></i><a
+                    href="mailto:{{ $kontak[0]->email }}">{{ $kontak[0]->email }}</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"
                     target="blank"><i class="icofont-facebook"></i></a>
                 <a href="https://www.instagram.com/smpmuh13sby/" class="instagram" target="blank"><i
                         class="icofont-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube" target="blank"><i
-                        class="icofont-youtube"></i></a>
+                <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"
+                    target="blank"><i class="icofont-youtube"></i></a>
             </div>
         </div>
     </section>
@@ -55,9 +55,8 @@
         <div class="container d-flex">
 
             <div class="logo mr-auto">
-                <a href="{{ url('/') }}"><img
-                        src="{{ asset('./assets/img/logo-navbar.png') }}"
-                        class="img-fluid mt-1 ml-3 logo-navbar"  alt=""></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('./assets/img/logo-navbar.png') }}"
+                        class="img-fluid mt-1 ml-3 logo-navbar" alt=""></a>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -105,7 +104,18 @@
                     <a href="{{ url('/berita') }}" class="btn-home2">Berita Terkini</a><br><br>
                 </div>
                 <div class="col-lg-6">
-                    <img src="{{ asset('./assets/img/banner.png') }}" class="img-fluid" alt="">
+
+                    @if ($beranda[0]->imageBanner == null)
+                        <div class="image-null" align="center">
+                            <img src="{{ asset('./assets/img/banner.png') }}" class="img-fluid" alt="">
+                        </div>
+                    @else
+                        <div class="image-null" align="center">
+                            <img src="{{ asset('storage/' . $beranda[0]->imageBanner) }}" class="img-fluid">
+                        </div>
+                    @endif
+                    <br>
+
                 </div>
 
             </div>
@@ -123,8 +133,18 @@
                     <div
                         class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                         <div class="box-heading" data-aos="fade-up">
-                            <img src="{{ asset('./assets/img/lala-1.png') }}" class="img-fluid"
-                                alt="">
+
+                            @if ($beranda[0]->imageSection2 == null)
+                                <div class="image-null" align="center">
+                                    <img src="{{ asset('./assets/img/lala-1.png') }}" class="img-fluid" alt="">
+                                </div>
+                            @else
+                                <div class="image-null" align="center">
+                                    <img src="{{ asset('storage/' . $beranda[0]->imageSection2) }}"
+                                        class="img-fluid">
+                                </div>
+                            @endif
+                            <br>
 
                         </div>
                     </div>
@@ -158,9 +178,18 @@
                     <div
                         class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                         <div class="box-heading" data-aos="fade-up">
-                            <img src="{{ asset('./assets/img/lala.png') }}" class="img-fluid"
-                                alt="">
-
+                           
+                            @if ($beranda[0]->imageSection3 == null)
+                                <div class="image-null" align="center">
+                                    <img src="{{ asset('./assets/img/lala.png') }}" class="img-fluid" alt="">
+                                </div>
+                            @else
+                                <div class="image-null" align="center">
+                                    <img src="{{ asset('storage/' . $beranda[0]->imageSection3) }}"
+                                        class="img-fluid">
+                                </div>
+                            @endif
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -181,11 +210,11 @@
 
                 <div class="row">
 
-                    @foreach($berita as $brt)
+                    @foreach ($berita as $brt)
                         <div class="col-lg-4" data-aos="fade-up">
                             <div class="card card-berita-home" style="width: 20rem;">
-                                <img src="{{ asset('storage/' . $brt->image) }}"
-                                    class="card-img-top" alt="Informasi Spemgalas">
+                                <img src="{{ asset('storage/' . $brt->image) }}" class="card-img-top"
+                                    alt="Informasi Spemgalas">
                                 <div class="card-body">
                                     <h6 class="card-title">{{ $brt->judul }}</h6>
                                     <p class="card-text">
@@ -232,16 +261,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4" align="left">
-                        <img src="{{ asset('./assets/img/logo-2.png') }}" class="img-fluid"
-                            alt="">
+                        <img src="{{ asset('./assets/img/logo-2.png') }}" class="img-fluid" alt="">
                         <p>Hallo, Selamat Datang di SMP Muhammadiyah
                             13 Surabaya. Sekolah islam memadukan nilai-nilai
                             tauhid ke seluruh kurikulum dan aktivitasnya </p>
 
                         <div class="social-links">
-                            <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/" class="facebook"><i class="icofont-facebook"></i></a>
-                            <a href="https://www.instagram.com/smpmuh13sby/" class="instagram"><i class="icofont-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"><i class="icofont-youtube"></i></a>
+                            <a href="https://www.facebook.com/SMP-Muhammadiyah-13-Surabaya-1060051160727782/"
+                                class="facebook"><i class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/smpmuh13sby/" class="instagram"><i
+                                    class="icofont-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCqTBxFnTPPQ1RIxiKTSrnOQ" class="youtube"><i
+                                    class="icofont-youtube"></i></a>
                         </div><br><br>
                     </div>
                     <div class="col-sm-4" align="left">
@@ -273,7 +304,8 @@
                         <h5>Informasi</h5>
                         <p><i class="icofont-location-arrow"></i> Jl. Tambak Segaran No. 27 Surabaya<br />
                             <i class="icofont-phone"></i> {{ $kontak[0]->telp }} <br>
-                            <i class="icofont-envelope"></i> <a href="mailto:{{$kontak[0]->email}}">{{ $kontak[0]->email }}</a>
+                            <i class="icofont-envelope"></i> <a
+                                href="mailto:{{ $kontak[0]->email }}">{{ $kontak[0]->email }}</a>
                     </div>
                 </div>
             </div>

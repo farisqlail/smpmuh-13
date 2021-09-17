@@ -70,7 +70,6 @@
                 <a class="collapse-item" href="{{ url('/prestasi-admin') }}">Prestasi Siswa</a>
                 <a class="collapse-item" href="{{ url('/kegiatanPenunjang-admin') }}">Kegiatan Penunjang</a>
                 <a class="collapse-item" href="{{ url('/ekstra-admin') }}">Ekstrakurikuler</a>
-                <a class="collapse-item" href="{{ url('/kategoriEkstra-admin') }}">Kategori <br> Ekstrakurikuler</a>
               </div>
             </div>
           </li>
@@ -86,6 +85,13 @@
               <i class="fas fa-fw fa-phone-square-alt"></i>
               <span>Kontak</span></a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/beranda-admin') }}">
+              <i class="fas fa-fw fa-home"></i>
+              <span>Setting Beranda</span></a>
+          </li>
+  
 
 
   

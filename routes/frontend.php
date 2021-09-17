@@ -150,6 +150,10 @@ Route::name('frontend.')->group(function () {
             Route::get('/deskripsiBeasiswa-admin/{deskripsiBeasiswa}/edit', 'DeskripsiBeasiswaController@edit')->name('deskripsiBeasiswa.edit');
             Route::patch('/deskripsiBeasiswa-admin/{deskripsiBeasiswa}', 'DeskripsiBeasiswaController@update')->name('deskripsiBeasiswa.update');
 
+            Route::get('/beranda-admin', 'HomeController@admin')->name('beranda.index');
+            Route::get('/beranda-admin/{beranda}/edit', 'HomeController@edit')->name('beranda.edit');
+            Route::patch('/beranda-admin/{beranda}', 'HomeController@update')->name('beranda.update');
+
             Route::get('/daftar/{daftar}/delete', 'DaftarController@destroy')->name('daftar.delete');
     });
 });
