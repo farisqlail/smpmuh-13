@@ -12,6 +12,18 @@
         <div class="card">
             <div class="card-body">
                 <h4>Tentang Sekolah</h4>
+
+                @if ($tentang[0]->image == null)
+                    <div class="image-null" align="center">
+                        <img src="http://mundalodge.com/images/joomlart/demo/default.jpg" class="img-fluid">
+                    </div>
+                @else
+                    <div class="image-null" align="center">
+                        <img src="{{ asset('storage/' . $tentang[0]->image) }}" class="img-fluid" width="800">
+                    </div>
+                @endif
+                <br>
+
                 <p>
                     {!! $tentang[0]->deskripsi !!}
                 </p>

@@ -92,7 +92,8 @@ class TentangController extends Controller
         Alert::success('success', 'Berhasil mengupdate tentang skeolah!');
 
         $tentang->update([
-            'deskripsi' => request('deskripsi')
+            'deskripsi' => request('deskripsi'),
+            'image' => request('image')->store('tentang')
         ]);
 
         return redirect()->route('frontend.tentang-admin.index');
