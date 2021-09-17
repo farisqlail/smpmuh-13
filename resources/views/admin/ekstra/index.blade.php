@@ -7,13 +7,28 @@
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Data Ekstrakurikuler</h1>
-             <a href="{{ route('frontend.ekstra-admin.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Data Ekstrakurikuler</a> 
+            <a href="{{ route('frontend.ekstra-admin.create') }}"
+                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-plus fa-sm text-white-50"></i> Tambah Data Ekstrakurikuler</a>
         </div>
 
         <div class="card mb-3">
             <div class="card-body">
                 <h4>Deskripsi Ekstrakurikuler</h4>
+
+                @if ($desk[0]->image == null)
+                    <div class="image-null" align="center">
+                        <img src="http://mundalodge.com/images/joomlart/demo/default.jpg" class="img-fluid">
+                    </div>
+                @else
+                    <div class="image-null" align="center">
+                        <img src="{{ asset('storage/' . $desk[0]->image) }}" class="img-fluid">
+                    </div>
+                @endif
+                <br>
+
                 {!! $desk[0]->deskripsi !!}
+
 
                 <div align="right">
                     <a href="{{ route('frontend.desk.edit', $desk[0]->id) }}" class="btn btn-primary mt-3">Edit</a>
@@ -72,7 +87,6 @@
             $(document).ready(function() {
                 $('#tableEkstra').DataTable();
             });
-
         </script>
 
     @endpush

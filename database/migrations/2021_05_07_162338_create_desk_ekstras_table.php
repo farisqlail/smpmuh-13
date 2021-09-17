@@ -15,6 +15,7 @@ class CreateDeskEkstrasTable extends Migration
     {
         Schema::create('desk_ekstras', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->longText('deskripsi');
             $table->timestamps();
         });

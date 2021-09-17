@@ -31,6 +31,7 @@ class DeskripsiEkstraController extends Controller
         Alert::success('Success', 'Berhasil mengubah deskripsi Ekstrakurikuler!');
 
         $desk->update([
+            'image' => request('image')->store('deskEkstra'),
             'deskripsi' => request('deskripsi')
         ]);
 

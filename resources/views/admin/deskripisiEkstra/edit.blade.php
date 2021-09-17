@@ -15,6 +15,11 @@
                         <textarea class="form-control" name="deskripsi" rows="3">{{ $desk->deskripsi }}</textarea>
                     </div>
 
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Gambar </label>
+                        <input type="file" class="form-control-file" required name="image" id="">
+                    </div>
+
                     <div class="form-group" align="right">
                         <button class="btn btn-primary" type="submit" value="save">Edit</button>
                     </div>
