@@ -155,7 +155,7 @@
 
     </footer><!-- End Footer -->
     <div class="akhir" align="center">
-        <small class="mt-1">2020 © All Rights Reserved Design By @Tim Elit</small>
+        <small class="mt-1">2020 © All Rights Reserved Design By &nbsp;<a class="text-white" target="blank" href="https://www.linkedin.com/in/faris-rizqilail-630329194/"><u> Faris Rizqilail</u></a></small>
     </div>
 
     <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
