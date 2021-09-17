@@ -15,10 +15,10 @@ class DaftarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(Request $request){
+
         $daftar = Daftar::all();
-        $kontak = Kontak::all();;
+        $kontak = Kontak::all();
 
         return view('frontend.daftar.create', compact('daftar', 'kontak'));
     }
@@ -41,10 +41,7 @@ class DaftarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    public function create(){}
 
     /**
      * Store a newly created resource in storage.
@@ -52,23 +49,11 @@ class DaftarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Daftar $daftar)
+    public function store(Request $request)
     {
         Alert::success('Success', 'Data Berhasil Terdaftar');
 
         $birth = date('Y-m-d', strtotime(request('birth')));
-        
-        $this->validate(request(), [
-            'name' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'birth' => 'required',
-            'from' => 'required',
-            'father' => 'required',
-            'number-father' => 'required',
-            'mother' => 'required',
-            'number-mother' => 'required',
-        ]);
 
         Daftar::create([
             'name' => request('name'),
@@ -82,6 +67,8 @@ class DaftarController extends Controller
             'number-mother' => request('number-mother')
         ]);
 
+        // dd($request);
+
         return redirect()->route('frontend.success');
     }
 
@@ -91,9 +78,9 @@ class DaftarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Daftar $daftar)
     {
-        //
+        return view('admin.daftar.show', compact('daftar'));
     }
 
     /**
@@ -125,8 +112,11 @@ class DaftarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Daftar $daftar)
     {
-        //
+        Alert::success('Success', 'Berhasil Dihapus');
+        $daftar->delete();
+        
+        return redirect()->route('admin.daftar-admin.index');
     }
 }

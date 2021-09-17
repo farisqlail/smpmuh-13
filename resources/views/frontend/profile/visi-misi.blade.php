@@ -1,4 +1,4 @@
-@extends('Frontend.layouts')
+@extends('frontend.layouts')
 
 @section('content')
   <section id="hero-1">

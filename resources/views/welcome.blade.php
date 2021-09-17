@@ -102,7 +102,7 @@
                 <div class="col-lg-6 align-self-center">
                     <h1>Hallo, Selamat Datang di SPEMGALAS</h1>
                     <p>Sekolah islam memadukan nilai-nilai tauhid ke seluruh kurikulum dan aktivitasnya </p>
-                    <a href="ppdb.html" class="btn-home">Pendaftaran</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ url('/daftar') }}" class="btn-home">Pendaftaran</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="{{ url('/berita') }}" class="btn-home2">Berita Terkini</a><br><br>
                 </div>
                 <div class="col-lg-6">
@@ -216,7 +216,7 @@
                         <h3>Jadi Bagian dari SPEMGALAS</h3>
                     </div>
                     <div class="col-lg-6" align="right" data-aos="fade-right">
-                        <a href="ppdb.html" class="btn btn-bagian">Daftar Sekarang</a>
+                        <a href="{{ url('/daftar') }}" class="btn btn-bagian">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -299,24 +299,6 @@
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
-    {{-- 
-  <script>
-    var sp = document.querySelector('.search-open');
-    var searchbar = document.querySelector('.search-inline');
-    var shclose = document.querySelector('.search-close');
-
-    function changeClass() {
-        searchbar.classList.add('search-visible');
-    }
-
-    function closesearch() {
-        searchbar.classList.remove('search-visible');
-    }
-
-    sp.addEventListener('click', changeClass);
-    shclose.addEventListener('click', closesearch);
-                
-  </script> --}}
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>

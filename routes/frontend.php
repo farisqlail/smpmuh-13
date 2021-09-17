@@ -146,5 +146,7 @@ Route::name('frontend.')->group(function () {
 
             Route::get('/deskripsiKegiatan-admin/{deskripsiKegiatan}/edit', 'DeskripsiKegiatanController@edit')->name('deskripsiKegiatan.edit');
             Route::patch('/deskripsiKegiatan-admin/{deskripsiKegiatan}', 'DeskripsiKegiatanController@update')->name('deskripsiKegiatan.update');
+
+            Route::get('/daftar/{daftar}/delete', 'DaftarController@destroy')->name('daftar.delete');
     });
 });

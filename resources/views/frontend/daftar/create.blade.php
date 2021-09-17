@@ -1,4 +1,4 @@
-@extends('Frontend.layouts')
+@extends('frontend.layouts')
 
 @section('content')
 <section id="hero-1">
@@ -34,121 +34,77 @@
 
                     <form action="{{ route('frontend.daftar.store') }}" id="formDaftar" method="POST">
                         {{ csrf_field() }}
+
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
+                                <div class="form-group">
                                     <label>Nama Lengkap</label>
-                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-                                    @if ($errors->has('name'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('name') }}
-                                        </span>
-                                    @endif
+                                    <input type="text" class="form-control" name="name" required>                                   
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
-                                <div class="form-group has-feedback{{ $errors->has('address') ? ' has-error' : '' }}">
+                                <div class="form-group">
                                     <label>Alamat Lengkap</label>
-                                    <input type="text" class="form-control" name="address" value="{{ old('address') }}">
-                                    @if ($errors->has('address'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('address') }}
-                                        </span>
-                                    @endif
+                                    <input type="text" class="form-control" name="address" required>                                    
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="form-group has-feedback{{ $errors->has('city') ? ' has-error' : '' }}">
+                                <div class="form-group">
                                     <label>Kota Lahir</label>
-                                    <input type="text" class="form-control" name="city" value="{{ old('city') }}">
-                                    @if ($errors->has('city'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('city') }}
-                                        </span>
-                                    @endif
+                                    <input type="text" class="form-control" name="city" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
-                                <div class="form-group has-feedback{{ $errors->has('birth') ? ' has-error' : '' }}">
+                                <div class="form-group">
                                     <label>Tanggal Lahir</label>
-                                    <div class="input-group date" id="datetimepicker2">
-                                        <input type="text" name="birth" class="form-control"><span
+                                    <div class="input-group">
+                                        <input type="date" name="birth" class="form-control" required><span
                                             class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
                                     </div>
-                                    @if ($errors->has('birth'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('birth') }}
-                                        </span>
-                                    @endif
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback{{ $errors->has('from') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label>Asal Sekolah</label>
-                            <input type="text" class="form-control" name="from">
-                            @if ($errors->has('from'))
-                                <span class="help-block">
-                                    <p>{{ $errors->first('from') }}
-                                </span>
-                            @endif
+                            <input type="text" class="form-control" name="from" required>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="form-group has-feedback{{ $errors->has('father') ? ' has-error' : '' }}">
-                                    <label>Nama Ayah</label>
-                                    <input type="text" class="form-control" name="father">
-                                    @if ($errors->has('father'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('father') }}
-                                        </span>
-                                    @endif
+                                <div class="form-group">
+                                    <label>Nama Lengkap Ayah</label>
+                                    <input type="text" class="form-control" name="father" placeholder="contoh : suep ...." required>
                                 </div>
 
                                 <div
-                                    class="form-group has-feedback{{ $errors->has('number-father') ? ' has-error' : '' }}">
+                                    class="form-group">
                                     <label>Nomor HP Ayah</label>
-                                    <input type="tel" class="form-control" name="number-father">
-                                    @if ($errors->has('number-father'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('number-father') }}
-                                        </span>
-                                    @endif
+                                    <input type="tel" class="form-control" name="number-father" placeholder="contoh : 089838...." required>
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
-                                <div class="form-group has-feedback{{ $errors->has('mother') ? ' has-error' : '' }}">
-                                    <label>Nama Ibu</label>
-                                    <input type="text" class="form-control" name="mother">
-                                    @if ($errors->has('mother'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('mother') }}
-                                        </span>
-                                    @endif
+                                <div class="form-group">
+                                    <label>Nama Lengkap Ibu</label>
+                                    <input type="text" class="form-control" name="mother" placeholder="contoh : titi ...." required>
                                 </div>
 
                                 <div
-                                    class="form-group has-feedback{{ $errors->has('number-mother') ? ' has-error' : '' }}">
+                                    class="form-group">
                                     <label>Nomor HP Ibu</label>
-                                    <input type="tel" class="form-control" name="number-mother">
-                                    @if ($errors->has('number-mother'))
-                                        <span class="help-block">
-                                            <p>{{ $errors->first('number-father') }}
-                                        </span>
-                                    @endif
+                                    <input type="tel" class="form-control" name="number-mother" placeholder="contoh : 089838...." required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mt-3" align="center">
-                            <button type="submit" id="btnDaftar" class="btn btn-komentar">Daftar</button>
+                            <button type="submit"  class="btn btn-komentar">Daftar</button>
                         </div>
 
                     </form>

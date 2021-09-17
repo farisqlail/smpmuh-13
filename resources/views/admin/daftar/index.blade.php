@@ -20,26 +20,19 @@
                         <tr>
                             <th>Nama Lengkap</th>
                             <th>Alamat Lengkap</th>
-                            <th>Kota Lahir</th>
-                            <th>Tanggal Lahir</th>
                             <th>Asal Sekolah</th>
                             <th>Nama Ayah</th>
                             <th>No Hp Ayah</th>
-                            <th>Nama Ibu</th>
-                            <th>No Hp Ibu</th>
-                        </tr>
+                            <th>Action</th>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Nama Lengkap</th>
                             <th>Alamat Lengkap</th>
-                            <th>Kota Lahir</th>
-                            <th>Tanggal Lahir</th>
                             <th>Asal Sekolah</th>
                             <th>Nama Ayah</th>
                             <th>No Hp Ayah</th>
-                            <th>Nama Ibu</th>
-                            <th>No Hp Ibu</th>
+                            <th>Action</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -47,19 +40,12 @@
                         <tr>
                            <td>{{ $dft->name }}</td>
                            <td>{{ $dft->address }}</td>
-                           <td>{{ $dft->city }}</td>
-                           <td>{{ $dft->birth }}</td>
                            <td>{{ $dft->from }}</td>
                            <td>{{ $dft->father }}</td>
                            <td>{{ $dft['number-father'] }}</td>
-                           <td>{{ $dft->mother }}</td>
-                           <td>{{ $dft['number-mother'] }}</td>
-                           {{-- <td>
-                                <a href="{{ route('frontend.galeri.edit', $glr) }}" class="btn btn-primary">Edit</a>
-
-                                <a href="{{ route('frontend.galeri.delete', $glr->id) }}" class="btn btn-danger">Delete</a> 
-
-                            </td> --}}
+                           <td>
+                               <a href="{{ route('frontend.daftar.show', $dft) }}" class="btn btn-primary">Lihat Detail</a>
+                           </td>
                         </tr>
                         @endforeach
 

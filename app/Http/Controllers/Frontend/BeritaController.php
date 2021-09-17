@@ -147,7 +147,7 @@ class BeritaController extends Controller
         // dd($berita);
 
         $berita->delete();
-        Alert::success('Success', 'Berhasul Dihapus');
+        Alert::success('Success', 'Berhasil Dihapus');
         \Storage::delete($berita->image);
 
         return redirect()->route('frontend.berita-admin.index');

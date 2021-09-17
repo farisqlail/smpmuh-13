@@ -183,20 +183,27 @@
         crossorigin=""></script>
 
     <script>
-        var sp = document.querySelector('.search-open');
-        var searchbar = document.querySelector('.search-inline');
-        var shclose = document.querySelector('.search-close');
+        // var sp = document.querySelector('.search-open');
+        // var searchbar = document.querySelector('.search-inline');
+        // var shclose = document.querySelector('.search-close');
 
-        function changeClass() {
-            searchbar.classList.add('search-visible');
-        }
+        // function changeClass() {
+        //     searchbar.classList.add('search-visible');
+        // }
 
-        function closesearch() {
-            searchbar.classList.remove('search-visible');
-        }
+        // function closesearch() {
+        //     searchbar.classList.remove('search-visible');
+        // }
 
-        sp.addEventListener('click', changeClass);
-        shclose.addEventListener('click', closesearch);
+        // shclose.addEventListener('click', changeClass);
+        // shclose.addEventListener('click', closesearch);
+        
+        const formDaftar = document.querySelector('#formDaftar');
+        const btnDaftar = document.querySelector('#btnDaftar');
+
+        btnDaftar.addEventListener('click', (e) =>{
+            formDaftar.submit();
+        });
 
     </script>
 
