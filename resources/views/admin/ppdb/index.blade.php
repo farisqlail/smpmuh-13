@@ -18,11 +18,11 @@
                             Link Pendaftaran &nbsp;
                         </div>
                         <div class="col-m-10">
-                            {{-- : {{ $ppdb->link }} --}}
+                            : <a href="{{ $ppdb->link }}" target="blank">{{ $ppdb->link }}</a>
                         </div>
                     </div>
 
-                    <a href="" class="btn btn-primary float-right">Edit Link</a>
+                    <a href="{{ route('frontend.ppdb.edit', $ppdb) }}" class="btn btn-primary float-right">Edit Link</a>
                 </div>
 
             </div>

@@ -17,7 +17,7 @@
                             
                             <div class="form-group">
                                 <label for="">Link PPDB</label>
-                                <input type="text" class="form-control" name="link" id="">
+                                <input type="text" class="form-control" name="link" placeholder="{{ $ppdb->link }}">
                             </div>
 
                                 <div class="form-group">

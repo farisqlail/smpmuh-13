@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\LinkPpdb;
-use Dotenv\Result\Success;
 
 class PPDBController extends Controller
 {
@@ -21,7 +20,8 @@ class PPDBController extends Controller
      */
     public function index()
     {
-        $ppdb = LinkPpdb::all();
+        $ppdb = LinkPpdb::find(1);
+        // dd($ppdb->link);
 
         return view('admin.ppdb.index', compact('ppdb'));
     }
