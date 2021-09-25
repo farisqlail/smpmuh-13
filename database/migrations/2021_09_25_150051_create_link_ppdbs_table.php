@@ -15,6 +15,7 @@ class CreateLinkPpdbsTable extends Migration
     {
         Schema::create('link_ppdbs', function (Blueprint $table) {
             $table->id();
+            $table->string('link');
             $table->timestamps();
         });
     }

@@ -154,6 +154,10 @@ Route::name('frontend.')->group(function () {
             Route::get('/beranda-admin/{beranda}/edit', 'HomeController@edit')->name('beranda.edit');
             Route::patch('/beranda-admin/{beranda}', 'HomeController@update')->name('beranda.update');
 
+            Route::get('/ppdb-admin', 'PPDBController@index')->name('ppdb.index');
+            Route::get('/ppdb-admin/{ppdb}/edit', 'PPDBController@edit')->name('ppdb.edit');
+            Route::patch('/ppdb-admin/{ppdb}', 'PPDBController@update')->name('ppdb.update');
+
             Route::get('/daftar/{daftar}/delete', 'DaftarController@destroy')->name('daftar.delete');
     });
 });

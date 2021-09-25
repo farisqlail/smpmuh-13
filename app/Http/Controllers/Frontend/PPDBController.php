@@ -1,10 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+
+namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\LinkPpdb;
+use Dotenv\Result\Success;
 
-class PppdbController extends Controller
+class PPDBController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +21,9 @@ class PppdbController extends Controller
      */
     public function index()
     {
-        //
+        $ppdb = LinkPpdb::all();
+
+        return view('admin.ppdb.index', compact('ppdb'));
     }
 
     /**
@@ -54,9 +64,9 @@ class PppdbController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(LinkPpdb $ppdb)
     {
-        //
+        return view('admin.ppdb.edit', compact('ppdb'));
     }
 
     /**
@@ -66,9 +76,15 @@ class PppdbController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, LinkPpdb $ppdb)
     {
-        //
+        Alert::Success('Sucess', 'Link PPDB berhasil diubah');
+
+        $ppdb->update([
+            'link' => request('link')
+        ]);
+
+        return redirect()->route('frontend.ppdb.index');
     }
 
     /**

@@ -56,6 +56,7 @@
                 <a class="collapse-item" href="{{ url('/staff-admin') }}">Staff</a>
                 <a class="collapse-item" href="{{ url('/kurikulum-admin') }}">Kurikulum & <br> Pembelajaran</a>
                 <a class="collapse-item" href="{{ url('/galeri-admin') }}">Galeri</a>
+                <a class="collapse-item" href="{{ url('/ppdb-admin') }}">Link PPDB</a>
               </div>
             </div>
           </li>
