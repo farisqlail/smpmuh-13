@@ -10,6 +10,7 @@ use App\Kontak;
 use App\Prestasi;
 use App\Alumni;
 use App\Beranda;
+use App\LinkPpdb;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -20,31 +21,35 @@ class HomeController extends Controller
         $berita = Berita::latest()->paginate(3);
         $kontak = Kontak::all();
         $beranda = Beranda::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('welcome', compact('berita', 'kontak', 'beranda'));
+        return view('welcome', compact('berita', 'kontak', 'beranda', 'ppdb'));
     }
 
 
     public function kontak(){
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.kontak.index', compact('kontak'));
+        return view('frontend.kontak.index', compact('kontak', 'ppdb'));
     }
 
     public function alumni(){
 
         $alumni = Alumni::all();
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.alumni.index', compact('kontak', 'alumni'));
+        return view('frontend.alumni.index', compact('kontak', 'alumni', 'ppdb'));
     }
 
     public function prestasi(){
 
         $prestasi = Prestasi::all();
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.prestasi.index', compact('prestasi', 'kontak'));
+        return view('frontend.prestasi.index', compact('prestasi', 'kontak', 'ppdb'));
     }
 
     public function admin(){

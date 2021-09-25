@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
 use App\Kurikulum;
 use App\Kontak;
+use App\LinkPpdb;
 
 class KurikulumController extends Controller
 {
@@ -33,8 +34,9 @@ class KurikulumController extends Controller
 
         $kontak = Kontak::all();
         $kurikulum = Kurikulum::all();
-
-        return view('frontend.profile.kur', compact('kontak', 'kurikulum'));
+        $ppdb = LinkPpdb::find(1);
+        
+        return view('frontend.profile.kur', compact('kontak', 'kurikulum', 'ppdb'));
     }
 
     /**

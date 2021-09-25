@@ -83,7 +83,7 @@
                     <li><a href="{{ url('/berita') }}">Berita</a></li>
                     <li><a href="{{ url('/alumni') }}">Alumni</a></li>
                     <li><a href="{{ url('/kontak') }}">Kontak</a></li>
-                    <li><a href="https://bit.ly/PPDBSMPM13" target="blank">Pendaftaran</a></li>
+                    <li><a href="{{ $ppdb->link }}" target="blank">Pendaftaran</a></li>
                     </li>
 
                 </ul>
@@ -100,7 +100,7 @@
                 <div class="col-lg-6 align-self-center">
                     <h1>Hallo, Selamat Datang di SPEMGALAS</h1>
                     <p>Sekolah islam memadukan nilai-nilai tauhid ke seluruh kurikulum dan aktivitasnya </p>
-                    <a href="{{ url('/daftar') }}" class="btn-home">Pendaftaran</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ $ppdb->link }}" target="blank" class="btn-home">Pendaftaran</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="{{ url('/berita') }}" class="btn-home2">Berita Terkini</a><br><br>
                 </div>
                 <div class="col-lg-6">
@@ -244,7 +244,7 @@
                         <h3>Jadi Bagian dari SPEMGALAS</h3>
                     </div>
                     <div class="col-lg-6" align="right" data-aos="fade-right">
-                        <a href="{{ url('/daftar') }}" class="btn btn-bagian">Daftar Sekarang</a>
+                        <a href="{{ $ppdb->link }}" target="blank" class="btn btn-bagian">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -296,7 +296,7 @@
                                 <a href="{{ url('/berita') }}">Berita</a><br>
                                 <a href="{{ url('/alumni') }}">Alumni</a><br>
                                 <a href="{{ url('/kontak') }}">Kontak</a><br>
-                                <a href="{{ url('/daftar') }}">Pendaftaran</a><br>
+                                <a href="{{ $ppdb->link }}" target="blank">Pendaftaran</a><br>
                             </div>
                         </div>
                     </div>

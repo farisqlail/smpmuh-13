@@ -11,6 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Kontak;
 use App\Tentang;
 use App\Karakter;
+use App\LinkPpdb;
 
 class TentangController extends Controller
 {
@@ -32,8 +33,9 @@ class TentangController extends Controller
         $kontak = Kontak::all();
         $tentang = Tentang::all();
         $karakter = Karakter::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.profile.tentang', compact('kontak', 'tentang', 'karakter'));
+        return view('frontend.profile.tentang', compact('kontak', 'tentang', 'karakter', 'ppdb'));
     }
 
     /**

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Paginator;
 use Carbon\Carbon;
 use App\Akreditasi;
 use App\Kontak;
+use App\LinkPpdb;
 
 class AkreditasiController extends Controller
 {
@@ -31,8 +32,9 @@ class AkreditasiController extends Controller
     public function home(){
         $akreditasi = Akreditasi::all();
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.akademik.akreditasi', compact('akreditasi', 'kontak'));
+        return view('frontend.akademik.akreditasi', compact('akreditasi', 'kontak', 'ppdb'));
     }
 
     /**

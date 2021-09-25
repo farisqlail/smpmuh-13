@@ -14,6 +14,7 @@ use Carbon\Carbon;
 use App\Kontak;
 use App\Beasiswa;
 use App\DeskripsiBeasiswa;
+use App\LinkPpdb;
 
 class BeasiswaController extends Controller
 {
@@ -38,8 +39,9 @@ class BeasiswaController extends Controller
         $kontak = Kontak::all();
         $beasiswa = Beasiswa::all();
         $deskBeasiswa = DeskripsiBeasiswa::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.akademik.beasiswa', compact('kontak', 'beasiswa', 'deskBeasiswa'));
+        return view('frontend.akademik.beasiswa', compact('kontak', 'beasiswa', 'deskBeasiswa', 'ppdb'));
     }
 
     /**

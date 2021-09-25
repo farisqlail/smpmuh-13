@@ -86,7 +86,7 @@
                     <li><a href="{{ url('/berita') }}">Berita</a></li>
                     <li><a href="{{ url('/alumni') }}">Alumni</a></li>
                     <li><a href="{{ url('/kontak') }}">Kontak</a></li>
-                    <li><a href="{{ url('/daftar') }}">Pendaftaran</a></li>
+                    <li><a href="{{ $ppdb->link }}" target="blank">Pendaftaran</a></li>
                     </li>
                 </ul>
             </nav><!-- .nav-menu -->
@@ -139,7 +139,7 @@
                                 <a href="{{ url('/berita') }}">Berita</a><br>
                                 <a href="{{ url('/alumni') }}">Alumni</a><br>
                                 <a href="{{ url('/kontak') }}">Kontak</a><br>
-                                <a href="{{ url('/daftar') }}">Pendaftaran</a><br>
+                                <a href="{{ $ppdb->link }}" target="blank">Pendaftaran</a><br>
                             </div>
                         </div>
                     </div>

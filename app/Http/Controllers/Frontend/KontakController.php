@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Kontak;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\LinkPpdb;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
@@ -22,9 +23,10 @@ class KontakController extends Controller
      */
     public function index()
     {
-        $kontak = Kontak::all();    
+        $kontak = Kontak::all();   
+        $ppdb = LinkPpdb::find(1); 
         
-        return view('admin.kontak.index', compact('kontak'));
+        return view('admin.kontak.index', compact('kontak', 'ppdb'));
     }
 
     /**

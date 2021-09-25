@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Galeri;
 use App\Kontak;
+use App\LinkPpdb;
 
 class GaleriController extends Controller
 {
@@ -30,8 +31,9 @@ class GaleriController extends Controller
         
         $galeri = Galeri::all();
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.profile.galeri', compact('galeri', 'kontak'));
+        return view('frontend.profile.galeri', compact('galeri', 'kontak', 'ppdb'));
     }
 
     /**

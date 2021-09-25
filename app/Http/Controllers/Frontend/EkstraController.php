@@ -13,6 +13,7 @@ use App\Kontak;
 use App\Ekstra;
 use App\DeskEKstra;
 use App\KategoriEkstra;
+use App\LinkPpdb;
 
 class EkstraController extends Controller
 {
@@ -34,6 +35,7 @@ class EkstraController extends Controller
 
         $kontak = Kontak::all();
         $desk = DeskEKstra::all();
+        $ppdb = LinkPpdb::find(1);
         // $ekstra = Ekstra::select('kategori_id')->groupBy('kategori_id')->get();
         
         // $string = [];
@@ -45,7 +47,7 @@ class EkstraController extends Controller
         $ekstra = Ekstra::all();
         // dd($ekstra);
 
-        return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk'));
+        return view('frontend.akademik.ekstrakulikuler', compact('kontak', 'ekstra', 'desk', 'ppdb'));
     }
 
     /**

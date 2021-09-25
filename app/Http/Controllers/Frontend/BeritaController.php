@@ -14,6 +14,7 @@ use Carbon\Carbon;
 use App\Berita;
 use App\Comment;
 use App\Kontak;
+use App\LinkPpdb;
 
 class BeritaController extends Controller
 {
@@ -37,8 +38,9 @@ class BeritaController extends Controller
         $berita = Berita::latest()->paginate(3);
         $beritaBaru = Berita::latest()->take(5)->get();
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.berita.index', compact('berita', 'beritaBaru', 'kontak'));
+        return view('frontend.berita.index', compact('berita', 'beritaBaru', 'kontak', 'ppdb'));
     }
 
     public function search(Request $request)

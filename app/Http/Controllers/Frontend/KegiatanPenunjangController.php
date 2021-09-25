@@ -12,6 +12,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\KegiatanPenunjang;
 use App\Kontak;
 use App\DeskripsiKegiatan;
+use App\LinkPpdb;
 
 class KegiatanPenunjangController extends Controller
 {
@@ -34,8 +35,9 @@ class KegiatanPenunjangController extends Controller
         $kontak = Kontak::all();
         $kegiatanPenunjang = KegiatanPenunjang::all();
         $deskripsiKegiatan = DeskripsiKegiatan::all();
+        $ppdb = LinkPpdb::find(1);
 
-        return view('frontend.akademik.kegiatanTambah', compact('kontak', 'kegiatanPenunjang', 'deskripsiKegiatan'));
+        return view('frontend.akademik.kegiatanTambah', compact('kontak', 'kegiatanPenunjang', 'deskripsiKegiatan', 'ppdb'));
     }
 
     /**

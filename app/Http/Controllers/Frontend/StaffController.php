@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Staff;
 use App\Kontak;
+use App\LinkPpdb;
 
 class StaffController extends Controller
 {
@@ -28,8 +29,9 @@ class StaffController extends Controller
     public function home(){
         $staff = Staff::latest()->paginate(10);
         $kontak = Kontak::all();
+        $ppdb = LinkPpdb::find(1);
         
-        return view('frontend.profile.staf', compact('staff', 'kontak'));
+        return view('frontend.profile.staf', compact('staff', 'kontak', 'ppdb'));
     }
 
     /**

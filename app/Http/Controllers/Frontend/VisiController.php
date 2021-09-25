@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Kontak;
+use App\LinkPpdb;
 use App\Visi;
 
 class VisiController extends Controller
@@ -30,8 +31,9 @@ class VisiController extends Controller
 
         $kontak = Kontak::all();
         $visi = Visi::all();
+        $ppdb = LinkPpdb::find(1);
         
-        return view('frontend.profile.visi-misi', compact('kontak', 'visi'));
+        return view('frontend.profile.visi-misi', compact('kontak', 'visi', 'ppdb'));
     }
 
     /**
