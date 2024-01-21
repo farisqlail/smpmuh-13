@@ -196,12 +196,12 @@
         // shclose.addEventListener('click', changeClass);
         // shclose.addEventListener('click', closesearch);
         
-        const formDaftar = document.querySelector('#formDaftar');
-        const btnDaftar = document.querySelector('#btnDaftar');
+        // const formDaftar = document.querySelector('#formDaftar');
+        // const btnDaftar = document.querySelector('#btnDaftar');
 
-        btnDaftar.addEventListener('click', (e) =>{
-            formDaftar.submit();
-        });
+        // btnDaftar.addEventListener('click', (e) =>{
+        //     formDaftar.submit();
+        // });
 
     </script>
 

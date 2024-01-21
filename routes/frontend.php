@@ -36,8 +36,8 @@ Route::name('frontend.')->group(function () {
             Route::get('/visi', 'VisiController@home')->name('visi');
 
             //Comment 
-            Route::resource('/comment', 'CommentController');
-            // Route::post('/berita/{comment}/comment', 'CommentController@store')->name('berita-comment');
+            // Route::resource('/comment', 'CommentController');
+            Route::post('/berita/comment/{comment}', 'CommentController@add')->name('berita-comment');
 
             //Info PPDB
             Route::get('/info', 'InfoController@index')->name('info');

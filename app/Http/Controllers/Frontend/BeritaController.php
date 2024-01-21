@@ -95,10 +95,12 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        $comment = Comment::find($berita);
+        $comment = Comment::where("berita_id", $berita->id)->get();
+        $ppdb = LinkPpdb::find(1);
         $kontak = Kontak::all();
 
-        return view('frontend.berita.show-berita', ['berita' => $berita, 'comment' => $comment, 'kontak' => $kontak]);
+
+        return view('frontend.berita.show-berita', ['berita' => $berita, 'comment' => $comment, 'kontak' => $kontak, 'ppdb' => $ppdb]);
     }
 
     /**

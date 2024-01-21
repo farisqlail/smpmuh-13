@@ -36,19 +36,21 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Berita $berita)
+    public function add(Request $request, $berita)
     {
-        Alert::success('Success', 'Berhasil Menambah Komentar');
-            // dd($berita->id);
-        Comment::create([
-            'berita_id' => $request->get('berita_id'),
-            'name' => request('name'),
-            'content' => request('content'),
-            'email' => request('email')
-        ]);
+        $comment = new Comment();
 
+        $comment->berita_id = (int)$berita;
+        $comment->name = $request->input('name');
+        $comment->content = $request->input('content');
+        $comment->email = $request->input('email');
+
+        $comment->save();
+
+        Alert::success('Success', 'Berhasil Menambah Komentar');
         return redirect()->back();
     }
+
 
     /**
      * Display the specified resource.

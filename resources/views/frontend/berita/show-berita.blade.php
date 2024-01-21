@@ -82,10 +82,10 @@
 
                 <br><br>
                 <h6>Tinggalkan Komentar</h6>
-                <form action="{{ route('frontend.comment.store') }}" id="formKomen" method="POST">
+                <form action="{{ route('frontend.berita-comment', $berita->id) }}" id="formKomen" method="POST">
                     {{ csrf_field() }}
-                    <input class="form-control" type="hidden" name="berita_id" value="{{ $berita->id }}">
 
+                    <input type="number" value="{{$berita->id}}" hidden>
                     <div class="form-group">
                         <label>Komentar</label>
                         <textarea class="form-control" name="content" rows="5"></textarea>
@@ -106,7 +106,8 @@
                     </div><br>
 
 
-                    <button type="submit" id="btnKomen" class="btn btn-komentar">Kirim Komentar</button>
+                    {{-- <button type="submit" id="btnKomen" class="btn btn-komentar">Kirim Komentar</button> --}}
+                    <input type="submit" id="btnKomen" class="btn btn-komentar" value="Kirim Komentar">
 
                 </form>
             </div>
